@@ -17,13 +17,13 @@ public class Main {
 //        //Dynamic Scrapings:
 //        bayt.scrap();
 //        forceEmploi.scrap();
-        wetech.scrap();
+        // wetech.scrap();
 
 
         //Static Scrapings:
-//        rekrut.scrap();
-//        emploiMa.scrap();
-//        talentTec.scrap();
+       //rekrut.scrap();
+  // emploiMa.scrap();
+       talentTec.scrap();
 
 
 

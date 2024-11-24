@@ -29,7 +29,7 @@ public class Bayt {
     }
 
     public void scrap() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Electronic Store\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
         // Initialize WebDriver
         WebDriver driver = new ChromeDriver();
@@ -38,7 +38,7 @@ public class Bayt {
         List<JobDetails> jobList = new ArrayList<>();
 
         // Output JSON file path
-        String outputFilePath = "C:\\Users\\Electronic Store\\Downloads\\projectos\\projectos\\outputs\\bayt_jobs.json";
+        String outputFilePath = "C:\\Users\\HP\\Documents\\GitHub\\Moumen-Java-Project\\outputs\\bayt_jobs.json";
 
         try {
             // Open the website

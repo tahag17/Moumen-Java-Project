@@ -15,7 +15,7 @@ public class TalentTectra {
         List<JobDetails> jobList = new ArrayList<>();
 
         // Set the path to the same directory as rekrut.txt
-        String outputDirPath = "C:\\Users\\Electronic Store\\Downloads\\projectos\\projectos\\outputs\\";
+        String outputDirPath = "C:\\Users\\HP\\Documents\\GitHub\\Moumen-Java-Project\\outputs\\";
         String outputFilePath = outputDirPath + "talenttectra_jobs.json";
 
         try {

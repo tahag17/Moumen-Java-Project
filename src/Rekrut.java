@@ -18,7 +18,7 @@ public class Rekrut {
     private static final int MAX_RETRIES = 3; // Retry up to 3 times on timeout
     private final String baseUrl = "https://www.rekrute.com/offres.html";
     private final String urlParams = "?workExperienceId%5B0%5D=1&workExperienceId%5B1%5D=2";
-    private final String outputFilePath = "C:\\Users\\Electronic Store\\Downloads\\projectos\\projectos\\outputs\\rekrut.json";
+    private final String outputFilePath = "C:\\Users\\HP\\Documents\\GitHub\\Moumen-Java-Project\\outputs\\rekrut.json";
 
     public Rekrut() {}
 

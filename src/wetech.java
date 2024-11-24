@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class wetech {
     public void scrap() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Electronic Store\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
