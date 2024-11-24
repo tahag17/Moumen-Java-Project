@@ -1,0 +1,97 @@
+[ {
+  "competences" : [ "Formation ou diplôme dans le domaine de l’aide à la personne, auxiliaire de vie, ou équivalent,", "Expérience préalable significative dans l’accompagnement de personnes âgées ou fragilisées,", "Capacité à faire preuve d’empathie, de patience et de bienveillance envers les bénéficiaires,", "Bonnes compétences relationnelles pour instaurer une relation de confiance avec les personnes accompagnées,", "Organisation, rigueur et discrétion dans l’exercice de vos fonctions,", "Connaissance des gestes de premiers secours appréciée," ],
+  "domain" : "Santé / Services aux personnes",
+  "title" : "auxiliaire de vie h/f"
+}, {
+  "competences" : [ "Formation en aménagement paysager ou équivalent,", "De sérieuses compétences en petite maçonnerie sont nécessaires,", "Capacité à travailler de manière autonome et organisée, tout en respectant les consignes organisationnelles de votre hiérarchie ainsi que les consignes de sécurité du métier,", "Sens du détail et souci de la qualité dans l’exécution des tâches,", "Polyvalence, dynamisme." ],
+  "domain" : "Bâtiment / Travaux Publics",
+  "title" : "ouvrier paysagiste h/f"
+}, {
+  "competences" : [ "Vous êtes dynamique et vous saurez vous adapter à un travail en autonomie,", "Vous êtes capable d’effectuer des tâches de manutention,", "Vous êtes capable de lire une recette et de sélectionner les ingrédients adéquats,", "Vous êtes capable d’effectuer des gestes répétitifs sur votre journée de travail." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de pétrissage h/f"
+}, {
+  "competences" : [ "Vous êtes capable de travailler dans un environnement de travail chaud,", "Vous saurez vous adapter à un travail en autonomie,", "Vous êtes capable de suivre un process de cuisson pour respecter une qualité de produit fini." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de fabrication-cuisson h/f"
+}, {
+  "competences" : [ " Vous acceptez de travailler dans un environnement de travail froid (entre 4 et 6°C),", "Vous êtes dynamique et vous saurez vous adapter à une cadence de chaine agroalimentaire,", "Vous aimez travailler en équipe et vous pouvez aussi travailler seul sur ligne de production,", "Vous êtes capable d’effectuer des gestes répétitifs sur votre journée de travail." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de conditionnement h/f"
+}, {
+  "competences" : [ "Expérience dans le domaine du nettoyage industriel ou en milieu agroalimentaire,", "Rigueur, autonomie et sens de l’organisation indispensables,", "Disponibilité pour des horaires décalés et possibilité de travailler en milieu froid." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de nettoyage industriel h/f"
+}, {
+  "competences" : [ "Maîtrise des logiciels comptables (idéalement Sage),", "Connaissance des normes comptables en vigueur,", "Rigueur, organisation et sens de la confidentialité,", "Formation en comptabilité (BTS Comptabilité, DCG, DSCG) appréciée,", "Expérience préalable de 2 ans en tant qu’Assistant Comptable souhaitée." ],
+  "domain" : "Comptabilité / Finances",
+  "title" : "assistant comptable h/f"
+}, {
+  "competences" : [ "Vous avez une expérience réussie dans le secteur agroalimentaire ou en industrie alimentaire,", "Vous avez des compétences en management d’équipe et en gestion de production,", "Vous êtes capable d’organiser et de coordonner le travail d’une équipe,", "Vous êtes rigoureux(se), réactif(ve) et savez prendre des initiatives,", "La connaissance des normes de qualité et de sécurité alimentaire est un plus," ],
+  "domain" : "Agro-alimentaire",
+  "title" : "adjoint chef d'équipe h/f"
+}, {
+  "competences" : [ "Capacité à travailler en équipe et à suivre des consignes précises,", "Polyvalence et adaptabilité aux différents postes,", "Autonomie et polyvalence." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de conditionnement étudiant h/f"
+}, {
+  "competences" : [ "Vous êtes de formation CAP ou BAC PRO ou BTS Électromécanique ou vous justifiez d’une expérience significative sur un poste équivalent,", "Vous disposez du Permis B pour conduire le véhicule de l’entreprise,", "Vous disposez des Habilitations électriques B1V – B2V", "Si vous avez le CACES Nacelle, c’est un atout, mais ce n’est pas bloquant pour votre candidature." ],
+  "domain" : "Bâtiment / Travaux Publics",
+  "title" : "technicien de maintenance h/f"
+}, {
+  "competences" : [ "Vous possédez une première expérience réussie dans le secteur de l’agroalimentaire ou en découpe de viande,", "Vous êtes capable de travailler en équipe et de respecter les consignes de sécurité,", "Vous êtes rigoureux(se), organisé(e) et avez le sens des responsabilités,", "La maîtrise des outils de découpe et la connaissance des normes de qualité sont des compétences appréciées pour ce poste." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "ouvrier découpe h/f"
+}, {
+  "competences" : [ "Vous êtes à l’aise avec le contact viande", "Vous posséder idéalement une première expérience sur un poste cadencé", "Vous êtes disponible sur du long terme", "Vous êtes volontaire, sérieux(se) et motivé(e)." ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de conditionnement et expédition h/f"
+}, {
+  "competences" : [ "Vous êtes titulaire d’un diplôme en maintenance industrielle, mécanique ou électromécanique.", "Vous avez une première expérience réussie dans un poste similaire.", "Vous possédez de bonnes connaissances en mécanique et en hydraulique.", "Le site n’est pas desservi par les transports en commun." ],
+  "domain" : "Maintenance",
+  "title" : "agent de maintenance h/f"
+}, {
+  "competences" : [ "Titulaire d’un diplôme en comptabilité (BTS, DCG, DSCG, DEC) ou équivalent,", "Expérience d’au moins 3 ans en tant que comptable en cabinet d’expertise comptable exigée,", "Rigueur, organisation et sens des responsabilités indispensables,", "Excellentes capacités d’analyse et de synthèse,", "Maîtrise des outils informatiques et logiciels de comptabilité.  " ],
+  "domain" : "Comptabilité / Finances",
+  "title" : "comptable h/f"
+}, {
+  "competences" : [ "Vous êtes doté d’une formation en transport de marchandises, permis CE, FIMO/FCO à jour !", "Expérience significative en tant que Conducteur SPL en frigo !", "Capacité à travailler de manière autonome tout en respectant les consignes et les délais !" ],
+  "domain" : "Logistique / Transport",
+  "title" : "conducteur spl en frigo h/f"
+}, {
+  "competences" : [ "Formation Bac+2 minimum en comptabilité, finance ou équivalent,", "Expérience d’au moins 3 ans en tant que comptable, idéalement en entreprise ou cabinet d’expertise comptable,", "Maîtrise des logiciels comptables et des outils bureautiques (Excel, Word, etc.),", "Connaissance des normes comptables en vigueur,", "Rigueur, organisation et capacité d’analyse développées." ],
+  "domain" : "Comptabilité / Finances",
+  "title" : "comptable h/f"
+}, {
+  "competences" : [ "Vous maîtrisez les matériaux suivants : cuivre, PVC, inox, etc !", "Vous connaissez les normes de sécurité liées aux installations de gaz, eau et chauffage !", "Vous avez des connaissances sur les systèmes thermiques et hydrauliques !", "Les techniques de soudure, brasage et sertissage n’ont plus de secret pour vous !", "Vous êtes titulaire dune formation Plombier chauffagiste et vous avez une expérience réussi dans le domaine !" ],
+  "domain" : "Bâtiment / Travaux Publics",
+  "title" : "plombier chauffagiste h/f"
+}, {
+  "competences" : [ "Vous êtes doté d’une formation en transport de marchandises, permis CE, FIMO/FCO à jour,", "Expérience significative en tant que Conducteur SPL en citerne pulvés,", "Capacité à travailler de manière autonome tout en respectant les consignes et les délais." ],
+  "domain" : "Logistique / Transport",
+  "title" : "conducteur spl en citerne pulvé h/f"
+}, {
+  "competences" : [ "Vous pouvez travailler dans un univers frigorifique, entre 3 et 5 °C;", "Vous êtes à l’aise avec le contact avec la viande crue (porc essentiellement);", "Vous êtes volontaire, minutieux(se), dynamique et courageux(se) ;", "Vous respectez scrupuleusement les règles de sécurité et d’hygiène en vigueur ;" ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de production agroalimentaire h/f"
+}, {
+  "competences" : [ "Vous êtes capable de manutention de charges allant jusqu’à 25 kgs ;", "Vous n’êtes pas gêné par les odeurs fortes (aromates, épices)", "Vous êtes disponible pour plusieurs mois (idéalement Noël 2024)", "Vous acceptez de travailler en station debout prolongée ;" ],
+  "domain" : "Agro-alimentaire",
+  "title" : "agent de fabrication h/f"
+}, {
+  "competences" : [ "Doté(e) d’un bon relationnel, vous souhaitez développer votre tempérament commercial. Motivé et persévérant, vous avez à cœur de vous former sur les métiers commerciaux.", "Etre titulaire du permis B serait un plus pour la prospection terrain." ],
+  "domain" : "Commerce / Vente",
+  "title" : "formation technico-commercial h/f"
+}, {
+  "competences" : [ "Vous êtes motivé(e) et polyvalent(e). Débutant(e) sans formation accepté(e).", "Vous êtes rigoureux(se), autonome et avez le sens de l’organisation.", "Vous serez amené(e) à occuper plusieurs postes, vous aurez des missions variées et vous devrez appliquer les règles d’hygiène et de sécurité en vigueur.  " ],
+  "domain" : "Agro-alimentaire",
+  "title" : "ouvrier d'abattoir h/f"
+}, {
+  "competences" : [ "Permis EC en cours de validité avec FIMO/FCO à jour,", "Expérience significative en tant que conducteur SPL national, idéalement dans le transport de marchandises en citerne pulvé (alimentaire ou industrielle),", "Rigueur, autonomie et sens des responsabilités pour assurer les livraisons dans les délais impartis et en toute sécurité,", "Bon relationnel pour interagir avec les clients lors des livraisons et assurer un service de qualité." ],
+  "domain" : "Logistique / Transport",
+  "title" : "conducteur spl national h/f"
+}, {
+  "competences" : [ "Expérience réussie dans l’assemblage d’armatures", "Capacité à lire et interpréter des plans techniques", "Rigueur et précision dans le travail d’assemblage", "Connaissance des normes de sécurité et de qualité" ],
+  "domain" : "Industrie",
+  "title" : "assembleur armature h/f"
+} ]

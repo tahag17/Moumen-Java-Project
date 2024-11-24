@@ -5,115 +5,139 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
+import com.google.gson.Gson;
+import java.util.ArrayList;
 import java.util.List;
 import java.time.Duration;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Bayt {
-    public void scrap(){
+
+    // Class to hold job details
+    static class JobDetails {
+        private String title;
+        private String date;
+        private String description;
+
+        public JobDetails(String title, String date, String description) {
+            this.title = title;
+            this.date = date;
+            this.description = description;
+        }
+    }
+
+    public void scrap() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Electronic Store\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
         // Initialize WebDriver
         WebDriver driver = new ChromeDriver();
 
+        // List to store all job details
+        List<JobDetails> jobList = new ArrayList<>();
+
+        // Output JSON file path
+        String outputFilePath = "C:\\Users\\Electronic Store\\Downloads\\projectos\\projectos\\outputs\\bayt_jobs.json";
+
         try {
             // Open the website
             driver.get("https://www.bayt.com/en/morocco/jobs/?jobid=5201745&page=2&_gl=1*lq5vlk*_up*MQ.._ga*MTI3NzA0MTI4MC4xNzMxMTE1Mzc4_ga_1NKPLGNKKD*MTczMTExNTM3OC4xLjAuMTczMTExNTM3OC4wLjAuMA..");
 
-
             // Create a WebDriverWait instance for handling waits
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-            boolean hasMorePages = true;
+            int currentPage = 1; // Start from the first page
+            int maxPages = 4; // Limit to 4 pages
 
+            while (currentPage <= maxPages) {
+                System.out.println("Scraping page: " + currentPage);
 
-            while (hasMorePages) {
-                // Scrape the offers on the current page
-
-
-                // Locate job listings (replace with the actual selector for the offers)
+                // Locate job listings
                 List<WebElement> jobOffers = driver.findElements(By.className("has-pointer-d"));
-
 
                 // Iterate over each offer
                 for (int i = 0; i < jobOffers.size(); i++) {
                     try {
-                        // Refresh jobOffers list in case it becomes stale after clicking
-
+                        // Refresh jobOffers list to avoid stale elements
                         jobOffers = driver.findElements(By.className("has-pointer-d"));
-
 
                         WebElement offer = jobOffers.get(i);
 
-                        // Wait until the element is clickable
+                        // Wait until the element is clickable and click it
                         wait.until(ExpectedConditions.elementToBeClickable(offer));
-
-                        // Scroll the element into view
                         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", offer);
 
-                        //get that title
-                        // Wait for details to load
-
+                        // Wait for job details to load
                         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("jobViewJobTitle")));
                         String title = driver.findElement(By.id("jobViewJobTitle")).getText();
 
-                        // Extract job type
-                        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".t-small.u-stretch")));
-                        //String type = driver.findElement(By.cssSelector(".t-small.u-stretch")).getText();
+                        // Wait for the job description to appear
+                        WebElement descriptionElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                                By.xpath("//div[contains(@class,'card-content p10t-m')]")));
+                        String paragraph = descriptionElement.getText();
 
-                        // Extract job description
-
-                        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/section[contains(@class,'box is-wide row is-reversed-d is-collapsed-m no-wrap')]/div[contains(@id,'jsMiniJobView')]/div[contains(@id,'formToggleSheet')]/div[contains(@id,'view_inner')]/div[contains(@class,'card p0 is-primary-d u-shadow')]/div[contains(@class,'card-content p10t-m')]")));
-                        String paragraph = driver.findElement(By.xpath("/html/body/section[contains(@class,'box is-wide row is-reversed-d is-collapsed-m no-wrap')]/div[contains(@id,'jsMiniJobView')]/div[contains(@id,'formToggleSheet')]/div[contains(@id,'view_inner')]/div[contains(@class,'card p0 is-primary-d u-shadow')]/div[contains(@class,'card-content p10t-m')]")).getText();
-
+                        // Process the paragraph into lines
                         String[] lines = paragraph.split("\\r?\\n");
-
-
                         String date = lines[0];
-
-
                         StringBuilder description = new StringBuilder();
 
                         for (int j = 4; j < lines.length; j++) {
-
-                            description.append(lines[j] + "\n");
+                            description.append(lines[j]).append("\n");
                         }
 
-                        // Print or save the details
-                        System.out.println("Title: " + title);
-                        System.out.println("date de disposition : " + date);
-                        System.out.println("description : " + description);
+                        // Add job details to the list
+                        jobList.add(new JobDetails(title, date, description.toString()));
 
-                        System.out.println("\n///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n");
-
-                        // Go back to the main list
+                        // Go back to the main job list
                         driver.navigate().back();
 
                         // Wait for the main job list to reload
                         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("has-pointer-d")));
-
-                    } catch (org.openqa.selenium.ElementClickInterceptedException e) {
-                        // Handle the case where the element is not clickable
-                        System.out.println("Element not clickable. Trying again.");
-                        // You could also wait and retry if needed, or add custom logic.
+                    } catch (Exception e) {
+                        System.out.println("An error occurred while processing the job offer: " + e.getMessage());
                     }
-
                 }
 
+                // Check if there's a next page and increment the page counter
                 try {
-                    WebElement nextLink = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[contains(@class,'pagination-next')]/a[contains(@class,'jsAjaxLoad')]"))); // Replace with actual class or ID of the "Next" button
+                    WebElement nextLink = wait.until(ExpectedConditions.presenceOfElementLocated(
+                            By.xpath("//li[contains(@class,'pagination-next')]/a[contains(@class,'jsAjaxLoad')]")));
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", nextLink);
                     String nextPageUrl = nextLink.getAttribute("href");
                     driver.get(nextPageUrl);
+                    currentPage++; // Move to the next page
                 } catch (Exception e) {
-                    System.out.println("No more pages available.");
-                    hasMorePages = false;  // Exit the loop if "Next" button is not found or clickable
+                    System.out.println("No more pages available or unable to navigate to the next page.");
+                    break; // Exit the loop if there's no "Next" button
                 }
             }
+
+            // Save job data as JSON
+            saveToJson(jobList, outputFilePath);
 
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             // Close the driver
             driver.quit();
+        }
+    }
+
+    // Method to save job list to JSON
+    private void saveToJson(List<JobDetails> jobList, String filePath) {
+        Gson gson = new Gson();
+        String json = gson.toJson(jobList);
+
+        // Ensure the output directory exists
+        File file = new File(filePath);
+        file.getParentFile().mkdirs();
+
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            fileWriter.write(json);
+            System.out.println("Job data saved to " + filePath);
+        } catch (IOException e) {
+            System.err.println("Error writing to file: " + e.getMessage());
         }
     }
 }

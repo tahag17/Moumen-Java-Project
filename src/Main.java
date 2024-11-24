@@ -11,20 +11,19 @@ public class Main {
         TalentTectra talentTec = new TalentTectra();
         wetech wetech = new wetech();
 
-//          Site getting updated:
-//        bayt.scrap();
 
 
 
 //        //Dynamic Scrapings:
+//        bayt.scrap();
 //        forceEmploi.scrap();
-//        wetech.scrap();
+        wetech.scrap();
 
 
         //Static Scrapings:
 //        rekrut.scrap();
 //        emploiMa.scrap();
-        talentTec.scrap();
+//        talentTec.scrap();
 
 
 
