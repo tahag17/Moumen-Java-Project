@@ -78,10 +78,7 @@ public class EmploiMa {
         }
     }
 
-    public static void main(String[] args) {
-        EmploiMa emploiMa = new EmploiMa();
-        emploiMa.scrap();
-    }
+
 
     // Job class to represent a job posting
     public static class Job {
