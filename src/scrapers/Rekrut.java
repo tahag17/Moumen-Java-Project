@@ -1,3 +1,5 @@
+package scrapers;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.jsoup.Jsoup;
@@ -15,7 +17,7 @@ import java.util.logging.Logger;
 
 public class Rekrut {
     private static final Logger LOGGER = Logger.getLogger(Rekrut.class.getName());
-    private static final int MAX_RETRIES = 3; // Retry up to 3 times on timeout
+    private static final int MAX_RETRIES = 3;
     private final String baseUrl = "https://www.rekrute.com/offres.html";
     private final String urlParams = "?workExperienceId%5B0%5D=1&workExperienceId%5B1%5D=2";
     private final String outputFilePath = "C:\\Users\\Electronic Store\\Downloads\\projectos\\projectos\\outputs\\rekrut.json";
@@ -27,7 +29,6 @@ public class Rekrut {
         boolean hasNextPage = true;
 
         try {
-            // Ensure directory exists
             File outputFile = new File(outputFilePath);
             File outputDir = outputFile.getParentFile();
             if (!outputDir.exists()) {

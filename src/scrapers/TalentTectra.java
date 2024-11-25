@@ -1,3 +1,6 @@
+package scrapers;
+
+import Job.JobDetails;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -12,7 +15,7 @@ import java.util.List;
 
 public class TalentTectra {
     public void scrap() {
-        List<JobDetails> jobList = new ArrayList<>();
+        List<JobDetails> jobList = new ArrayList<>();  // Use the new JobData.JobDetails class
 
         // Set the path to the same directory as rekrut.txt
         String outputDirPath = "C:\\Users\\Electronic Store\\Downloads\\projectos\\projectos\\outputs\\";
@@ -43,8 +46,8 @@ public class TalentTectra {
                 Element fonction = niveauEtude.nextElementSibling();
                 String function = fonction.text();
 
-                // Create JobDetails object and add it to the list
-                JobDetails jobObj = new JobDetails(expe, function, sActivity, nEtude);
+                // Create JobData.JobDetails object and add it to the list
+                JobDetails jobObj = new JobDetails(sActivity, function, nEtude, expe);  // Use the new JobData.JobDetails constructor
                 jobList.add(jobObj);
             }
 

@@ -1,6 +1,30 @@
 [
   {
     "experienceLevel": "Expérience requise : 3 à 5 ans",
+    "niveauEtude": "Niveau d’étude demandé : Bac",
+    "function": "Fonction : Commis de bar",
+    "activity": "Secteur d\u0027activité : Hôtellerie, restauration"
+  },
+  {
+    "experienceLevel": "Expérience requise : 3 à 5 ans",
+    "niveauEtude": "Niveau d’étude demandé : Bac+2",
+    "function": "Fonction : Agent lingerie",
+    "activity": "Secteur d\u0027activité : Hôtellerie, restauration"
+  },
+  {
+    "experienceLevel": "Expérience requise : 3 à 5 ans",
+    "niveauEtude": "Niveau d’étude demandé : Bac+2",
+    "function": "Fonction : Récptionniste SPA",
+    "activity": "Secteur d\u0027activité : Hôtellerie, restauration"
+  },
+  {
+    "experienceLevel": "Expérience requise : 3 à 5 ans",
+    "niveauEtude": "Niveau d’étude demandé : Bac+2",
+    "function": "Fonction : Chef de Partie",
+    "activity": "Secteur d\u0027activité : Hôtellerie, restauration"
+  },
+  {
+    "experienceLevel": "Expérience requise : 3 à 5 ans",
     "niveauEtude": "Niveau d’étude demandé : Bac+3",
     "function": "Fonction : Dessinateur",
     "activity": "Secteur d\u0027activité : BTP, construction"
@@ -34,29 +58,5 @@
     "niveauEtude": "Niveau d’étude demandé : Bac+3",
     "function": "Fonction : charge logistique",
     "activity": "Secteur d\u0027activité : Services autres"
-  },
-  {
-    "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "niveauEtude": "Niveau d’étude demandé : Bac+3",
-    "function": "Fonction : Délégué Médico Commercial - Casablanca",
-    "activity": "Secteur d\u0027activité : Distribution, vente, commerce de gros"
-  },
-  {
-    "experienceLevel": "Expérience requise : 3 à 5 ans",
-    "niveauEtude": "Niveau d’étude demandé : Bac+2",
-    "function": "Fonction : Recrutement de 2 Chefs de Chantier - Bambey et Saint-Louis",
-    "activity": "Secteur d\u0027activité : BTP, construction"
-  },
-  {
-    "experienceLevel": "Expérience requise : 3 à 5 ans",
-    "niveauEtude": "Niveau d’étude demandé : Bac+2",
-    "function": "Fonction : Conducteur de Travaux - Pekess-Thies-Bambey",
-    "activity": "Secteur d\u0027activité : BTP, construction"
-  },
-  {
-    "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "niveauEtude": "Niveau d’étude demandé : Bac+2",
-    "function": "Fonction : Chargé (e ) de traitement des réclamations",
-    "activity": "Secteur d\u0027activité : Banque, assurance"
   }
 ]

@@ -1,3 +1,6 @@
+package scrapers;
+
+import lombok.Getter;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -9,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class EmploiMa {
 
@@ -78,12 +82,7 @@ public class EmploiMa {
         }
     }
 
-    public static void main(String[] args) {
-        EmploiMa emploiMa = new EmploiMa();
-        emploiMa.scrap();
-    }
 
-    // Job class to represent a job posting
     public static class Job {
         private String title;
         private String niveauEtude;
@@ -97,37 +96,5 @@ public class EmploiMa {
             this.competence = competence;
         }
 
-        // Getters and setters (if needed)
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getNiveauEtude() {
-            return niveauEtude;
-        }
-
-        public void setNiveauEtude(String niveauEtude) {
-            this.niveauEtude = niveauEtude;
-        }
-
-        public String getNiveauExperience() {
-            return niveauExperience;
-        }
-
-        public void setNiveauExperience(String niveauExperience) {
-            this.niveauExperience = niveauExperience;
-        }
-
-        public String getCompetence() {
-            return competence;
-        }
-
-        public void setCompetence(String competence) {
-            this.competence = competence;
-        }
     }
 }
