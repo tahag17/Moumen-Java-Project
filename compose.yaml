@@ -1,0 +1,11 @@
+version: '27.2.0'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: username
+    ports:
+      - 5432:5432

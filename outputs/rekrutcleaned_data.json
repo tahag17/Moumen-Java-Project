@@ -1,5 +1,59 @@
 [
   {
+    "function": "Assistante RH",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "Centre d'appel Autres services",
+    "niveauEtude": "Bac +5 et plus"
+  },
+  {
+    "function": "Dposez votre CandidatureSpontane",
+    "niveauExperience": "Moins de 1 an De 5 à 10 ans",
+    "activity": "Indifférent",
+    "niveauEtude": "Bac +3"
+  },
+  {
+    "function": "Conseiller Technique de Vente en climatisation HF",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "Energie Autres Industries",
+    "niveauEtude": "Bac +3"
+  },
+  {
+    "function": "Charge de Clientle  centre dappel",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "Centre d'appel Offshoring / Nearshoring",
+    "niveauEtude": "Bac"
+  },
+  {
+    "function": "Charg de Clientle Avec Caisse",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "Banque / Finance",
+    "niveauEtude": "Bac +3"
+  },
+  {
+    "function": "Ingnieur dtudes Eau potable et Assainissement",
+    "niveauExperience": "Moins de 1 an De 1 à 3 ans",
+    "activity": "BTP / Génie Civil Conseil / Etudes",
+    "niveauEtude": "Bac +5 et plus"
+  },
+  {
+    "function": "Ingnieur Agronome Gnie Rural",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "BTP / Génie Civil",
+    "niveauEtude": "Bac +5 et plus"
+  },
+  {
+    "function": "Programme Yeelen  Ple Corporate Investment Banking",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "Banque / Finance",
+    "niveauEtude": "Bac +5 et plus"
+  },
+  {
+    "function": "Charg de Conduite dActivit HF",
+    "niveauExperience": "Moins de 1 an",
+    "activity": "Centre d'appel Telecom",
+    "niveauEtude": "Bac"
+  },
+  {
     "function": "Technical Sales Consulting in Air Conditioning HF",
     "niveauExperience": "Moins de 1 an",
     "activity": "Energie Autres Industries",
@@ -66,12 +120,6 @@
     "niveauEtude": "Bac +2"
   },
   {
-    "function": "Superviseur RH",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "Recrutement / Intérim",
-    "niveauEtude": "Bac +3"
-  },
-  {
     "function": "Comptable stagiaire",
     "niveauExperience": "Moins de 1 an",
     "activity": "Papier / Carton",
@@ -102,18 +150,6 @@
     "niveauEtude": "Bac +2"
   },
   {
-    "function": "Ingnieur Agronome Gnie Rural",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "BTP / Génie Civil",
-    "niveauEtude": "Bac +5 et plus"
-  },
-  {
-    "function": "Ingnieur dtudes Eau potable et Assainissement",
-    "niveauExperience": "Moins de 1 an De 1 à 3 ans",
-    "activity": "BTP / Génie Civil Conseil / Etudes",
-    "niveauEtude": "Bac +5 et plus"
-  },
-  {
     "function": "Ingnieur Etude et Dveloppement Hispanophone",
     "niveauExperience": "Moins de 1 an",
     "activity": "Informatique",
@@ -130,12 +166,6 @@
     "niveauExperience": "Moins de 1 an",
     "activity": "Centre d'appel",
     "niveauEtude": "Bac +2"
-  },
-  {
-    "function": "Programme Yeelen  Ple Corporate Investment Banking",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "Banque / Finance",
-    "niveauEtude": "Bac +5 et plus"
   },
   {
     "function": "Techniciene en Mtallurgie",
@@ -202,12 +232,6 @@
     "niveauExperience": "Moins de 1 an De 1 à 3 ans",
     "activity": "Assurance / Courtage Conseil / Etudes",
     "niveauEtude": "Bac +5 et plus"
-  },
-  {
-    "function": "Charg de Conduite dActivit HF",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "Centre d'appel Telecom",
-    "niveauEtude": "Bac"
   },
   {
     "function": "Analyste Junior",
@@ -318,18 +342,6 @@
     "niveauEtude": "Bac"
   },
   {
-    "function": "Auditeur Junior HF",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "Comptabilité / Audit",
-    "niveauEtude": "Bac +5 et plus"
-  },
-  {
-    "function": "Auditeur Financier Junior  Full audit HF",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "Comptabilité / Audit Conseil / Etudes",
-    "niveauEtude": "Bac +5 et plus"
-  },
-  {
     "function": "Conseiller Clientle  Experte en Relations Client",
     "niveauExperience": "Moins de 1 an De 1 à 3 ans",
     "activity": "Centre d'appel",
@@ -417,12 +429,6 @@
     "function": "Stagiaire Comptabilit HF",
     "niveauExperience": "Moins de 1 an",
     "activity": "Comptabilité / Audit",
-    "niveauEtude": "Bac +3"
-  },
-  {
-    "function": "Charge dadministration",
-    "niveauExperience": "Moins de 1 an De 1 à 3 ans",
-    "activity": "Audiovisuel Internet / Multimédia",
     "niveauEtude": "Bac +3"
   },
   {
@@ -516,12 +522,6 @@
     "niveauEtude": "Bac +2"
   },
   {
-    "function": "Planification et prise de RDV ADV",
-    "niveauExperience": "Moins de 1 an De 1 à 3 ans",
-    "activity": "Centre d'appel",
-    "niveauEtude": "Bac"
-  },
-  {
     "function": "Stagiaire Archiviste",
     "niveauExperience": "Moins de 1 an",
     "activity": "Banque / Finance",
@@ -556,11 +556,5 @@
     "niveauExperience": "Moins de 1 an",
     "activity": "Chimie / Parachimie / Peintures Pétrole / Gaz",
     "niveauEtude": "Bac +2"
-  },
-  {
-    "function": "Charg de Clientle Avec Caisse",
-    "niveauExperience": "Moins de 1 an",
-    "activity": "Banque / Finance",
-    "niveauEtude": "Bac +3"
   }
 ]

@@ -1,0 +1,62 @@
+[
+  {
+    "niveauExperience": "1 à 3 ans",
+    "niveauEtude": "Bac+4",
+    "funtion": "Chargé(e) administration RH",
+    "activity": "Secteur d'activité : Hôtellerie, restauration"
+  },
+  {
+    "niveauExperience": "1 à 3 ans",
+    "niveauEtude": "Bac+4",
+    "funtion": "Chargée(e) Développement RH",
+    "activity": "Secteur d'activité : Hôtellerie, restauration"
+  },
+  {
+    "niveauExperience": "5 à 10 ans",
+    "niveauEtude": "Bac+5 et plus",
+    "funtion": "Responsable Communication",
+    "activity": "Secteur d'activité : Évènementiel, hôte(sse), accueil"
+  },
+  {
+    "niveauExperience": "1 à 3 ans",
+    "niveauEtude": "Bac+2",
+    "funtion": "téléconseiller",
+    "activity": "Secteur d'activité : Centres d´appel, hotline, call center"
+  },
+  {
+    "niveauExperience": "5 à 10 ans",
+    "niveauEtude": "Bac+5 et plus",
+    "funtion": "Ticketing Manager",
+    "activity": "Secteur d'activité : Administration publique"
+  },
+  {
+    "niveauExperience": "1 à 3 ans",
+    "niveauEtude": "Bac+2",
+    "funtion": "Comptable Junior",
+    "activity": "Secteur d'activité : Distribution, vente, commerce de gros"
+  },
+  {
+    "niveauExperience": "3 à 5 ans",
+    "niveauEtude": "Bac+3",
+    "funtion": "Manufacturing Manager",
+    "activity": "Secteur d'activité : Automobile, matériels de transport, réparation"
+  },
+  {
+    "niveauExperience": "3 à 5 ans",
+    "niveauEtude": "Bac+5 et plus",
+    "funtion": "contrôleur de gestion",
+    "activity": "Secteur d'activité : Agroalimentaire"
+  },
+  {
+    "niveauExperience": "3 à 5 ans",
+    "niveauEtude": "Bac",
+    "funtion": "Commis de bar",
+    "activity": "Secteur d'activité : Hôtellerie, restauration"
+  },
+  {
+    "niveauExperience": "3 à 5 ans",
+    "niveauEtude": "Bac+2",
+    "funtion": "Agent lingerie",
+    "activity": "Secteur d'activité : Hôtellerie, restauration"
+  }
+]

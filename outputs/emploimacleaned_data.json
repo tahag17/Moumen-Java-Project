@@ -1,1 +1,788 @@
-[]
+[
+  {
+    "fucntion": "HR Recruitment Administrator",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Fonction RH - Formation - Projets RH - Recrutement"
+  },
+  {
+    "fucntion": "Technicien Maintenance en Chariots Élévateurs",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Maintenance - Manutention - Qualité"
+  },
+  {
+    "fucntion": "Agent Lingerie H/F",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Conseil - Formation - Hôtellerie - Housekeeping - Nettoyage - Restauration - Secteur Hôtelier - Sécurité - Tourisme"
+  },
+  {
+    "fucntion": "Waitresses",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Cuisine - Hygiène Alimentaire - Restauration - Tourisme"
+  },
+  {
+    "fucntion": "Head Waitresses",
+    "niveauEtude": "Bac+1",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Cuisine - Restauration - Tourisme"
+  },
+  {
+    "fucntion": "Pastry Chef",
+    "niveauEtude": "Bac+1",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Boulangerie - Pâtisserie - Tourisme"
+  },
+  {
+    "fucntion": "Acheteur Anglophone",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Achats - Gestion des Achats - Import - Transport"
+  },
+  {
+    "fucntion": "Agent D´Immatriculation",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Droit - Finance - Gestion"
+  },
+  {
+    "fucntion": "Administrateur de Ventes",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - CRM - Facturation - Finance - Financement - Gestion - Leasing - Vente"
+  },
+  {
+    "fucntion": "Électromécanicien",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Gestion de la Maintenance - Machines - Maintenance - Maintenance des Machines - Qualité - Réparation"
+  },
+  {
+    "fucntion": "Chef de Salle",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Accueil - Cuisine - Dressage - Restauration - Secteur Hôtelier - Tourisme"
+  },
+  {
+    "fucntion": "Coordinateur Superviseur Production Hispanophone",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Amélioration Continue - Assemblage - Fabrication - Génie Industriel - Gestion - Machines - Maintenance - Management - Non-Conformité - Normes de Qualité - Processus - Production - Production Industrielle - Productivité - Qualité - Six Sigma - TPM"
+  },
+  {
+    "fucntion": "Administrateur de Ventes",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - CRM - Devis - Finance - Gestion - Gestion d'Entreprise - Gestion des Ventes - Recouvrement - Vente"
+  },
+  {
+    "fucntion": "Responsable Qualité Produits",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Essais Mécaniques - Lean Manufacturing - Maintenance - Manufacturing - Métallurgie - Méthodes Industrielles - Normes de Qualité - Qualité"
+  },
+  {
+    "fucntion": "Technicien de Bobinage",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Bobinage - Machines - Maintenance - Qualité"
+  },
+  {
+    "fucntion": "Technicien en Gestion de Base de Données",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "EKIP - ORACLE - SQL"
+  },
+  {
+    "fucntion": "Développeur Profil Devops",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "BASH - PYTHON"
+  },
+  {
+    "fucntion": "Responsable Administratif et Financier",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Comptabilité - Finance - Fiscalité - Gestion"
+  },
+  {
+    "fucntion": "Infirmier(ère) de Travail – Contrat Temporaire",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Domaine Infirmier - Infirmerie - Intervention Médicale - Médecine - Premiers Secours - Santé - Soins d'Urgence - Soins Infirmiers"
+  },
+  {
+    "fucntion": "Animateur de Vente",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Vente"
+  },
+  {
+    "fucntion": "Chargé de Commande",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion Commerciale - Vente"
+  },
+  {
+    "fucntion": "Chargé(e) de Recouvrement par Téléphone",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Contentieux"
+  },
+  {
+    "fucntion": "Opérateur d´Imprimantes",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat"
+  },
+  {
+    "fucntion": "Chef Comptable",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Comptabilité - États Financiers - Finance - Gestion - Gestion des Coûts"
+  },
+  {
+    "fucntion": "Chauffeur",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Transport"
+  },
+  {
+    "fucntion": "Gestionnaire de Paie Expérimenté(e)",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Édition - Formation - Gestion de la Paie"
+  },
+  {
+    "fucntion": "Caissier/ère Expérimentés",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Comptabilité - Finance - Gardiennage - Gestion - Secrétariat"
+  },
+  {
+    "fucntion": "Ingénieur en Électromécanique",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Électromécanique - Maintenance - Production - Qualité"
+  },
+  {
+    "fucntion": "Chef de Produit Compléments Alimentaires",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Actions Marketing - Communication - Marketing - Plan Marketing"
+  },
+  {
+    "fucntion": "Gestionnaire de Paie Expérimenté (H/F)",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Formation - Gestion"
+  },
+  {
+    "fucntion": "Floor Supervisor",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Tourisme"
+  },
+  {
+    "fucntion": "Minibar Assistant",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Gestion Hôtelière - Hôtellerie - Housekeeping - Restauration - Tourisme"
+  },
+  {
+    "fucntion": "Carpenter",
+    "niveauEtude": "Bac+1",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "BTP - Menuiserie - Tourisme"
+  },
+  {
+    "fucntion": "Executive Housekeeper",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Gestion Hôtelière - Hôtellerie - Restauration - Secteur Hôtelier - Tourisme"
+  },
+  {
+    "fucntion": "Chefs de Rayon Électricité/Luminaire",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Bricolage - Gestion - Gestion Commerciale - Gestion d'Équipe - Leadership - Management - Vente"
+  },
+  {
+    "fucntion": "Chef D´Équipe Production",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Démarche de Production - Gestion de la Production - Gestion d'Équipe - Hygiène - Maintenance - Processus - Production - Qualité"
+  },
+  {
+    "fucntion": "Banquet Manager",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Cuisine - Housekeeping - Restauration - Tourisme"
+  },
+  {
+    "fucntion": "Chef de Rayon Quincaillerie",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion Commerciale - Gestion d'Équipe - Transport - Vente"
+  },
+  {
+    "fucntion": "Chef de Rayon",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Bricolage - Gestion - Gestion Commerciale - Gestion d'Équipe - Leadership - Management - Vente"
+  },
+  {
+    "fucntion": "Night Auditor",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Gestion Hôtelière - Hôtellerie - Tourisme"
+  },
+  {
+    "fucntion": "Technicien Facilities Expérimenté",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "CVC - DU - Éléctricité - Maintenance - Maintenance Préventive - Menuiserie - Plomberie - Processus - Production - Qualité - Ventilation"
+  },
+  {
+    "fucntion": "Agent de Recouvrement",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Gestion - Recouvrement"
+  },
+  {
+    "fucntion": "Opérateurs Injection-Extrusion",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Automatisme - Automatisme Mécanique - DU - Électromécanique - Équipement - Extrusion - Machines - Maintenance - Matériaux Composites - Outillage - Production - Qualité"
+  },
+  {
+    "fucntion": "Responsable Recouvrement Public",
+    "niveauEtude": "Bac+4",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Droit"
+  },
+  {
+    "fucntion": "Technicien Comptable",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Comptabilité - Comptabilité Générale - Finance - Gestion"
+  },
+  {
+    "fucntion": "Chargé(e) des Moyens Généraux",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Classement des Documents - Comptabilité - Finance - Gestion - Rédaction - Secrétariat - WORD"
+  },
+  {
+    "fucntion": "Superviseur Assurance Qualité",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assurance Qualité - Entrepôt - Maintenance - Production - Qualité"
+  },
+  {
+    "fucntion": "Commerciaux Francophones en B2B",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Prospection - Télévente - Vente"
+  },
+  {
+    "fucntion": "Chargé Exploitation SI",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "BATCH"
+  },
+  {
+    "fucntion": "Chargée d´Accueil Bilingue",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Accueil - Accueil Physique - Assistanat - Encaissement - Fiches - Secrétariat"
+  },
+  {
+    "fucntion": "Ingénieur Chargé D´Affaires CFO H/F",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "AUTOCAD - BTP - CANECO - Chiffrage - DIALUX - Exploitation - Maintenance - Négociation - Production - Qualité - Vente"
+  },
+  {
+    "fucntion": "Chargé D´Accueil",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Secrétariat"
+  },
+  {
+    "fucntion": "Assistante Administrative",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Comptabilité - Dossiers - Finance - Gestion - Gestion des Dossiers - Secrétariat"
+  },
+  {
+    "fucntion": "Comptable (H/F)",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Gestion"
+  },
+  {
+    "fucntion": "Animateurs HSE",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "DU - Électromécanique - Hygiène - Industrie - Maintenance - Production - Qualité"
+  },
+  {
+    "fucntion": "Engineering Technician",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Amélioration Continue - Assemblage - Circuits Imprimés - DU - Électronique - Énergie - Équipement - Lean Manufacturing - Machines - Maintenance - Manufacturing - Processus - Production - Production d'Énergie - Qualité"
+  },
+  {
+    "fucntion": "Quality Technician",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assurance Qualité - DU - Électromécanique - Électronique - Énergie - Indicateurs de la Qualité - Maintenance - Management de la Qualité - Non-Conformité - Normes de Qualité - PDCA - Process - Processus - Production - QRQC - Qualité - Qualité de la Production - Quality"
+  },
+  {
+    "fucntion": "Chef d´Équipe Maintenance",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Électromécanique - Machines - Maintenance - Maintenance Corrective - Maintenance Préventive - Production - Qualité"
+  },
+  {
+    "fucntion": "Chargé(e) de Paie",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Communication RH - Gestion de la Paie - HR Access"
+  },
+  {
+    "fucntion": "Commercial",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Communication - Marketing - Prospection - Prospection Commerciale - Vente"
+  },
+  {
+    "fucntion": "Gestionnaire Sinistre",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Comptabilité - Devis - Gestion - Secrétariat"
+  },
+  {
+    "fucntion": "Chargée d´Accueil Anglophone",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Accueil - Accueil Physique - Assistanat - Encaissement - Fiches - Secrétariat"
+  },
+  {
+    "fucntion": "Magasinier",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Vente"
+  },
+  {
+    "fucntion": "Chef Boucher",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Boucherie - Cuisine - Hôtellerie - Restauration"
+  },
+  {
+    "fucntion": "Chef de Partie Garde Manger",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Cuisine - Hôtellerie - Restauration - Tourisme"
+  },
+  {
+    "fucntion": "Animateur de Vente",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Négociation - Techniques de Vente - Vente"
+  },
+  {
+    "fucntion": "Logistic Associate",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Delivery - Freight - Handling"
+  },
+  {
+    "fucntion": "Chargé de Méthodes",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Fabrication - Machines - Maintenance - Processus - Production - Qualité"
+  },
+  {
+    "fucntion": "Chargés des Bases de Données",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Secrétariat"
+  },
+  {
+    "fucntion": "Chef de Partie Boucherie",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Boucherie - Cuisine"
+  },
+  {
+    "fucntion": "Chef Comptable (Filiales)",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Comptabilité - États Financiers - Finance - Gestion"
+  },
+  {
+    "fucntion": "Responsable Google Ads",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Communication - Copywriting - Facebook Ads - Marketing - Publicité - Rédaction"
+  },
+  {
+    "fucntion": "Comptable",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Gestion"
+  },
+  {
+    "fucntion": "Chef de Réception Marchandise",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion d'Équipe - Gestion des Stocks - Gestion Logistique - Stockage - Stocks"
+  },
+  {
+    "fucntion": "Chef de Rayon spécialisé (Électricité et Luminaire)",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion Commerciale - Gestion d'Équipe - Vente"
+  },
+  {
+    "fucntion": "Technicien Carrosserie et Peinture Automobile",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Maintenance - Production - Qualité - Réparation"
+  },
+  {
+    "fucntion": "Mixologue Artiste",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Cuisine - Organisation d'Événements"
+  },
+  {
+    "fucntion": "Sport Facility Manager",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Entretien - Maintenance - Production - Qualité"
+  },
+  {
+    "fucntion": "Juriste Senior Anglophone",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Contentieux - Droit - Risques Juridiques"
+  },
+  {
+    "fucntion": "Chargée d´Accueil Anglophone",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Accueil - Accueil Physique - Assistanat - Encaissement - Fiches - Secrétariat"
+  },
+  {
+    "fucntion": "Pharmacien Responsable Qualité Produit",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Amélioration Continue - Assurance Qualité - Biochimie - BPF - Chimie - Entreposage - Gestion de la Qualité - Industrie - Maintenance - Processus - Production - Qualité - Santé"
+  },
+  {
+    "fucntion": "Magasinier/logistique Senior Officer",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Distribution - Flux Logistiques - Gestion des Stocks - Importation - Stocks - Transport"
+  },
+  {
+    "fucntion": "Hôtesse D´Accueil Anglophone Hôtel 5*",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Accueil - Assistance - Hôtellerie - Restauration - Sécurité - Surveillance - Tourisme"
+  },
+  {
+    "fucntion": "Coach Fitness",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Tourisme"
+  },
+  {
+    "fucntion": "Agents de Sécurité Anglophones",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Nettoyage - Sécurité - Surveillance"
+  },
+  {
+    "fucntion": "Ingénieur Civil Junior",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "AUTOCAD - Conception AUTOCAD"
+  },
+  {
+    "fucntion": "Superviseur, Qualité, HSE -Projet de Station de Dessalement",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion de la Qualité - Maintenance - Production - Qualité"
+  },
+  {
+    "fucntion": "Responsable Appels d´Offres H/F",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Comptabilité - Dépôt - Finance - Gestion - Techniques de Gestion - Vente"
+  },
+  {
+    "fucntion": "Technicien Laboratoire",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Équipement - Étalonnage - Maintenance - Normes de Qualité - Qualité"
+  },
+  {
+    "fucntion": "Quality Specialist",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assurance Qualité - BPF - Emballage - Fabrication - Machines - Maintenance - Processus - Production - Qualité - Quality"
+  },
+  {
+    "fucntion": "Assistants Magasin",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Achats - Gestion des Stocks - Inventaire - Stockage - Stocks - Transport"
+  },
+  {
+    "fucntion": "Responsable Opérationnel Senior",
+    "niveauEtude": "Bac+4",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Gestion - Leadership - Management - Management Stratégique"
+  },
+  {
+    "fucntion": "Conseiller Commercial",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Suivi Commercial - Vente"
+  },
+  {
+    "fucntion": "Operations Manager",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Gestion - Gestion Stratégique - Leadership - Management - Planification"
+  },
+  {
+    "fucntion": "Product Cost Controlling Associate / Specialist",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Controlling - Cost Accounting - Finance - Gestion"
+  },
+  {
+    "fucntion": "Responsable HSE",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Maintenance - Processus - Production - Protection Incendie - Qualité"
+  },
+  {
+    "fucntion": "Responsable Appels d´Offres H/F",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Comptabilité - Dépôt - Finance - Gestion - Techniques de Gestion - Vente"
+  },
+  {
+    "fucntion": "Chef de Site de Copropriété",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion - Management - Planification"
+  },
+  {
+    "fucntion": "Assistant Comptable",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Fiscalité - Gestion - Gestion des Créances - Gestion des Factures"
+  },
+  {
+    "fucntion": "Assistante Commerciale",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Devis - Vente"
+  },
+  {
+    "fucntion": "Conducteur de Travaux d´Eléctricité",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Maintenance - Production - Qualité"
+  },
+  {
+    "fucntion": "Conseiller en Assurance",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Commercialisation - Prospection - Techniques de Vente - Vente"
+  },
+  {
+    "fucntion": "Guard/Driver Anglophone",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Sécurité"
+  },
+  {
+    "fucntion": "Media Planner H/F",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Communication - Médias"
+  },
+  {
+    "fucntion": "Développeur C#/.NET Core",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "API - BOOTSTRAP - C# - CSS3 - ENTITY FRAMEWORK - JAVASCRIPT - JQUERY - MVC - NET - SQL"
+  },
+  {
+    "fucntion": "Analyste de Crédit",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Gestion"
+  },
+  {
+    "fucntion": "Chargé(e) d´Administration des Ventes",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Administration - Assistanat - Comptabilité - Dossiers - Expédition - Finance - Gestion - Réception - Secrétariat"
+  },
+  {
+    "fucntion": "Gestionnaire de Recouvrement",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Gestion - Recouvrement"
+  },
+  {
+    "fucntion": "Chargé de Recouvrement par Téléphone",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Gestion - Recouvrement"
+  },
+  {
+    "fucntion": "Enseignant d´Anglais",
+    "niveauEtude": "Bac+4",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Enseignement - Formation"
+  },
+  {
+    "fucntion": "Enseignant de Français H/F",
+    "niveauEtude": "Bac+4",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Enseignement"
+  },
+  {
+    "fucntion": "Ingénieur Génie Civil",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "AUTOCAD - DU - Maintenance - Modélisation - Production - Qualité"
+  },
+  {
+    "fucntion": "Commis Sommelier",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Hôtellerie - Restauration - Tourisme"
+  },
+  {
+    "fucntion": "Assistant(e) Administratif(ve) Anglophone",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Assistanat - Bureautique - Dossiers - Secrétariat"
+  },
+  {
+    "fucntion": "Acheteur Anglophone (H/F)",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Achats - Gestion des Achats - Import - Transport"
+  },
+  {
+    "fucntion": "Agent d´Accueil",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Administration - Assistanat - Pack Office - Secrétariat"
+  },
+  {
+    "fucntion": "Chargé(e) de la Gestion des Fournisseurs",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Achats - Gestion des Fournisseurs"
+  },
+  {
+    "fucntion": "Commercial Terrain (H/F)",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Négociation - Prospection - Prospection Terrain - Vente"
+  },
+  {
+    "fucntion": "Conseiller de Clientèle -Secteur bancaire-",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Accueil - Vente"
+  },
+  {
+    "fucntion": "Caviste",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Gestion Hôtelière - Tourisme"
+  },
+  {
+    "fucntion": "Aide Comptable",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Comptabilité - Finance - Gestion"
+  },
+  {
+    "fucntion": "Agent de Service",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "BTP"
+  },
+  {
+    "fucntion": "Commercial B2B",
+    "niveauEtude": "Bac+4",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Négociation - Recouvrement - Vente"
+  },
+  {
+    "fucntion": "Mécanicien Automobile/ Pneumatique",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Maintenance - Maintenance Pneumatique - Pneumatique - Production - Qualité"
+  },
+  {
+    "fucntion": "Ingénieur(e) D’Etudes en Génie Civil / Hydraulique",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Dimensionnement - Hydraulique"
+  },
+  {
+    "fucntion": "Ingénieur(e) D’Etudes en Génie Civil / Ouvrage D´art",
+    "niveauEtude": "Bac+5 et plus",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Dimensionnement"
+  },
+  {
+    "fucntion": "Technicien de Maintenance Industrielle",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "Agroalimentaire - Électrotechnique - Lubrification - Machines - Maintenance - Maintenance Corrective - Maintenance Électrotechnique - Maintenance Industrielle - Process - Processus - Production - Qualité"
+  },
+  {
+    "fucntion": "Technicien Sertisseur en Agro-Alimentaire",
+    "niveauEtude": "Bac",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "DU - Emballage - Hygiène - Machines - Maintenance - Maintenance Curative - Maintenance Préventive - Non-Conformité - Process - Process de Production - Processus - Production - Productivité - Qualité - Sécurité Alimentaire"
+  },
+  {
+    "fucntion": "Infirmière de Travail",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "Infirmerie - Intervention Médicale - Santé - Soins Infirmiers - Soins Médicaux"
+  },
+  {
+    "fucntion": "OBJECTIVE-C Developer (M/F)",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 5 ans et 10 ans",
+    "activity": "ANDROID - APP - COCOA - CSS - CVS - EDGE - GIT - HTML - JAVASCRIPT - JQUERY - JSON - LINUX - MAC - MERCURIAL - OSX - REST - SWIFT - XML"
+  },
+  {
+    "fucntion": "Consultant SAP FI-CO/PS (H/F)",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "Expérience entre 2 ans et 5 ans",
+    "activity": "SAP"
+  }
+]
