@@ -1,62 +1,130 @@
 [
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : surveillant",
-    "activity": "Secteur d'activité : Services autres",
-    "niveauEtude": "Niveau d’étude demandé : Bac+2"
+    "niveauEtude": "Niveau d’étude demandé : Bac+2",
+    "jobTitle": "Fonction : surveillant",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Services",
+      "autres"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : Magasinier",
-    "activity": "Secteur d'activité : Industrie, production, fabrication, autres",
-    "niveauEtude": "Niveau d’étude demandé : Bac+3"
+    "niveauEtude": "Niveau d’étude demandé : Bac+3",
+    "jobTitle": "Fonction : Magasinier",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Industrie",
+      "production",
+      "fabrication",
+      "autres"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : Assistante Administrative",
-    "activity": "Secteur d'activité : Services autres",
-    "niveauEtude": "Niveau d’étude demandé : Bac+2"
+    "niveauEtude": "Niveau d’étude demandé : Bac+2",
+    "jobTitle": "Fonction : Assistante Administrative",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Services",
+      "autres"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : Responsable de Production et Qualité",
-    "activity": "Secteur d'activité : Industrie, production, fabrication, autres",
-    "niveauEtude": "Niveau d’étude demandé : Bac+3"
+    "niveauEtude": "Niveau d’étude demandé : Bac+3",
+    "jobTitle": "Fonction : Responsable de Production et Qualité",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Industrie",
+      "production",
+      "fabrication",
+      "autres"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : Chargé import export",
-    "activity": "Secteur d'activité : Import, export",
-    "niveauEtude": "Niveau d’étude demandé : Bac+3"
+    "niveauEtude": "Niveau d’étude demandé : Bac+3",
+    "jobTitle": "Fonction : Chargé import export",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Import",
+      "export"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : Chargé(e) administration RH",
-    "activity": "Secteur d'activité : Hôtellerie, restauration",
-    "niveauEtude": "Niveau d’étude demandé : Bac+4"
+    "niveauEtude": "Niveau d’étude demandé : Bac+4",
+    "jobTitle": "Fonction : Chargé(e) administration RH",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Hôtellerie",
+      "restauration"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : Chargée(e) Développement RH",
-    "activity": "Secteur d'activité : Hôtellerie, restauration",
-    "niveauEtude": "Niveau d’étude demandé : Bac+4"
+    "niveauEtude": "Niveau d’étude demandé : Bac+4",
+    "jobTitle": "Fonction : Chargée(e) Développement RH",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Hôtellerie",
+      "restauration"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 5 à 10 ans",
-    "function": "Fonction : Responsable Communication",
-    "activity": "Secteur d'activité : Évènementiel, hôte(sse), accueil",
-    "niveauEtude": "Niveau d’étude demandé : Bac+5 et plus"
+    "niveauEtude": "Niveau d’étude demandé : Bac+5 et plus",
+    "jobTitle": "Fonction : Responsable Communication",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Évènementiel",
+      "hôte(sse)",
+      "accueil"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 1 à 3 ans",
-    "function": "Fonction : téléconseiller",
-    "activity": "Secteur d'activité : Centres d´appel, hotline, call center",
-    "niveauEtude": "Niveau d’étude demandé : Bac+2"
+    "niveauEtude": "Niveau d’étude demandé : Bac+2",
+    "jobTitle": "Fonction : téléconseiller",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Centres",
+      "d´appel",
+      "hotline",
+      "call",
+      "center"
+    ]
   },
   {
     "experienceLevel": "Expérience requise : 5 à 10 ans",
-    "function": "Fonction : Ticketing Manager",
-    "activity": "Secteur d'activité : Administration publique",
-    "niveauEtude": "Niveau d’étude demandé : Bac+5 et plus"
+    "niveauEtude": "Niveau d’étude demandé : Bac+5 et plus",
+    "jobTitle": "Fonction : Ticketing Manager",
+    "skills": [
+      "Secteur",
+      "d\u0027activité",
+      ":",
+      "Administration",
+      "publique"
+    ]
   }
 ]

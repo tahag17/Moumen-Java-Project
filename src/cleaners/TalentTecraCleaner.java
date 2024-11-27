@@ -25,11 +25,11 @@ public class TalentTecraCleaner {
         while (elementsIterator.hasNext()) {
             JsonNode job = elementsIterator.next();
 
-            // Nettoyer et formater les champs nécessaires
-            String experienceLevel = formatExperienceLevel(job.get("experienceLevel").asText());
-            String niveauEtude = formatNiveauEtude(job.get("niveauEtude").asText());
-            String function = formatFunction(job.get("function").asText());
-            String activity = formatActivity(job.get("activity").asText());
+            // Utiliser la méthode sécurisée pour obtenir les valeurs
+            String experienceLevel = formatExperienceLevel(getSafeText(job, "experienceLevel"));
+            String niveauEtude = formatNiveauEtude(getSafeText(job, "niveauEtude"));
+            String function = formatFunction(getSafeText(job, "jobTitle")); // Changed to jobTitle here
+            String activity = formatActivity(getSafeText(job, "skills"));
 
             // Créer un nouvel ObjectNode pour chaque job nettoyé
             ObjectNode cleanedJob = objectMapper.createObjectNode();
@@ -37,7 +37,7 @@ public class TalentTecraCleaner {
             // Ajouter les champs nettoyés au nouvel ObjectNode
             cleanedJob.put("niveauExperience", experienceLevel);
             cleanedJob.put("niveauEtude", niveauEtude);
-            cleanedJob.put("funtion", function);
+            cleanedJob.put("funtion", function); // Ensure correct spelling if needed
             cleanedJob.put("activity", activity);
 
             // Ajouter le job nettoyé à la liste
@@ -46,6 +46,12 @@ public class TalentTecraCleaner {
 
         // Sauvegarder les données nettoyées dans un nouveau fichier JSON
         objectMapper.writeValue(new File(outputFile), cleanedData);
+    }
+
+    // Méthode pour obtenir le texte de manière sécurisée
+    private static String getSafeText(JsonNode node, String fieldName) {
+        JsonNode fieldNode = node.get(fieldName);
+        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText() : "";  // Retourne une chaîne vide si le champ est manquant ou null
     }
 
     // Formater le champ "experienceLevel"
@@ -65,18 +71,18 @@ public class TalentTecraCleaner {
     }
 
     // Formater le champ "function"
-    private static String formatFunction(String function) {
-        if (function != null && function.contains("Fonction :")) {
-            return function.replace("Fonction :", "").trim();
+    private static String formatFunction(String jobTitle) {
+        if (jobTitle != null && jobTitle.contains("Fonction :")) {
+            return jobTitle.replace("Fonction :", "").trim(); // Extract function after "Fonction :"
         }
-        return function != null ? function.trim() : "";
+        return jobTitle != null ? jobTitle.trim() : "";
     }
 
     // Formater le champ "activity"
-    private static String formatActivity(String activity) {
-        if (activity != null && activity.contains("Secteur d’activité :")) {
-            return activity.replace("Secteur d’activité :", "").trim();
+    private static String formatActivity(String skills) {
+        if (skills != null && skills.contains("Secteur d’activité :")) {
+            return skills.replace("Secteur d’activité :", "").trim();
         }
-        return activity != null ? activity.trim() : "";
+        return skills != null ? skills.trim() : "";
     }
 }
