@@ -1,5 +1,7 @@
 package job;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.util.Objects;
@@ -10,17 +12,22 @@ import java.util.Objects;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class JobDetails {
     private Integer id;
+    @JsonProperty("niveauExperience")
     private String experienceLevel;
+    @JsonProperty("niveauEtude")
     private String niveauEtude;
-    private String function;
-    private String activity;
+    @JsonProperty("function")
+    private String jobTitle;
+    @JsonProperty("activity")
+    private String skills;
 
-    public JobDetails(String experienceLevel, String function, String activity, String niveauEtude) {
+    public JobDetails(String experienceLevel, String jobTitle, String skills, String niveauEtude) {
         this.experienceLevel = experienceLevel;
-        this.function = function;
-        this.activity = activity;
+        this.jobTitle = jobTitle;
+        this.skills = skills;
         this.niveauEtude = niveauEtude;
     }
 

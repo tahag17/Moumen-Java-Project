@@ -46,7 +46,7 @@ public class EmploiMaCleaner {
 
                             // Ajouter l'entrée nettoyée à la liste des données valides
                             ObjectNode cleanedJob = objectMapper.createObjectNode();
-                            cleanedJob.put("fucntion", cleanedTitle);
+                            cleanedJob.put("function", cleanedTitle);
                             // Pas de champ location
                             cleanedJob.put("niveauEtude", niveauEtude.trim());
                             cleanedJob.put("niveauExperience", niveauExperience.trim());
