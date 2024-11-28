@@ -10,7 +10,7 @@ public class TestMainMethod {
     public static void main(String[] args) {
         try {
             // Path to your JSON file
-            File jsonFile = new File(Config.BASE_PATH+"emploimacleaned_data.json");
+            File jsonFile = new File(Config.BASE_PATH+"talenttectracleaned_data.json");
 
             // Instantiate the mapper
             JobDetailsMapper mapper = new JobDetailsMapper();

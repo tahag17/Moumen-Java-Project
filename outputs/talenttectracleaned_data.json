@@ -3,60 +3,60 @@
     "niveauExperience": "1",
     "niveauEtude": "Bac+1",
     "function": "Receptionniste",
-    "activity": "Hôtellerie-restauration"
+    "activity": "Hôtellerie - restauration"
   },
   {
     "niveauExperience": "3",
     "niveauEtude": "Bac+2",
     "function": "Technicien des imprimantes marrakech",
-    "activity": "Distribution-vente-commerce-de-gros"
+    "activity": "Distribution - vente - commerce - de - gros"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+2",
     "function": "Technicien des imprimantes-Casablanca",
-    "activity": "Distribution-vente-commerce-de-gros"
+    "activity": "Distribution - vente - commerce - de - gros"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+2",
     "function": "Assistante logistique",
-    "activity": "Industrie-production-fabrication-autres"
+    "activity": "Industrie - production - fabrication - autres"
   },
   {
     "niveauExperience": "3",
     "niveauEtude": "Bac+3",
     "function": "Juriste Confirmé",
-    "activity": "Distribution-vente-commerce-de-gros"
+    "activity": "Distribution - vente - commerce - de - gros"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+2",
     "function": "surveillant",
-    "activity": "Services-autres"
+    "activity": "Services - autres"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+3",
     "function": "Magasinier",
-    "activity": "Industrie-production-fabrication-autres"
+    "activity": "Industrie - production - fabrication - autres"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+2",
     "function": "Assistante Administrative",
-    "activity": "Services-autres"
+    "activity": "Services - autres"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+3",
     "function": "Responsable de Production et Qualité",
-    "activity": "Industrie-production-fabrication-autres"
+    "activity": "Industrie - production - fabrication - autres"
   },
   {
     "niveauExperience": "1",
     "niveauEtude": "Bac+3",
     "function": "Chargé import export",
-    "activity": "Import-export"
+    "activity": "Import - export"
   }
 ]
