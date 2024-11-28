@@ -83,9 +83,10 @@ public class RekrutCleaner {
             // Ajouter les données nettoyées
             ObjectNode cleanedJob = objectMapper.createObjectNode();
             cleanedJob.put("function", jobTitle);
+            cleanedJob.put("niveauEtude", educationLevel);
             cleanedJob.put("niveauExperience", experience);
             cleanedJob.put("activity", activity);
-            cleanedJob.put("niveauEtude", educationLevel);
+
 
             // Ajouter le job nettoyé à la liste
             cleanedData.add(cleanedJob);

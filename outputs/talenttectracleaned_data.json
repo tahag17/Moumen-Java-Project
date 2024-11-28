@@ -1,62 +1,62 @@
 [
   {
-    "niveauExperience": "1",
-    "niveauEtude": "Bac+1",
-    "function": "Receptionniste",
+    "function": "Chargéé de paie",
+    "niveauEtude": "Bac+5",
+    "niveauExperience": "5",
+    "activity": "Services - autres"
+  },
+  {
+    "function": "Agent d'inventaire PDR",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "3",
+    "activity": "Transports - logistique - services - postaux"
+  },
+  {
+    "function": "Chef de stewarding",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "10",
     "activity": "Hôtellerie - restauration"
   },
   {
-    "niveauExperience": "3",
-    "niveauEtude": "Bac+2",
+    "function": "Receptionniste",
+    "niveauEtude": "Bac+1",
+    "niveauExperience": "1",
+    "activity": "Hôtellerie - restauration"
+  },
+  {
     "function": "Technicien des imprimantes marrakech",
-    "activity": "Distribution - vente - commerce - de - gros"
-  },
-  {
-    "niveauExperience": "1",
     "niveauEtude": "Bac+2",
-    "function": "Technicien des imprimantes-Casablanca",
-    "activity": "Distribution - vente - commerce - de - gros"
-  },
-  {
-    "niveauExperience": "1",
-    "niveauEtude": "Bac+2",
-    "function": "Assistante logistique",
-    "activity": "Industrie - production - fabrication - autres"
-  },
-  {
     "niveauExperience": "3",
-    "niveauEtude": "Bac+3",
-    "function": "Juriste Confirmé",
     "activity": "Distribution - vente - commerce - de - gros"
   },
   {
-    "niveauExperience": "1",
+    "function": "Technicien des imprimantes-Casablanca",
     "niveauEtude": "Bac+2",
+    "niveauExperience": "1",
+    "activity": "Distribution - vente - commerce - de - gros"
+  },
+  {
+    "function": "Assistante logistique",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "1",
+    "activity": "Industrie - production - fabrication - autres"
+  },
+  {
+    "function": "Juriste Confirmé",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "3",
+    "activity": "Distribution - vente - commerce - de - gros"
+  },
+  {
     "function": "surveillant",
-    "activity": "Services - autres"
-  },
-  {
-    "niveauExperience": "1",
-    "niveauEtude": "Bac+3",
-    "function": "Magasinier",
-    "activity": "Industrie - production - fabrication - autres"
-  },
-  {
-    "niveauExperience": "1",
     "niveauEtude": "Bac+2",
-    "function": "Assistante Administrative",
+    "niveauExperience": "1",
     "activity": "Services - autres"
   },
   {
-    "niveauExperience": "1",
+    "function": "Magasinier",
     "niveauEtude": "Bac+3",
-    "function": "Responsable de Production et Qualité",
+    "niveauExperience": "1",
     "activity": "Industrie - production - fabrication - autres"
-  },
-  {
-    "niveauExperience": "1",
-    "niveauEtude": "Bac+3",
-    "function": "Chargé import export",
-    "activity": "Import - export"
   }
 ]

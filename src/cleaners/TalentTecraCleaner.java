@@ -40,9 +40,9 @@ public class TalentTecraCleaner {
             ObjectNode cleanedJob = objectMapper.createObjectNode();
 
             // Ajouter les champs nettoyés au nouvel ObjectNode
-            cleanedJob.put("niveauExperience", experienceLevel);
-            cleanedJob.put("niveauEtude", niveauEtude);
             cleanedJob.put("function", function);
+            cleanedJob.put("niveauEtude", niveauEtude);
+            cleanedJob.put("niveauExperience", experienceLevel);
             cleanedJob.put("activity", activity);
 
             // Ajouter le job nettoyé à la liste
