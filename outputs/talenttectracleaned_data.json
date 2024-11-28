@@ -1,62 +1,62 @@
 [
   {
-    "niveauExperience": "1 à 3 ans",
+    "niveauExperience": "1",
+    "niveauEtude": "Bac+1",
+    "function": "Receptionniste",
+    "activity": "Hôtellerie-restauration"
+  },
+  {
+    "niveauExperience": "3",
     "niveauEtude": "Bac+2",
-    "funtion": "surveillant",
-    "activity": ""
+    "function": "Technicien des imprimantes marrakech",
+    "activity": "Distribution-vente-commerce-de-gros"
   },
   {
-    "niveauExperience": "1 à 3 ans",
-    "niveauEtude": "Bac+3",
-    "funtion": "Magasinier",
-    "activity": ""
-  },
-  {
-    "niveauExperience": "1 à 3 ans",
+    "niveauExperience": "1",
     "niveauEtude": "Bac+2",
-    "funtion": "Assistante Administrative",
-    "activity": ""
+    "function": "Technicien des imprimantes-Casablanca",
+    "activity": "Distribution-vente-commerce-de-gros"
   },
   {
-    "niveauExperience": "1 à 3 ans",
-    "niveauEtude": "Bac+3",
-    "funtion": "Responsable de Production et Qualité",
-    "activity": ""
-  },
-  {
-    "niveauExperience": "1 à 3 ans",
-    "niveauEtude": "Bac+3",
-    "funtion": "Chargé import export",
-    "activity": ""
-  },
-  {
-    "niveauExperience": "1 à 3 ans",
-    "niveauEtude": "Bac+4",
-    "funtion": "Chargé(e) administration RH",
-    "activity": ""
-  },
-  {
-    "niveauExperience": "1 à 3 ans",
-    "niveauEtude": "Bac+4",
-    "funtion": "Chargée(e) Développement RH",
-    "activity": ""
-  },
-  {
-    "niveauExperience": "5 à 10 ans",
-    "niveauEtude": "Bac+5 et plus",
-    "funtion": "Responsable Communication",
-    "activity": ""
-  },
-  {
-    "niveauExperience": "1 à 3 ans",
+    "niveauExperience": "1",
     "niveauEtude": "Bac+2",
-    "funtion": "téléconseiller",
-    "activity": ""
+    "function": "Assistante logistique",
+    "activity": "Industrie-production-fabrication-autres"
   },
   {
-    "niveauExperience": "5 à 10 ans",
-    "niveauEtude": "Bac+5 et plus",
-    "funtion": "Ticketing Manager",
-    "activity": ""
+    "niveauExperience": "3",
+    "niveauEtude": "Bac+3",
+    "function": "Juriste Confirmé",
+    "activity": "Distribution-vente-commerce-de-gros"
+  },
+  {
+    "niveauExperience": "1",
+    "niveauEtude": "Bac+2",
+    "function": "surveillant",
+    "activity": "Services-autres"
+  },
+  {
+    "niveauExperience": "1",
+    "niveauEtude": "Bac+3",
+    "function": "Magasinier",
+    "activity": "Industrie-production-fabrication-autres"
+  },
+  {
+    "niveauExperience": "1",
+    "niveauEtude": "Bac+2",
+    "function": "Assistante Administrative",
+    "activity": "Services-autres"
+  },
+  {
+    "niveauExperience": "1",
+    "niveauEtude": "Bac+3",
+    "function": "Responsable de Production et Qualité",
+    "activity": "Industrie-production-fabrication-autres"
+  },
+  {
+    "niveauExperience": "1",
+    "niveauEtude": "Bac+3",
+    "function": "Chargé import export",
+    "activity": "Import-export"
   }
 ]

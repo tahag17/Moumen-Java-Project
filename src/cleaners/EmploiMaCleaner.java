@@ -8,6 +8,10 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
 
 public class EmploiMaCleaner {
 
@@ -29,32 +33,41 @@ public class EmploiMaCleaner {
             String title = job.get("title").asText();
             if (title != null && title.contains("-")) {
                 String[] parts = title.split(" - ");
-                String cleanedTitle = parts[0].trim();
-                // Location est supprimé ici
+                String cleanedTitle = parts[0].trim(); // Location est supprimé ici
 
                 // Nettoyage du niveau d'étude (acceptation de plusieurs niveaux, Bac+N ou Bac seul)
                 String niveauEtude = job.get("niveauEtude").asText();
                 if (niveauEtude != null && isValidNiveauEtude(niveauEtude)) {
 
-                    // Nettoyage du niveau d'expérience (format "Expérience entre X ans et Y ans")
+                    // Nettoyage du niveau d'expérience (extraction du premier entier trouvé)
                     String niveauExperience = job.get("niveauExperience").asText();
-                    if (niveauExperience != null && niveauExperience.matches("Expérience entre \\d+ ans et \\d+ ans")) {
+                    if (niveauExperience != null) {
+                        // Utiliser une expression régulière pour trouver le premier entier dans la chaîne
+                        Pattern pattern = Pattern.compile("\\d+");  // Expression régulière pour un entier
+                        Matcher matcher = pattern.matcher(niveauExperience);
 
-                        // Nettoyage des compétences (s'assurer qu'elles ne sont pas vides)
-                        String competence = job.get("competence").asText();
-                        if (competence != null && !competence.isEmpty()) {
-
-                            // Ajouter l'entrée nettoyée à la liste des données valides
-                            ObjectNode cleanedJob = objectMapper.createObjectNode();
-                            cleanedJob.put("function", cleanedTitle);
-                            // Pas de champ location
-                            cleanedJob.put("niveauEtude", niveauEtude.trim());
-                            cleanedJob.put("niveauExperience", niveauExperience.trim());
-                            cleanedJob.put("activity", competence.trim());
-
-                            // Ajouter le job nettoyé à la liste
-                            cleanedData.add(cleanedJob);
+                        if (matcher.find()) {
+                            niveauExperience = matcher.group();  // Retourner le premier entier trouvé
+                        } else {
+                            niveauExperience = "0";  // Valeur par défaut si aucun entier n'est trouvé
                         }
+                    } else {
+                        niveauExperience = "0";  // Si le champ niveauExperience est null, définir une valeur par défaut
+                    }
+
+                    // Nettoyage des compétences (s'assurer qu'elles ne sont pas vides)
+                    String competence = job.get("competence").asText();
+                    if (competence != null && !competence.isEmpty()) {
+
+                        // Ajouter l'entrée nettoyée à la liste des données valides
+                        ObjectNode cleanedJob = objectMapper.createObjectNode();
+                        cleanedJob.put("function", cleanedTitle);
+                        cleanedJob.put("niveauEtude", niveauEtude.trim());
+                        cleanedJob.put("niveauExperience", niveauExperience.trim());
+                        cleanedJob.put("activity", competence.trim());
+
+                        // Ajouter le job nettoyé à la liste
+                        cleanedData.add(cleanedJob);
                     }
                 }
             }
@@ -64,11 +77,12 @@ public class EmploiMaCleaner {
         objectMapper.writeValue(new File(outputFile), cleanedData);
     }
 
-    // Méthode de validation pour le champ niveauEtude (accepte plusieurs niveaux)
+    // Méthode de validation pour le champ niveauEtude (accepte un seul niveau d'étude, "et plus" non autorisé)
     private static boolean isValidNiveauEtude(String niveauEtude) {
-        // Expression régulière qui accepte Bac+N, Bac ou plusieurs niveaux séparés par une virgule
-        String regex = "(Bac(\\+\\d+)?)(,\\s?Bac(\\+\\d+)?)*\\s?(et plus)?";
-        return niveauEtude.matches(regex);
-    }
+        // Expression régulière qui accepte uniquement "Bac" ou "Bac+N" sans "et plus"
+        String regex = "Bac(\\+\\d+)?";  // Permet "Bac" ou "Bac+N" (N étant un entier)
 
+        // Vérifier si le niveau d'étude correspond à l'expression régulière et s'il ne contient pas "et plus"
+        return niveauEtude.matches(regex) && !niveauEtude.toLowerCase().contains("et plus");
+    }
 }

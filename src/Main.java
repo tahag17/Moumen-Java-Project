@@ -27,13 +27,13 @@ public class Main {
 
         try {
             // Scraping et nettoyage (Statique)
-//            rekrut.scrap();
-//            cleaningService.CleanData(rekrut, "Rekrut.json", "Rekrutcleaned_data.json");
+           rekrut.scrap();
+          cleaningService.CleanData(rekrut, "rekrut.json", "rekrutcleaned_data.json");
 
-//            emploiMa.scrap();
-//            cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploimacleaned_data.json");
-//
-            talentTectra.scrap();
+            emploiMa.scrap();
+           cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploimacleaned_data.json");
+
+           talentTectra.scrap();
             cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
         } catch (IOException e) {
             System.err.println("Erreur lors de l'exécution : " + e.getMessage());

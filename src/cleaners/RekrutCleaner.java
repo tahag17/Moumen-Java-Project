@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RekrutCleaner {
 
@@ -36,12 +38,22 @@ public class RekrutCleaner {
                 jobTitle = title != null ? title.replaceAll("[^\\w\\s]", "").trim() : null;
             }
 
-            // Nettoyer le champ "experience"
             String experience = job.get("experience").asText();
-            if (containsMultipleMoins(experience)) {
-                continue; // Si "Moins" apparaît plus d'une fois, ignorer cette entrée
+
+            // Extraire le premier entier rencontré dans la chaîne
+            if (experience != null && !experience.isEmpty()) {
+                // Utiliser une expression régulière pour trouver le premier entier
+                Pattern pattern = Pattern.compile("\\d+");  // Expression régulière pour un entier
+                Matcher matcher = pattern.matcher(experience);
+
+                if (matcher.find()) {
+                    experience = matcher.group();  // Si un entier est trouvé, le mettre dans "experience"
+                } else {
+                    experience = "0";  // Valeur par défaut si aucun entier n'est trouvé
+                }
+            } else {
+                experience = "0";  // Valeur par défaut si la chaîne est vide ou nulle
             }
-            experience = experience != null ? experience.trim() : "Non spécifié";
 
             // Nettoyer le champ "function" en supprimant la chaîne "(metier de)" si elle existe
             String function = job.get("function").asText();
@@ -56,12 +68,16 @@ public class RekrutCleaner {
             String activity = job.get("activity").asText();
             if (activity == null || activity.isEmpty()) {
                 activity = "Non spécifié"; // Valeur par défaut si l'activité est manquante
+            } else {
+                activity = activity.replace("/", "-"); // Remplacer les '/' par des '-'
             }
 
-            // Nettoyer le champ "educationLevel" (conserver même s'il est partiellement malformé)
+            // Nettoyer le champ "educationLevel"
             String educationLevel = job.get("educationLevel").asText();
             if (educationLevel == null || educationLevel.isEmpty()) {
                 educationLevel = "Non spécifié"; // Valeur par défaut si le niveau d'étude est manquant
+            } else {
+                educationLevel = formatNiveauEtude(educationLevel); // Nettoyage du niveau d'étude
             }
 
             // Ajouter les données nettoyées
@@ -77,6 +93,23 @@ public class RekrutCleaner {
 
         // Sauvegarder les données nettoyées dans un nouveau fichier JSON
         objectMapper.writeValue(new File(outputFile), cleanedData);
+    }
+
+
+    private static String formatNiveauEtude(String niveauEtude) {
+        if (niveauEtude != null && !niveauEtude.isEmpty()) {
+            // Expression régulière qui accepte "Bac" ou "Bac+N" (N étant un entier), avec ou sans espace avant le "+"
+            Pattern pattern = Pattern.compile("Bac\\s?\\+?\\d*");  // Permet Bac, Bac+N ou Bac + N (espaces optionnels)
+            Matcher matcher = pattern.matcher(niveauEtude);
+
+            if (matcher.find()) {
+                // Retirer les espaces entre "Bac" et "+" dans le résultat
+                String result = matcher.group();
+                result = result.replaceAll("\\s?\\+", "+");  // Remplacer l'espace avant le "+" par rien
+                return result;  // Retourner le niveau d'étude propre
+            }
+        }
+        return "Non spécifié";  // Valeur par défaut si aucune correspondance n'est trouvée
     }
 
     // Méthode pour vérifier si "Moins" apparaît plus d'une fois dans l'expérience

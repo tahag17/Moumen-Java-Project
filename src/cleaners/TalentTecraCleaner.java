@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TalentTecraCleaner {
 
@@ -28,8 +30,11 @@ public class TalentTecraCleaner {
             // Utiliser la méthode sécurisée pour obtenir les valeurs
             String experienceLevel = formatExperienceLevel(getSafeText(job, "experienceLevel"));
             String niveauEtude = formatNiveauEtude(getSafeText(job, "niveauEtude"));
-            String function = formatFunction(getSafeText(job, "jobTitle")); // Changed to jobTitle here
-            String activity = formatActivity(getSafeText(job, "skills"));
+            String function = formatFunction(getSafeText(job, "jobTitle"));
+            JsonNode skillsNode = job.get("skills");  // Récupérer le tableau des compétences
+
+            // Formater les compétences (en ignorant les 3 premiers éléments et en joignant les autres par un tiret)
+            String activity = formatActivity(skillsNode);
 
             // Créer un nouvel ObjectNode pour chaque job nettoyé
             ObjectNode cleanedJob = objectMapper.createObjectNode();
@@ -37,7 +42,7 @@ public class TalentTecraCleaner {
             // Ajouter les champs nettoyés au nouvel ObjectNode
             cleanedJob.put("niveauExperience", experienceLevel);
             cleanedJob.put("niveauEtude", niveauEtude);
-            cleanedJob.put("funtion", function); // Ensure correct spelling if needed
+            cleanedJob.put("function", function);
             cleanedJob.put("activity", activity);
 
             // Ajouter le job nettoyé à la liste
@@ -51,38 +56,82 @@ public class TalentTecraCleaner {
     // Méthode pour obtenir le texte de manière sécurisée
     private static String getSafeText(JsonNode node, String fieldName) {
         JsonNode fieldNode = node.get(fieldName);
-        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText() : "";  // Retourne une chaîne vide si le champ est manquant ou null
+        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText().trim() : "";  // Retourne une chaîne vide si le champ est manquant ou null
     }
 
-    // Formater le champ "experienceLevel"
+    // Formater le champ "experienceLevel" pour extraire le premier entier
     private static String formatExperienceLevel(String experienceLevel) {
-        if (experienceLevel != null && experienceLevel.contains("Expérience requise")) {
-            return experienceLevel.replace("Expérience requise :", "").trim();
+        if (experienceLevel != null && !experienceLevel.isEmpty() && experienceLevel.contains("Expérience requise")) {
+            experienceLevel = experienceLevel.replace("Expérience requise :", "").trim();
         }
-        return experienceLevel != null ? experienceLevel.trim() : "";
+        return extractFirstInteger(experienceLevel);
     }
 
-    // Formater le champ "niveauEtude"
+    // Formater le champ "niveauEtude" pour accepter Bac, Bac+N ou Bac et plus
     private static String formatNiveauEtude(String niveauEtude) {
-        if (niveauEtude != null && niveauEtude.contains("Niveau d’étude demandé")) {
-            return niveauEtude.replace("Niveau d’étude demandé :", "").trim();
+        if (niveauEtude != null && !niveauEtude.isEmpty()) {
+            // Supprimer "et plus" s'il est présent
+            niveauEtude = niveauEtude.replaceAll("\\s?et plus", "").trim();
+
+            // Vérifier si le niveau d'étude est Bac seul ou Bac+N
+            if (niveauEtude.toLowerCase().contains("bac")) {
+                // Si Bac seul
+                if (niveauEtude.equalsIgnoreCase("bac")) {
+                    return "Bac";  // Retourner simplement Bac
+                } else {
+                    // Extraire le niveau Bac+N, si présent
+                    Pattern pattern = Pattern.compile("Bac\\+\\d+");
+                    Matcher matcher = pattern.matcher(niveauEtude);
+
+                    if (matcher.find()) {
+                        return matcher.group();  // Retourner Bac+N
+                    }
+                }
+            }
         }
-        return niveauEtude != null ? niveauEtude.trim() : "";
+        return "Non spécifié";  // Valeur par défaut si aucun format valide n'est trouvé
     }
 
-    // Formater le champ "function"
+    // Formater le champ "function" pour extraire la fonction sans la partie "Fonction :"
     private static String formatFunction(String jobTitle) {
-        if (jobTitle != null && jobTitle.contains("Fonction :")) {
-            return jobTitle.replace("Fonction :", "").trim(); // Extract function after "Fonction :"
+        if (jobTitle != null && !jobTitle.isEmpty() && jobTitle.contains("Fonction :")) {
+            jobTitle = jobTitle.replace("Fonction :", "").trim();  // Extraire la fonction après "Fonction :"
         }
-        return jobTitle != null ? jobTitle.trim() : "";
+        return jobTitle.isEmpty() ? "Non spécifié" : jobTitle;
     }
 
-    // Formater le champ "activity"
-    private static String formatActivity(String skills) {
-        if (skills != null && skills.contains("Secteur d’activité :")) {
-            return skills.replace("Secteur d’activité :", "").trim();
+    // Méthode de nettoyage pour le champ "skills"
+    private static String formatActivity(JsonNode skillsNode) {
+        if (skillsNode != null && skillsNode.isArray()) {
+            int size = skillsNode.size();
+
+            // Vérifier si la liste de compétences contient plus de 3 éléments
+            if (size > 3) {
+                StringBuilder cleanedSkills = new StringBuilder();
+
+                // Commencer à partir du 4ème élément (index 3)
+                for (int i = 3; i < size; i++) {
+                    if (i > 3) {
+                        cleanedSkills.append(" - ");  // Ajouter un tiret entre les éléments
+                    }
+                    cleanedSkills.append(skillsNode.get(i).asText().trim());  // Ajouter chaque compétence
+                }
+                return cleanedSkills.toString();  // Retourner les compétences jointes par des tirets
+            }
         }
-        return skills != null ? skills.trim() : "";
+        return "Non spécifié";  // Valeur par défaut si la liste a moins de 4 éléments
+    }
+
+    // Méthode pour extraire le premier entier trouvé dans une chaîne
+    private static String extractFirstInteger(String input) {
+        if (input != null && !input.isEmpty()) {
+            Pattern pattern = Pattern.compile("\\d+");  // Expression régulière pour un entier
+            Matcher matcher = pattern.matcher(input);
+
+            if (matcher.find()) {
+                return matcher.group();  // Retourner le premier entier trouvé
+            }
+        }
+        return "Non spécifié";  // Valeur par défaut si aucun entier n'est trouvé
     }
 }
