@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class Rekrut {
     private static final Logger LOGGER = Logger.getLogger(Rekrut.class.getName());
     private static final int MAX_RETRIES = 3; // Retry up to 3 times on timeout
@@ -40,7 +41,6 @@ public class Rekrut {
                 }
             }
 
-            // Create list to hold job data
             List<Job> jobList = new ArrayList<>();
 
             while (hasNextPage) {
@@ -85,7 +85,7 @@ public class Rekrut {
                         continue;
                     }
 
-                    // Create a Job object and add it to the list
+                    // Create a h object and add it to the list
                     Job jobObject = new Job(title, experience, fonction, activity, niveauEtude);
                     jobList.add(jobObject);
                 }
@@ -133,7 +133,6 @@ public class Rekrut {
             this.educationLevel = educationLevel;
         }
 
-        // Getters and setters for Gson serialization (optional, depends on your requirements)
         public String getTitle() {
             return title;
         }

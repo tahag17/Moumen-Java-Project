@@ -34,8 +34,7 @@ public class JobDetails {
     @JsonDeserialize(using = ActivityDeserializer.class)
     private List<String> skills;
 
-    // Constructor for easier initialization
-    public JobDetails(String experienceLevel, String jobTitle, String activity, String niveauEtude) {
+        public JobDetails(String experienceLevel, String jobTitle, String activity, String niveauEtude) {
         this.experienceLevel = experienceLevel;
         this.jobTitle = jobTitle;
         this.skills = formatSkills(activity);

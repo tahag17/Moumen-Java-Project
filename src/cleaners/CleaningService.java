@@ -13,13 +13,11 @@ public class CleaningService {
         File inputFile = new File(Config.BASE_PATH + inputFileName);
         File outputFile = new File(Config.BASE_PATH + outputFileName);
 
-        // Check if the input file exists
-        if (!inputFile.exists()) {
+                if (!inputFile.exists()) {
             throw new IOException("Input file " + inputFileName + " not found.");
         }
 
-        // Perform cleaning based on scraper type
-        if (scraper instanceof Rekrut) {
+                if (scraper instanceof Rekrut) {
             RekrutCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
         } else if (scraper instanceof EmploiMa) {
             EmploiMaCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());

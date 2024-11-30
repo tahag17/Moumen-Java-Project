@@ -21,38 +21,30 @@ public class EmploiMa {
         boolean hasNextPage = true;
         List<Job> jobList = new ArrayList<>();
 
-        // Set the path to the same directory as rekrut.txt
         String outputDirPath = Config.BASE_PATH;
         String outputFilePath = outputDirPath + "emploima_jobs.json";
 
         try {
-            // Loop through pages until there are no more "Next" links
-            while (hasNextPage) {
+                        while (hasNextPage) {
                 String url = baseUrl + "?page=" + currentPage;
                 Document document = Jsoup.connect(url).get();
 
                 System.out.println("Scraping Page: " + currentPage);
 
-                // Select job postings on the current page
-                Elements jobs = document.select(".card-job-detail");
+                                Elements jobs = document.select(".card-job-detail");
 
-                // Loop through each job posting
-                for (Element job : jobs) {
-                    // Extract job title
-                    String title = job.select("h3 > a").text();
+                                for (Element job : jobs) {
+                                        String title = job.select("h3 > a").text();
 
-                    // Extract experience level and competence
-                    String niveauEtude = job.select("ul > li:contains(Niveau d\\´études requis) strong").text();
+                                        String niveauEtude = job.select("ul > li:contains(Niveau d\\´études requis) strong").text();
                     String niveauExperience = job.select("ul > li:contains(Niveau d\\'expérience) strong").text();
                     String competence = job.select("ul > li:contains(Compétences clés) strong").text();
 
-                    // Add job to the list
-                    Job jobObj = new Job(title, niveauEtude, niveauExperience, competence);
+                                        Job jobObj = new Job(title, niveauEtude, niveauExperience, competence);
                     jobList.add(jobObj);
                 }
 
-                // Check if there's a next page
-                Element nextPageLink = document.selectFirst(".pager-next a");
+                                Element nextPageLink = document.selectFirst(".pager-next a");
                 if (nextPageLink != null) {
                     currentPage++;
                 } else {
@@ -60,18 +52,14 @@ public class EmploiMa {
                 }
             }
 
-            // Convert the job list to JSON
-            Gson gson = new Gson();
+                        Gson gson = new Gson();
             String json = gson.toJson(jobList);
 
-            // Ensure directory exists
-            File outputDir = new File(outputDirPath);
+                        File outputDir = new File(outputDirPath);
             if (!outputDir.exists()) {
-                outputDir.mkdirs(); // Create the directory if it doesn't exist
-            }
+                outputDir.mkdirs();             }
 
-            // Write JSON to file
-            try (FileWriter fileWriter = new FileWriter(outputFilePath)) {
+                        try (FileWriter fileWriter = new FileWriter(outputFilePath)) {
                 fileWriter.write(json);
                 System.out.println("Job data saved to " + outputFilePath);
             }
@@ -83,8 +71,7 @@ public class EmploiMa {
 
 
 
-    // Job class to represent a job posting
-    public static class Job {
+        public static class Job {
         private String title;
         private String niveauEtude;
         private String niveauExperience;
@@ -97,8 +84,7 @@ public class EmploiMa {
             this.competence = competence;
         }
 
-        // Getters and setters (if needed)
-        public String getTitle() {
+                public String getTitle() {
             return title;
         }
 
