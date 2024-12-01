@@ -1,0 +1,115 @@
+@relation test
+
+@attribute function {'Conseillers Technicocommerciaux pour un oprateur tlphonique dimanche fixe','Administrative Assistant','Charg de clientle en agence Mohammedia','Tlconseiller en prise des Rdvs Panneau Photovoltaque Dbutant ou Expriment HF','Conseillers Commerciaux pour un nouveau projet Dimanche fixe','Technicienne Mtreur Btiment','Administrateur IT','Assistante RH','Conseiller Technique de Vente en climatisation HF','Charge de Clientle  centre dappel','Charg de Clientle Avec Caisse','Ingnieur dtudes Eau potable et Assainissement','Ingnieur Agronome Gnie Rural','Charg de Conduite dActivit HF','Technical Sales Consulting in Air Conditioning HF','Night Auditeur','Tlconseiller en prise des Rdvs rnovations dampleur Dbutant ou Expriment HF Tanger','Technicien Gologue','Ingnieur dtudes en Amnagement Urbain','Process Technicain','Acheteur HF Mission de 3 mois','Technicienne Helpdesk  assistance technique','Technicien en lectromcanique','k Office Specialist with Spanish','Sales Support','Charg de clientle en agence AL HOCEIMA','Ingnieur Etude et Dveloppement Hispanophone','Stagiaire en Recrutement','Service Desk Agent Germanoanglophones','Techniciene en Mtallurgie','Support Client Bilingue Shift de Nuit pour un Nouveau Projet Financier','Tlvendeurs en mission dappels Yaacoub El Mansour Casablanca','Conseillers Clients en Assistance Technique Primes dplafonnes  Challenges  Tombola  Animation','Contrleur de Gestion HF','Data Scientist SIRH','Technicienne Helpdesk N2','Animateur de vente en magasin','Service Desk Agent with French','Attach Pdagogique Polyvalent','Commercial terrain B2B  TANGER','Charge de Service Human Capital  HF','Technicien Supervision','Conseiller Clientle  Experte en Relations Client','Charge de Clientle  Ple Relation Client','Risk Management Specialist','Assistante Achat Mission de 3 mois','Coordinatrice Communication','Tlconseillers spcialiss en assistance technique','Technicien Support Informatique','Stage en testing HF','Stagiaire en Dveloppement PHP HF  Casablanca','Stagiaire Ingnieur IA HF','Stagiaire en Dveloppement JAVA HF','Commercial terrain B2B  TEMARA','Business Analyst Pricing HF','Stagiaire Comptabilit HF','Agent HelpDesk Italophone','Assistant e Moyens Gnraux','Charge de Clientle  Tlvendeur se','Service Desk Spanish','Customer Service Agent  Arabic English speaker','Consultant digital close','Charge de Recrutement','Charg e des Systmes dinformation et de la digitalisation','Agents de Dveloppement','Credit Analyst k Office','Approvisionneur Italophone','Agent Commercial HF','Ingnieur AI',Actuaire,'Assistant Analyse des Ventes','Stagiaire Archiviste','ENERGY COMPLIANCE ANALYST','Acheteur Intrants Production','Chargéé de paie','Agent d\'inventaire PDR','Chef de stewarding',Receptionniste,'Technicien des imprimantes marrakech','Technicien des imprimantes-Casablanca','Assistante logistique','Juriste Confirmé',surveillant,Magasinier}
+@attribute niveauEtude string
+@attribute niveauExperience numeric
+@attribute activity {'Centre d\'appel Banque - Finance Informatique Communication - Evénementiel Centre d\'appel Centre d\'appel BTP - Génie Civil Agence pub - Marketing Direct Enseignement - Formation Centre d\'appel Autres services Energie Autres Industries Centre d\'appel Offshoring - Nearshoring','Centre d\'appel','Banque - Finance Informatique','Communication - Evénementiel','BTP - Génie Civil','Agence pub - Marketing Direct Enseignement - Formation','Centre d\'appel Autres services','Energie Autres Industries','Centre d\'appel Offshoring - Nearshoring','Banque - Finance BTP - Génie Civil Conseil - Etudes BTP - Génie Civil Centre d\'appel Telecom Energie Autres Industries Hôtellerie - Restauration Centre d\'appel BTP - Génie Civil Autres Industries Agriculture - Environnement BTP - Génie Civil Electro-mécanique - Mécanique','Banque - Finance','BTP - Génie Civil Conseil - Etudes','Centre d\'appel Telecom','Hôtellerie - Restauration','BTP - Génie Civil Autres Industries','Agriculture - Environnement BTP - Génie Civil','Electro-mécanique - Mécanique','Autres Industries Informatique Agroalimentaire Indifférent Autres Industries Autres services Internet - Multimédia Telecom Communication - Evénementiel Informatique Recrutement - Intérim Centre d\'appel Chimie - Parachimie - Peintures Extraction - Mines','Autres Industries',Informatique,'Agroalimentaire Indifférent','Autres Industries Autres services','Internet - Multimédia Telecom','Recrutement - Intérim','Chimie - Parachimie - Peintures Extraction - Mines','Centre d\'appel Informatique Informatique Offshoring - Nearshoring Offshoring - Nearshoring Comptabilité - Audit Centre d\'appel Offshoring - Nearshoring Assurance - Courtage Conseil - Etudes Centre d\'appel Offshoring - Nearshoring Centre d\'appel Informatique','Offshoring - Nearshoring','Comptabilité - Audit','Assurance - Courtage Conseil - Etudes','Centre d\'appel Informatique','Distribution Distribution Distribution Distribution Centre d\'appel Autres services Enseignement - Formation Communication - Evénementiel Centre d\'appel Offshoring - Nearshoring Offshoring - Nearshoring Autres services Banque - Finance Informatique',Distribution,'Enseignement - Formation','Offshoring - Nearshoring Autres services','Centre d\'appel Offshoring - Nearshoring Centre d\'appel Offshoring - Nearshoring Centre d\'appel Centre d\'appel Centre d\'appel Offshoring - Nearshoring Centre d\'appel Offshoring - Nearshoring Autres Industries Communication - Evénementiel Agroalimentaire Indifférent','Agroalimentaire Indifférent Centre d\'appel Informatique Informatique Informatique Informatique Informatique Communication - Evénementiel Distribution Comptabilité - Audit','Informatique Métallurgie - Sidérurgie Centre d\'appel Offshoring - Nearshoring Centre d\'appel Informatique Centre d\'appel Informatique Banque - Finance Recrutement - Intérim Informatique Banque - Finance Comptabilité - Audit Assurance - Courtage Banque - Finance','Métallurgie - Sidérurgie','Banque - Finance Comptabilité - Audit','Assurance - Courtage Banque - Finance','Autres Industries Banque - Finance Autres Industries Assurance - Courtage Distribution Banque - Finance Conseil - Etudes Energie Agriculture - Environnement Agroalimentaire','Assurance - Courtage','Conseil - Etudes Energie','Agriculture - Environnement Agroalimentaire','Services - autres','Transports - logistique - services - postaux','Hôtellerie - restauration','Distribution - vente - commerce - de - gros','Industrie - production - fabrication - autres'}
+
+@data
+'Conseillers Technicocommerciaux pour un oprateur tlphonique dimanche fixe',?,1,'Centre d\'appel Banque - Finance Informatique Communication - Evénementiel Centre d\'appel Centre d\'appel BTP - Génie Civil Agence pub - Marketing Direct Enseignement - Formation Centre d\'appel Autres services Energie Autres Industries Centre d\'appel Offshoring - Nearshoring'
+'Conseillers Technicocommerciaux pour un oprateur tlphonique dimanche fixe',?,1,'Centre d\'appel'
+'Administrative Assistant',?,1,'Banque - Finance Informatique'
+'Charg de clientle en agence Mohammedia',?,1,'Communication - Evénementiel'
+'Tlconseiller en prise des Rdvs Panneau Photovoltaque Dbutant ou Expriment HF',?,1,'Centre d\'appel'
+'Conseillers Commerciaux pour un nouveau projet Dimanche fixe',?,1,'Centre d\'appel'
+'Technicienne Mtreur Btiment',?,1,'BTP - Génie Civil'
+'Administrateur IT',?,1,'Agence pub - Marketing Direct Enseignement - Formation'
+'Assistante RH',?,1,'Centre d\'appel Autres services'
+'Conseiller Technique de Vente en climatisation HF',?,1,'Energie Autres Industries'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Charg de Clientle Avec Caisse',?,1,'Banque - Finance BTP - Génie Civil Conseil - Etudes BTP - Génie Civil Centre d\'appel Telecom Energie Autres Industries Hôtellerie - Restauration Centre d\'appel BTP - Génie Civil Autres Industries Agriculture - Environnement BTP - Génie Civil Electro-mécanique - Mécanique'
+'Charg de Clientle Avec Caisse',?,1,'Banque - Finance'
+'Ingnieur dtudes Eau potable et Assainissement',?,1,'BTP - Génie Civil Conseil - Etudes'
+'Ingnieur Agronome Gnie Rural',?,1,'BTP - Génie Civil'
+'Charg de Conduite dActivit HF',?,1,'Centre d\'appel Telecom'
+'Technical Sales Consulting in Air Conditioning HF',?,1,'Energie Autres Industries'
+'Night Auditeur',?,1,'Hôtellerie - Restauration'
+'Tlconseiller en prise des Rdvs rnovations dampleur Dbutant ou Expriment HF Tanger',?,1,'Centre d\'appel'
+'Technicien Gologue',?,1,'BTP - Génie Civil Autres Industries'
+'Ingnieur dtudes en Amnagement Urbain',?,1,'Agriculture - Environnement BTP - Génie Civil'
+'Process Technicain',?,1,'Electro-mécanique - Mécanique'
+'Acheteur HF Mission de 3 mois',?,1,'Autres Industries Informatique Agroalimentaire Indifférent Autres Industries Autres services Internet - Multimédia Telecom Communication - Evénementiel Informatique Recrutement - Intérim Centre d\'appel Chimie - Parachimie - Peintures Extraction - Mines'
+'Acheteur HF Mission de 3 mois',?,1,'Autres Industries'
+'Technicienne Helpdesk  assistance technique',?,1,Informatique
+'Technicien en lectromcanique',?,1,'Agroalimentaire Indifférent'
+'k Office Specialist with Spanish',?,1,'Autres Industries Autres services'
+'Sales Support',?,1,'Internet - Multimédia Telecom'
+'Charg de clientle en agence AL HOCEIMA',?,1,'Communication - Evénementiel'
+'Ingnieur Etude et Dveloppement Hispanophone',?,1,Informatique
+'Stagiaire en Recrutement',?,1,'Recrutement - Intérim'
+'Service Desk Agent Germanoanglophones',?,1,'Centre d\'appel'
+'Techniciene en Mtallurgie',?,1,'Chimie - Parachimie - Peintures Extraction - Mines'
+'Support Client Bilingue Shift de Nuit pour un Nouveau Projet Financier',?,1,'Centre d\'appel Informatique Informatique Offshoring - Nearshoring Offshoring - Nearshoring Comptabilité - Audit Centre d\'appel Offshoring - Nearshoring Assurance - Courtage Conseil - Etudes Centre d\'appel Offshoring - Nearshoring Centre d\'appel Informatique'
+'Support Client Bilingue Shift de Nuit pour un Nouveau Projet Financier',?,1,'Centre d\'appel'
+'Ingnieur Etude et Dveloppement Hispanophone',?,1,Informatique
+'Ingnieur Etude et Dveloppement Hispanophone',?,1,Informatique
+'Tlvendeurs en mission dappels Yaacoub El Mansour Casablanca',?,1,'Offshoring - Nearshoring'
+'Conseillers Clients en Assistance Technique Primes dplafonnes  Challenges  Tombola  Animation',?,1,'Offshoring - Nearshoring'
+'Contrleur de Gestion HF',?,1,'Comptabilité - Audit'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Data Scientist SIRH',?,1,'Assurance - Courtage Conseil - Etudes'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Technicienne Helpdesk N2',?,1,'Centre d\'appel Informatique'
+'Animateur de vente en magasin',?,1,'Distribution Distribution Distribution Distribution Centre d\'appel Autres services Enseignement - Formation Communication - Evénementiel Centre d\'appel Offshoring - Nearshoring Offshoring - Nearshoring Autres services Banque - Finance Informatique'
+'Animateur de vente en magasin',?,1,Distribution
+'Animateur de vente en magasin',?,1,Distribution
+'Animateur de vente en magasin',?,1,Distribution
+'Animateur de vente en magasin',?,1,Distribution
+'Service Desk Agent with French',?,1,'Centre d\'appel Autres services'
+'Attach Pdagogique Polyvalent',?,1,'Enseignement - Formation'
+'Commercial terrain B2B  TANGER',?,1,'Communication - Evénementiel'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Charge de Service Human Capital  HF',?,1,'Offshoring - Nearshoring Autres services'
+'Technicien Supervision',?,1,'Banque - Finance Informatique'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring Centre d\'appel Offshoring - Nearshoring Centre d\'appel Centre d\'appel Centre d\'appel Offshoring - Nearshoring Centre d\'appel Offshoring - Nearshoring Autres Industries Communication - Evénementiel Agroalimentaire Indifférent'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Charge de Clientle  centre dappel',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Conseiller Clientle  Experte en Relations Client',?,1,'Centre d\'appel'
+'Conseiller Clientle  Experte en Relations Client',?,1,'Centre d\'appel'
+'Charge de Clientle  Ple Relation Client',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Conseiller Clientle  Experte en Relations Client',?,1,'Centre d\'appel'
+'Risk Management Specialist',?,1,'Offshoring - Nearshoring'
+'Assistante Achat Mission de 3 mois',?,1,'Autres Industries'
+'Coordinatrice Communication',?,1,'Communication - Evénementiel'
+'Technicien en lectromcanique',?,1,'Agroalimentaire Indifférent'
+'Technicien en lectromcanique',?,1,'Agroalimentaire Indifférent Centre d\'appel Informatique Informatique Informatique Informatique Informatique Communication - Evénementiel Distribution Comptabilité - Audit'
+'Technicien en lectromcanique',?,1,'Agroalimentaire Indifférent'
+'Tlconseillers spcialiss en assistance technique',?,1,'Centre d\'appel'
+'Technicien Support Informatique',?,1,Informatique
+'Stage en testing HF',?,1,Informatique
+'Stagiaire en Dveloppement PHP HF  Casablanca',?,1,Informatique
+'Stagiaire Ingnieur IA HF',?,1,Informatique
+'Stagiaire en Dveloppement JAVA HF',?,1,Informatique
+'Commercial terrain B2B  TEMARA',?,1,'Communication - Evénementiel'
+'Business Analyst Pricing HF',?,1,Distribution
+'Stagiaire Comptabilit HF',?,1,'Comptabilité - Audit'
+'Agent HelpDesk Italophone',?,1,'Informatique Métallurgie - Sidérurgie Centre d\'appel Offshoring - Nearshoring Centre d\'appel Informatique Centre d\'appel Informatique Banque - Finance Recrutement - Intérim Informatique Banque - Finance Comptabilité - Audit Assurance - Courtage Banque - Finance'
+'Agent HelpDesk Italophone',?,1,Informatique
+'Assistant e Moyens Gnraux',?,1,'Métallurgie - Sidérurgie'
+'Charge de Clientle  Tlvendeur se',?,1,'Centre d\'appel Offshoring - Nearshoring'
+'Service Desk Spanish',?,1,'Centre d\'appel Informatique'
+'Customer Service Agent  Arabic English speaker',?,1,'Centre d\'appel Informatique'
+'Consultant digital close',?,1,'Banque - Finance'
+'Charge de Recrutement',?,1,'Recrutement - Intérim'
+'Charg e des Systmes dinformation et de la digitalisation',?,1,Informatique
+'Agents de Dveloppement',?,1,'Banque - Finance Comptabilité - Audit'
+'Credit Analyst k Office',?,1,'Assurance - Courtage Banque - Finance'
+'Approvisionneur Italophone',?,1,'Autres Industries Banque - Finance Autres Industries Assurance - Courtage Distribution Banque - Finance Conseil - Etudes Energie Agriculture - Environnement Agroalimentaire'
+'Approvisionneur Italophone',?,1,'Autres Industries'
+'Agent Commercial HF',?,1,'Banque - Finance'
+'Ingnieur AI',?,1,'Autres Industries'
+Actuaire,?,1,'Assurance - Courtage'
+'Assistant Analyse des Ventes',?,1,Distribution
+'Stagiaire Archiviste',?,1,'Banque - Finance'
+'ENERGY COMPLIANCE ANALYST',?,1,'Conseil - Etudes Energie'
+'Acheteur Intrants Production',?,1,'Agriculture - Environnement Agroalimentaire'
+'Chargéé de paie',?,5,'Services - autres'
+'Agent d\'inventaire PDR',?,3,'Transports - logistique - services - postaux'
+'Chef de stewarding',?,10,'Hôtellerie - restauration'
+Receptionniste,?,1,'Hôtellerie - restauration'
+'Technicien des imprimantes marrakech',?,3,'Distribution - vente - commerce - de - gros'
+'Technicien des imprimantes-Casablanca',?,1,'Distribution - vente - commerce - de - gros'
+'Assistante logistique',?,1,'Industrie - production - fabrication - autres'
+'Juriste Confirmé',?,3,'Distribution - vente - commerce - de - gros'
+surveillant,?,1,'Services - autres'
+Magasinier,?,1,'Industrie - production - fabrication - autres'

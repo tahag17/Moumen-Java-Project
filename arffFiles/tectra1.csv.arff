@@ -1,0 +1,18 @@
+@relation tectra1
+
+@attribute function {'Chargéé de paie','Agent d\'inventaire PDR','Chef de stewarding',Receptionniste,'Technicien des imprimantes marrakech','Technicien des imprimantes-Casablanca','Assistante logistique','Juriste Confirmé',surveillant,Magasinier}
+@attribute niveauEtude {Bac+5,Bac+2,Bac+3,Bac+1}
+@attribute niveauExperience numeric
+@attribute activity {'Services - autres','Transports - logistique - services - postaux','Hôtellerie - restauration','Distribution - vente - commerce - de - gros','Industrie - production - fabrication - autres'}
+
+@data
+'Chargéé de paie',Bac+5,5,'Services - autres'
+'Agent d\'inventaire PDR',Bac+2,3,'Transports - logistique - services - postaux'
+'Chef de stewarding',Bac+3,10,'Hôtellerie - restauration'
+Receptionniste,Bac+1,1,'Hôtellerie - restauration'
+'Technicien des imprimantes marrakech',Bac+2,3,'Distribution - vente - commerce - de - gros'
+'Technicien des imprimantes-Casablanca',Bac+2,1,'Distribution - vente - commerce - de - gros'
+'Assistante logistique',Bac+2,1,'Industrie - production - fabrication - autres'
+'Juriste Confirmé',Bac+3,3,'Distribution - vente - commerce - de - gros'
+surveillant,Bac+2,1,'Services - autres'
+Magasinier,Bac+3,1,'Industrie - production - fabrication - autres'
