@@ -18,7 +18,7 @@ public class predictionNaiveBayesEducationLevel {
 
         // Set the class attribute for training data
         if (train.classIndex() == -1) {
-            train.setClassIndex(1);
+            train.setClassIndex(1);;
         }
 
         // Convert string class attribute to nominal (if it's a string)
@@ -47,7 +47,7 @@ public class predictionNaiveBayesEducationLevel {
         Evaluation eval_rocTrain = new Evaluation(train);
         eval_rocTrain.crossValidateModel(naiveBayes, train, 10, new Random(1));
 
-        // Perform cross-validation on the testing data
+        // Perform cross-validation on the testing dataa
         Evaluation eval_rocTest = new Evaluation(test);
         eval_rocTest.crossValidateModel(naiveBayes, test, 10, new Random(1));
 
@@ -86,5 +86,6 @@ public class predictionNaiveBayesEducationLevel {
             // Move to the next line after printing all attributes
         }
     }
+
 
 }
