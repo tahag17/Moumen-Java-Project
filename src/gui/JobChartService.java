@@ -11,24 +11,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Map;
 
-public class JobChartApp {
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            // Fetch data from the database
-            DataFetcher dataFetcher = new DataFetcher();
-            Map<String, Integer> educationLevelData = dataFetcher.fetchEducationLevelData();
-            Map<String, Integer> experienceLevelData = dataFetcher.fetchExperienceLevelData();
+public class JobChartService {
 
-            // Create and display the first chart for education level
-            createAndShowChartWindow("Job Education Level Distribution", educationLevelData);
+    public void generateJobCharts() {
+        // Fetch data from the database
+        DataFetcher dataFetcher = new DataFetcher();
+        Map<String, Integer> educationLevelData = dataFetcher.fetchEducationLevelData();
+        Map<String, Integer> experienceLevelData = dataFetcher.fetchExperienceLevelData();
 
-            // Create and display the second chart for experience level
-            createAndShowChartWindow("Job Experience Level Distribution", experienceLevelData);
-        });
+        // Create and display the first chart for education level
+        createAndShowChartWindow("Job Education Level Distribution", educationLevelData);
+
+        // Create and display the second chart for experience level
+        createAndShowChartWindow("Job Experience Level Distribution", experienceLevelData);
     }
 
     // Method to create and display a chart window
-    private static void createAndShowChartWindow(String title, Map<String, Integer> data) {
+    private void createAndShowChartWindow(String title, Map<String, Integer> data) {
         JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Allow closing individual windows
         frame.setSize(800, 600);
@@ -45,7 +44,7 @@ public class JobChartApp {
     }
 
     // Create a dataset for the pie chart
-    private static DefaultPieDataset createDataset(Map<String, Integer> data) {
+    private DefaultPieDataset createDataset(Map<String, Integer> data) {
         DefaultPieDataset dataset = new DefaultPieDataset();
 
         // Populate dataset with data from the map
@@ -61,7 +60,7 @@ public class JobChartApp {
     }
 
     // Create a pie chart with a donut appearance
-    private static JFreeChart createDonutChart(DefaultPieDataset dataset) {
+    private JFreeChart createDonutChart(DefaultPieDataset dataset) {
         JFreeChart chart = ChartFactory.createPieChart(
                 null,   // No chart title here; the window title suffices
                 dataset,
