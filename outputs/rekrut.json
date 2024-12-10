@@ -1,10 +1,45 @@
 [
   {
-    "title": "Conseillers Technico-commerciaux pour un opérateur téléphonique (dimanche fixe) | Rabat (Maroc) Administrative Assistant | Casablanca (Maroc) Chargé de clientèle en agence Mohammedia | Mohammédia (Maroc) Téléconseiller en prise des Rdvs Panneau Photovoltaïque Débutant ou Expérimenté H/F | Tanger (Maroc) Conseillers Commerciaux pour un nouveau projet (Dimanche fixe) | Rabat (Maroc) Technicien(ne) Métreur Bâtiment | Salé, Technopolis (Maroc) Administrateur IT | Casablanca (Maroc) Assistante RH | Casablanca (Maroc) Conseiller Technique de Vente en climatisation (H/F) | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc)",
-    "experience": "Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 3 à 5 ans Moins de 1 an Moins de 1 an Moins de 1 an",
-    "function": "Call Centers (métiers de) RH / Personnel / Formation Commercial / Vente / Export Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Gestion projet / Etudes / R\u0026D Travaux / Chantiers / BTP Informatique / Electronique Télécoms / Réseaux RH / Personnel / Formation Gestion projet / Etudes / R\u0026D Méthodes / Process / Industrialisation Call Centers (métiers de) Commercial / Vente / Export",
-    "activity": "Centre d\u0027appel Banque / Finance Informatique Communication / Evénementiel Centre d\u0027appel Centre d\u0027appel BTP / Génie Civil Agence pub / Marketing Direct Enseignement / Formation Centre d\u0027appel Autres services Energie Autres Industries Centre d\u0027appel Offshoring / Nearshoring",
-    "educationLevel": "Bac Bac +3 Bac +2 Bac Bac Bac +2 Bac +3 Bac +5 et plus Bac +3 Bac"
+    "title": "Confirmateur des Rendez-vous H/F | Tanger (Maroc) Superviseur | Tanger (Maroc) Conseiller de Clientèle Germanophone/ENG | Technopolis Salé (Maroc) Conseiller de Clientèle Italophone / English | Salé - Technopolis (Maroc) Conseiller de Clientèle Germanophone / English | Technopolis Salé (Maroc) Conseillers Technico-commerciaux pour un opérateur téléphonique (dimanche fixe) | Rabat (Maroc) Administrative Assistant | Casablanca (Maroc) Chargé de clientèle en agence Mohammedia | Mohammédia (Maroc) Conseillers Commerciaux pour un nouveau projet (Dimanche fixe) | Rabat (Maroc) Technicien(ne) Métreur Bâtiment | Salé, Technopolis (Maroc)",
+    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans",
+    "function": "Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Hôtellerie / Restauration (métiers de) Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Hôtellerie / Restauration (métiers de) Call Centers (métiers de) RH / Personnel / Formation Commercial / Vente / Export Call Centers (métiers de) Gestion projet / Etudes / R\u0026D Travaux / Chantiers / BTP",
+    "activity": "Centre d\u0027appel Centre d\u0027appel Centre d\u0027appel Informatique Centre d\u0027appel Centre d\u0027appel Banque / Finance Informatique Communication / Evénementiel Centre d\u0027appel BTP / Génie Civil",
+    "educationLevel": "Bac +2 Bac +2 Bac +2 Bac +2 Bac +2 Bac Bac +3 Bac +2 Bac Bac +2"
+  },
+  {
+    "title": "Confirmateur des Rendez-vous H/F | Tanger (Maroc)",
+    "experience": "Moins de 1 an",
+    "function": "Call Centers (métiers de) Commercial / Vente / Export",
+    "activity": "Centre d\u0027appel",
+    "educationLevel": "Bac +2"
+  },
+  {
+    "title": "Superviseur | Tanger (Maroc)",
+    "experience": "Moins de 1 an",
+    "function": "Call Centers (métiers de) Commercial / Vente / Export",
+    "activity": "Centre d\u0027appel",
+    "educationLevel": "Bac +2"
+  },
+  {
+    "title": "Conseiller de Clientèle Germanophone/ENG | Technopolis Salé (Maroc)",
+    "experience": "Moins de 1 an",
+    "function": "Call Centers (métiers de) Hôtellerie / Restauration (métiers de)",
+    "activity": "Centre d\u0027appel",
+    "educationLevel": "Bac +2"
+  },
+  {
+    "title": "Conseiller de Clientèle Italophone / English | Salé - Technopolis (Maroc)",
+    "experience": "Moins de 1 an",
+    "function": "Call Centers (métiers de) Commercial / Vente / Export",
+    "activity": "Informatique",
+    "educationLevel": "Bac +2"
+  },
+  {
+    "title": "Conseiller de Clientèle Germanophone / English | Technopolis Salé (Maroc)",
+    "experience": "Moins de 1 an",
+    "function": "Call Centers (métiers de) Hôtellerie / Restauration (métiers de)",
+    "activity": "Centre d\u0027appel",
+    "educationLevel": "Bac +2"
   },
   {
     "title": "Conseillers Technico-commerciaux pour un opérateur téléphonique (dimanche fixe) | Rabat (Maroc)",
@@ -28,13 +63,6 @@
     "educationLevel": "Bac +2"
   },
   {
-    "title": "Téléconseiller en prise des Rdvs Panneau Photovoltaïque Débutant ou Expérimenté H/F | Tanger (Maroc)",
-    "experience": "Moins de 1 an",
-    "function": "Call Centers (métiers de) Commercial / Vente / Export",
-    "activity": "Centre d\u0027appel",
-    "educationLevel": "Bac"
-  },
-  {
     "title": "Conseillers Commerciaux pour un nouveau projet (Dimanche fixe) | Rabat (Maroc)",
     "experience": "Moins de 1 an",
     "function": "Call Centers (métiers de)",
@@ -47,6 +75,13 @@
     "function": "Gestion projet / Etudes / R\u0026D Travaux / Chantiers / BTP",
     "activity": "BTP / Génie Civil",
     "educationLevel": "Bac +2"
+  },
+  {
+    "title": "Administrateur IT | Casablanca (Maroc) Assistante RH | Casablanca (Maroc) Conseiller Technique de Vente en climatisation (H/F) | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Chargé de Clientèle Avec Caisse | Casablanca, El Jadida, Rabat,Tanger \u0026 Agadir (Maroc) Ingénieur d\u0027études Eau potable et Assainissement | Salé, Technopolis (Maroc) Ingénieur Agronome/ Génie Rural | Salé (Technopolis) (Maroc) Chargé de Conduite d\u0027Activité H/F | Casablanca (Maroc) Technical Sales Consulting in Air Conditioning (H/F) | Casablanca (Maroc) Night Auditeur | Casablanca (Maroc)",
+    "experience": "Moins de 1 an De 3 à 5 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans",
+    "function": "Informatique / Electronique Télécoms / Réseaux RH / Personnel / Formation Gestion projet / Etudes / R\u0026D Méthodes / Process / Industrialisation Call Centers (métiers de) Commercial / Vente / Export Banque (métiers de la) Environnement (métiers de l\u0027) Gestion projet / Etudes / R\u0026D Agriculture (métiers de l\u0027) Travaux / Chantiers / BTP Call Centers (métiers de) Gestion projet / Etudes / R\u0026D Méthodes / Process / Industrialisation Hôtellerie / Restauration (métiers de)",
+    "activity": "Agence pub / Marketing Direct Enseignement / Formation Centre d\u0027appel Autres services Energie Autres Industries Centre d\u0027appel Offshoring / Nearshoring Banque / Finance BTP / Génie Civil Conseil / Etudes BTP / Génie Civil Centre d\u0027appel Telecom Energie Autres Industries Hôtellerie / Restauration",
+    "educationLevel": "Bac +3 Bac +5 et plus Bac +3 Bac Bac +3 Bac +5 et plus Bac +5 et plus Bac Bac +3 Bac +2"
   },
   {
     "title": "Administrateur IT | Casablanca (Maroc)",
@@ -75,13 +110,6 @@
     "function": "Call Centers (métiers de) Commercial / Vente / Export",
     "activity": "Centre d\u0027appel Offshoring / Nearshoring",
     "educationLevel": "Bac"
-  },
-  {
-    "title": "Chargé de Clientèle Avec Caisse | Casablanca, El Jadida, Rabat,Tanger \u0026 Agadir (Maroc) Ingénieur d\u0027études Eau potable et Assainissement | Salé, Technopolis (Maroc) Ingénieur Agronome/ Génie Rural | Salé (Technopolis) (Maroc) Chargé de Conduite d\u0027Activité H/F | Casablanca (Maroc) Technical Sales Consulting in Air Conditioning (H/F) | Casablanca (Maroc) Night Auditeur | Casablanca (Maroc) Téléconseiller en prise des Rdvs rénovations d\u0027ampleur Débutant ou Expérimenté H/F (Tanger) | Tanger (Maroc) Technicien Géologue | Salé, Technopolis (Maroc) Ingénieur d\u0027études en Aménagement Urbain | Salé, Technopolis (Maroc) Process Technicain | Nador (Maroc)",
-    "experience": "Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans",
-    "function": "Banque (métiers de la) Environnement (métiers de l\u0027) Gestion projet / Etudes / R\u0026D Agriculture (métiers de l\u0027) Travaux / Chantiers / BTP Call Centers (métiers de) Gestion projet / Etudes / R\u0026D Méthodes / Process / Industrialisation Hôtellerie / Restauration (métiers de) Call Centers (métiers de) Commercial / Vente / Export Environnement (métiers de l\u0027) Travaux / Chantiers / BTP Environnement (métiers de l\u0027) Travaux / Chantiers / BTP Méthodes / Process / Industrialisation Production / Qualité / Sécurité / Maintenance",
-    "activity": "Banque / Finance BTP / Génie Civil Conseil / Etudes BTP / Génie Civil Centre d\u0027appel Telecom Energie Autres Industries Hôtellerie / Restauration Centre d\u0027appel BTP / Génie Civil Autres Industries Agriculture / Environnement BTP / Génie Civil Electro-mécanique / Mécanique",
-    "educationLevel": "Bac +3 Bac +5 et plus Bac +5 et plus Bac Bac +3 Bac +2 Bac Bac +2 Bac +5 et plus Bac +3"
   },
   {
     "title": "Chargé de Clientèle Avec Caisse | Casablanca, El Jadida, Rabat,Tanger \u0026 Agadir (Maroc)",
@@ -126,11 +154,11 @@
     "educationLevel": "Bac +2"
   },
   {
-    "title": "Téléconseiller en prise des Rdvs rénovations d\u0027ampleur Débutant ou Expérimenté H/F (Tanger) | Tanger (Maroc)",
-    "experience": "Moins de 1 an",
-    "function": "Call Centers (métiers de) Commercial / Vente / Export",
-    "activity": "Centre d\u0027appel",
-    "educationLevel": "Bac"
+    "title": "Technicien Géologue | Salé, Technopolis (Maroc) Ingénieur d\u0027études en Aménagement Urbain | Salé, Technopolis (Maroc) Process Technicain | Nador (Maroc) Acheteur H/F- Mission de 3 mois | Casablanca (Maroc) Technicien(ne) Helpdesk ( assistance technique) | Casablanca (Maroc) Technicien en électromécanique | Fès (Maroc) Back Office Specialist with Spanish | Rabat (Maroc) Sales Support | Casablanca (Maroc) Chargé de clientèle en agence AL HOCEIMA | Al Hoceima (Maroc) Ingénieur Etude et Développement Hispanophone | Casablanca (Maroc)",
+    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an",
+    "function": "Environnement (métiers de l\u0027) Travaux / Chantiers / BTP Environnement (métiers de l\u0027) Travaux / Chantiers / BTP Méthodes / Process / Industrialisation Production / Qualité / Sécurité / Maintenance Achats / Supply Chain Informatique / Electronique Multimédia / Internet Production / Qualité / Sécurité / Maintenance Administration des ventes / SAV Administration des ventes / SAV Multimédia / Internet Commercial / Vente / Export Informatique / Electronique",
+    "activity": "BTP / Génie Civil Autres Industries Agriculture / Environnement BTP / Génie Civil Electro-mécanique / Mécanique Autres Industries Informatique Agroalimentaire Indifférent Autres Industries Autres services Internet / Multimédia Telecom Communication / Evénementiel Informatique",
+    "educationLevel": "Bac +2 Bac +5 et plus Bac +3 Bac +5 et plus Bac +2 Bac +2 Bac +3 Bac +4 Bac +2 Bac +4"
   },
   {
     "title": "Technicien Géologue | Salé, Technopolis (Maroc)",
@@ -152,13 +180,6 @@
     "function": "Méthodes / Process / Industrialisation Production / Qualité / Sécurité / Maintenance",
     "activity": "Electro-mécanique / Mécanique",
     "educationLevel": "Bac +3"
-  },
-  {
-    "title": "Acheteur H/F- Mission de 3 mois | Casablanca (Maroc) Technicien(ne) Helpdesk ( assistance technique) | Casablanca (Maroc) Technicien en électromécanique | Fès (Maroc) Back Office Specialist with Spanish | Rabat (Maroc) Sales Support | Casablanca (Maroc) Chargé de clientèle en agence AL HOCEIMA | Al Hoceima (Maroc) Ingénieur Etude et Développement Hispanophone | Casablanca (Maroc) Stagiaire en Recrutement | Casablanca (Maroc) Service Desk Agent Germano-anglophones | Technopolis Salé (Maroc) Technicien(e) en Métallurgie | Taliouine (Maroc)",
-    "experience": "Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans",
-    "function": "Achats / Supply Chain Informatique / Electronique Multimédia / Internet Production / Qualité / Sécurité / Maintenance Administration des ventes / SAV Administration des ventes / SAV Multimédia / Internet Commercial / Vente / Export Informatique / Electronique RH / Personnel / Formation Call Centers (métiers de) Hôtellerie / Restauration (métiers de) Production / Qualité / Sécurité / Maintenance",
-    "activity": "Autres Industries Informatique Agroalimentaire Indifférent Autres Industries Autres services Internet / Multimédia Telecom Communication / Evénementiel Informatique Recrutement / Intérim Centre d\u0027appel Chimie / Parachimie / Peintures Extraction / Mines",
-    "educationLevel": "Bac +5 et plus Bac +2 Bac +2 Bac +3 Bac +4 Bac +2 Bac +4 Bac +3 Bac +2 Bac +2"
   },
   {
     "title": "Acheteur H/F- Mission de 3 mois | Casablanca (Maroc)",
@@ -210,6 +231,13 @@
     "educationLevel": "Bac +4"
   },
   {
+    "title": "Stagiaire en Recrutement | Casablanca (Maroc) Service Desk Agent Germano-anglophones | Technopolis Salé (Maroc) Technicien(e) en Métallurgie | Taliouine (Maroc) Support Client Bilingue Shift de Nuit pour un Nouveau Projet Financier | Rabat (Maroc) Ingénieur Etude et Développement Hispanophone | Rabat (Maroc) Ingénieur Etude et Développement Hispanophone | Rabat (Maroc) Télévendeurs en émission d\u0027appels -Yaacoub El Mansour Casablanca | Casablanca (Maroc) Conseillers Clients en Assistance Technique: \"Primes déplafonnées - Challenges - Tombola - Animation\" | Casablanca (Maroc) Contrôleur de Gestion (H/F) | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc)",
+    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an",
+    "function": "RH / Personnel / Formation Call Centers (métiers de) Hôtellerie / Restauration (métiers de) Production / Qualité / Sécurité / Maintenance Call Centers (métiers de) Informatique / Electronique Informatique / Electronique Call Centers (métiers de) Call Centers (métiers de) Gestion / Comptabilité / Finance Call Centers (métiers de) Commercial / Vente / Export",
+    "activity": "Recrutement / Intérim Centre d\u0027appel Chimie / Parachimie / Peintures Extraction / Mines Centre d\u0027appel Informatique Informatique Offshoring / Nearshoring Offshoring / Nearshoring Comptabilité / Audit Centre d\u0027appel Offshoring / Nearshoring",
+    "educationLevel": "Bac +3 Bac +2 Bac +2 Bac Bac +4 Bac +4 Bac Bac Bac +5 et plus Bac"
+  },
+  {
     "title": "Stagiaire en Recrutement | Casablanca (Maroc)",
     "experience": "Moins de 1 an",
     "function": "RH / Personnel / Formation",
@@ -229,13 +257,6 @@
     "function": "Production / Qualité / Sécurité / Maintenance",
     "activity": "Chimie / Parachimie / Peintures Extraction / Mines",
     "educationLevel": "Bac +2"
-  },
-  {
-    "title": "Support Client Bilingue Shift de Nuit pour un Nouveau Projet Financier | Rabat (Maroc) Ingénieur Etude et Développement Hispanophone | Rabat (Maroc) Ingénieur Etude et Développement Hispanophone | Rabat (Maroc) Télévendeurs en émission d\u0027appels -Yaacoub El Mansour Casablanca | Casablanca (Maroc) Conseillers Clients en Assistance Technique: \"Primes déplafonnées - Challenges - Tombola - Animation\" | Casablanca (Maroc) Contrôleur de Gestion (H/F) | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Data Scientist SIRH | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Technicien(ne) Helpdesk N2 | Casablanca (Maroc)",
-    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an",
-    "function": "Call Centers (métiers de) Informatique / Electronique Informatique / Electronique Call Centers (métiers de) Call Centers (métiers de) Gestion / Comptabilité / Finance Call Centers (métiers de) Commercial / Vente / Export Informatique / Electronique RH / Personnel / Formation Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Informatique / Electronique",
-    "activity": "Centre d\u0027appel Informatique Informatique Offshoring / Nearshoring Offshoring / Nearshoring Comptabilité / Audit Centre d\u0027appel Offshoring / Nearshoring Assurance / Courtage Conseil / Etudes Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Informatique",
-    "educationLevel": "Bac Bac +4 Bac +4 Bac Bac Bac +5 et plus Bac Bac +5 et plus Bac Bac +2"
   },
   {
     "title": "Support Client Bilingue Shift de Nuit pour un Nouveau Projet Financier | Rabat (Maroc)",
@@ -287,6 +308,13 @@
     "educationLevel": "Bac"
   },
   {
+    "title": "Data Scientist SIRH | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Technicien(ne) Helpdesk N2 | Casablanca (Maroc) Animateur de vente en magasin | Casablanca (Maroc) Animateur de vente en magasin | Mohammédia (Maroc) Animateur de vente en magasin | Marrakech (Maroc) Animateur de vente en magasin | Agadir (Maroc) Service Desk Agent with French | Rabat (Maroc) Attaché Pédagogique Polyvalent | Benguérir (Maroc) Commercial terrain B2B à TANGER | Tanger (Maroc)",
+    "experience": "Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an",
+    "function": "Informatique / Electronique RH / Personnel / Formation Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Informatique / Electronique Commercial / Vente / Export Commercial / Vente / Export Commercial / Vente / Export Commercial / Vente / Export Call Centers (métiers de) Administration des ventes / SAV Enseignement Santé / Social (métiers de) Commercial / Vente / Export",
+    "activity": "Assurance / Courtage Conseil / Etudes Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Informatique Distribution Distribution Distribution Distribution Centre d\u0027appel Autres services Enseignement / Formation Communication / Evénementiel",
+    "educationLevel": "Bac +5 et plus Bac Bac +2 Bac +2 Bac +2 Bac +2 Bac +2 Bac +3 Bac +3 Bac +2"
+  },
+  {
     "title": "Data Scientist SIRH | Casablanca (Maroc)",
     "experience": "Moins de 1 an De 1 à 3 ans",
     "function": "Informatique / Electronique RH / Personnel / Formation",
@@ -306,13 +334,6 @@
     "function": "Call Centers (métiers de) Informatique / Electronique",
     "activity": "Centre d\u0027appel Informatique",
     "educationLevel": "Bac +2"
-  },
-  {
-    "title": "Animateur de vente en magasin | Casablanca (Maroc) Animateur de vente en magasin | Mohammédia (Maroc) Animateur de vente en magasin | Marrakech (Maroc) Animateur de vente en magasin | Agadir (Maroc) Service Desk Agent with French | Rabat (Maroc) Attaché Pédagogique Polyvalent | Benguérir (Maroc) Commercial terrain B2B à TANGER | Tanger (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Chargé.e de Service Human Capital - (H/F) | Casablanca (Maroc) Technicien Supervision | Casablanca (Maroc)",
-    "experience": "Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans",
-    "function": "Commercial / Vente / Export Commercial / Vente / Export Commercial / Vente / Export Commercial / Vente / Export Call Centers (métiers de) Administration des ventes / SAV Enseignement Santé / Social (métiers de) Commercial / Vente / Export Call Centers (métiers de) Commercial / Vente / Export RH / Personnel / Formation Informatique / Electronique",
-    "activity": "Distribution Distribution Distribution Distribution Centre d\u0027appel Autres services Enseignement / Formation Communication / Evénementiel Centre d\u0027appel Offshoring / Nearshoring Offshoring / Nearshoring Autres services Banque / Finance Informatique",
-    "educationLevel": "Bac +2 Bac +2 Bac +2 Bac +2 Bac +3 Bac +3 Bac +2 Bac Bac +3 Bac +2"
   },
   {
     "title": "Animateur de vente en magasin | Casablanca (Maroc)",
@@ -364,6 +385,13 @@
     "educationLevel": "Bac +2"
   },
   {
+    "title": "Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Chargé.e de Service Human Capital - (H/F) | Casablanca (Maroc) Technicien Supervision | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Conseiller Clientèle - Expert(e) en Relations Client | Casablanca (Maroc) Conseiller Clientèle - Expert(e) en Relations Client | Casablanca (Maroc) Chargé(e) de Clientèle - Pôle Relation Client | Casablanca (Maroc) Conseiller Clientèle - Expert(e) en Relations Client | Casablanca (Maroc) Risk Management Specialist | Casablanca (Maroc)",
+    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans",
+    "function": "Call Centers (métiers de) Commercial / Vente / Export RH / Personnel / Formation Informatique / Electronique Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Call Centers (métiers de) Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Avocat / Juriste / Fiscaliste",
+    "activity": "Centre d\u0027appel Offshoring / Nearshoring Offshoring / Nearshoring Autres services Banque / Finance Informatique Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Centre d\u0027appel Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Offshoring / Nearshoring",
+    "educationLevel": "Bac Bac +3 Bac +2 Bac Bac Bac +2 Bac +2 Bac Bac +2 Bac +5 et plus"
+  },
+  {
     "title": "Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc)",
     "experience": "Moins de 1 an",
     "function": "Call Centers (métiers de) Commercial / Vente / Export",
@@ -383,13 +411,6 @@
     "function": "Informatique / Electronique",
     "activity": "Banque / Finance Informatique",
     "educationLevel": "Bac +2"
-  },
-  {
-    "title": "Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc) Conseiller Clientèle - Expert(e) en Relations Client | Casablanca (Maroc) Conseiller Clientèle - Expert(e) en Relations Client | Casablanca (Maroc) Chargé(e) de Clientèle - Pôle Relation Client | Casablanca (Maroc) Conseiller Clientèle - Expert(e) en Relations Client | Casablanca (Maroc) Risk Management Specialist | Casablanca (Maroc) Assistante Achat (Mission de 3 mois) | Casablanca (Maroc) Coordinatrice Communication | Casablanca (Maroc) Technicien en électromécanique | El Jadida (Maroc)",
-    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an",
-    "function": "Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Call Centers (métiers de) Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Avocat / Juriste / Fiscaliste Achats / Supply Chain Communication / Publicité / RP Production / Qualité / Sécurité / Maintenance",
-    "activity": "Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Centre d\u0027appel Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Offshoring / Nearshoring Autres Industries Communication / Evénementiel Agroalimentaire Indifférent",
-    "educationLevel": "Bac Bac Bac +2 Bac +2 Bac Bac +2 Bac +5 et plus Bac +5 et plus Bac +5 et plus Bac +2"
   },
   {
     "title": "Chargé(e) de Clientèle - centre d\u0027appel | Casablanca (Maroc)",
@@ -441,6 +462,13 @@
     "educationLevel": "Bac +5 et plus"
   },
   {
+    "title": "Assistante Achat (Mission de 3 mois) | Casablanca (Maroc) Coordinatrice Communication | Casablanca (Maroc) Technicien en électromécanique | El Jadida (Maroc) Technicien en électromécanique | Tit Mellil (Maroc) Téléconseillers spécialisés en assistance technique | Casablanca (Maroc) Technicien Support Informatique | Bouskoura (Maroc) Stage en testing (H/F) | Csablanca (Maroc) Stagiaire en Développement PHP (H/F) - Casablanca | Casablanca (Maroc) Stagiaire Ingénieur IA (H/F) | Casablanca (Maroc) Stagiaire en Développement JAVA (H/F) | Casablanca (Maroc)",
+    "experience": "Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an",
+    "function": "Achats / Supply Chain Communication / Publicité / RP Production / Qualité / Sécurité / Maintenance Production / Qualité / Sécurité / Maintenance Call Centers (métiers de) Informatique / Electronique Informatique / Electronique Informatique / Electronique Informatique / Electronique Informatique / Electronique",
+    "activity": "Autres Industries Communication / Evénementiel Agroalimentaire Indifférent Agroalimentaire Indifférent Centre d\u0027appel Informatique Informatique Informatique Informatique Informatique",
+    "educationLevel": "Bac +5 et plus Bac +5 et plus Bac +2 Bac +2 Bac +2 Bac +2 Bac +5 et plus Bac +5 et plus Bac +5 et plus Bac +5 et plus"
+  },
+  {
     "title": "Assistante Achat (Mission de 3 mois) | Casablanca (Maroc)",
     "experience": "Moins de 1 an De 1 à 3 ans",
     "function": "Achats / Supply Chain",
@@ -460,13 +488,6 @@
     "function": "Production / Qualité / Sécurité / Maintenance",
     "activity": "Agroalimentaire Indifférent",
     "educationLevel": "Bac +2"
-  },
-  {
-    "title": "Technicien en électromécanique | Tit Mellil (Maroc) Téléconseillers spécialisés en assistance technique | Casablanca (Maroc) Technicien Support Informatique | Bouskoura (Maroc) Stage en testing (H/F) | Csablanca (Maroc) Stagiaire en Développement PHP (H/F) - Casablanca | Casablanca (Maroc) Stagiaire Ingénieur IA (H/F) | Casablanca (Maroc) Stagiaire en Développement JAVA (H/F) | Casablanca (Maroc) Commercial terrain B2B à TEMARA | Témara (Maroc) Business Analyst Pricing (H/F) | Casablanca (Maroc) Stagiaire Comptabilité H/F | Rabat (Maroc)",
-    "experience": "Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an",
-    "function": "Production / Qualité / Sécurité / Maintenance Call Centers (métiers de) Informatique / Electronique Informatique / Electronique Informatique / Electronique Informatique / Electronique Informatique / Electronique Commercial / Vente / Export Gestion projet / Etudes / R\u0026D Gestion / Comptabilité / Finance",
-    "activity": "Agroalimentaire Indifférent Centre d\u0027appel Informatique Informatique Informatique Informatique Informatique Communication / Evénementiel Distribution Comptabilité / Audit",
-    "educationLevel": "Bac +2 Bac +2 Bac +2 Bac +5 et plus Bac +5 et plus Bac +5 et plus Bac +5 et plus Bac +2 Bac +5 et plus Bac +3"
   },
   {
     "title": "Technicien en électromécanique | Tit Mellil (Maroc)",
@@ -518,6 +539,13 @@
     "educationLevel": "Bac +5 et plus"
   },
   {
+    "title": "Commercial terrain B2B à TEMARA | Témara (Maroc) Business Analyst Pricing (H/F) | Casablanca (Maroc) Stagiaire Comptabilité H/F | Rabat (Maroc) Agent HelpDesk Italophone | Tétouan (Maroc) Assistant (e) Moyens Généraux | Casablanca et périphérie (Maroc) Chargé(e) de Clientèle - Télévendeur (se) | Casablanca (Maroc) Service Desk- Spanish | Rabat (Maroc) Customer Service Agent - Arabic/ English speaker | Sale el jadida (Maroc) Consultant digital close | Casablanca (Maroc) Chargé (e) des Systèmes d’information et de la digitalisation | Rabat (Maroc)",
+    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an",
+    "function": "Commercial / Vente / Export Gestion projet / Etudes / R\u0026D Gestion / Comptabilité / Finance Multimédia / Internet Télécoms / Réseaux Achats / Supply Chain Assistanat de Direction / Services Généraux Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Informatique / Electronique Call Centers (métiers de) Commercial / Vente / Export Gestion / Comptabilité / Finance Informatique / Electronique Multimédia / Internet",
+    "activity": "Communication / Evénementiel Distribution Comptabilité / Audit Informatique Métallurgie / Sidérurgie Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Informatique Centre d\u0027appel Informatique Banque / Finance Informatique",
+    "educationLevel": "Bac +2 Bac +5 et plus Bac +3 Bac +2 Bac +2 Bac Bac +3 Bac +2 Bac +5 et plus Bac +5 et plus"
+  },
+  {
     "title": "Commercial terrain B2B à TEMARA | Témara (Maroc)",
     "experience": "Moins de 1 an",
     "function": "Commercial / Vente / Export",
@@ -537,13 +565,6 @@
     "function": "Gestion / Comptabilité / Finance",
     "activity": "Comptabilité / Audit",
     "educationLevel": "Bac +3"
-  },
-  {
-    "title": "Agent HelpDesk Italophone | Tétouan (Maroc) Assistant (e) Moyens Généraux | Casablanca et périphérie (Maroc) Chargé(e) de Clientèle - Télévendeur (se) | Casablanca (Maroc) Service Desk- Spanish | Rabat (Maroc) Customer Service Agent - Arabic/ English speaker | Sale el jadida (Maroc) Consultant digital close | Casablanca (Maroc) Chargé(e) de Recrutement | Casablanca (Maroc) Chargé (e) des Systèmes d’information et de la digitalisation | Rabat (Maroc) Agents de Développement | Tout le Maroc (Maroc) Credit Analyst (Back Office) | Casablanca (Maroc)",
-    "experience": "Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an",
-    "function": "Multimédia / Internet Télécoms / Réseaux Achats / Supply Chain Assistanat de Direction / Services Généraux Call Centers (métiers de) Commercial / Vente / Export Call Centers (métiers de) Informatique / Electronique Call Centers (métiers de) Commercial / Vente / Export Gestion / Comptabilité / Finance RH / Personnel / Formation Informatique / Electronique Multimédia / Internet Banque (métiers de la) Gestion / Comptabilité / Finance Assurance (métiers de l\u0027) Banque (métiers de la)",
-    "activity": "Informatique Métallurgie / Sidérurgie Centre d\u0027appel Offshoring / Nearshoring Centre d\u0027appel Informatique Centre d\u0027appel Informatique Banque / Finance Recrutement / Intérim Informatique Banque / Finance Comptabilité / Audit Assurance / Courtage Banque / Finance",
-    "educationLevel": "Bac +2 Bac +2 Bac Bac +3 Bac +2 Bac +5 et plus Bac +5 et plus Bac +5 et plus Bac +2 Bac +3"
   },
   {
     "title": "Agent HelpDesk Italophone | Tétouan (Maroc)",
@@ -588,13 +609,6 @@
     "educationLevel": "Bac +5 et plus"
   },
   {
-    "title": "Chargé(e) de Recrutement | Casablanca (Maroc)",
-    "experience": "Moins de 1 an",
-    "function": "RH / Personnel / Formation",
-    "activity": "Recrutement / Intérim",
-    "educationLevel": "Bac +5 et plus"
-  },
-  {
     "title": "Chargé (e) des Systèmes d’information et de la digitalisation | Rabat (Maroc)",
     "experience": "Moins de 1 an",
     "function": "Informatique / Electronique Multimédia / Internet",
@@ -602,11 +616,11 @@
     "educationLevel": "Bac +5 et plus"
   },
   {
-    "title": "Agents de Développement | Tout le Maroc (Maroc)",
-    "experience": "Moins de 1 an De 1 à 3 ans",
-    "function": "Banque (métiers de la) Gestion / Comptabilité / Finance",
-    "activity": "Banque / Finance Comptabilité / Audit",
-    "educationLevel": "Bac +2"
+    "title": "Credit Analyst (Back Office) | Casablanca (Maroc) Approvisionneur Italophone | Rabat, Rabat-Salé-Kénitra, Maroc (Maroc) Agent Commercial H/F | Oujda (Maroc) Ingénieur AI | Casablanca (Maroc) Actuaire | Casablanca (Maroc) Assistant Analyse des Ventes | Bouskoura (Maroc) Stagiaire Archiviste | Rabat (Maroc) ENERGY COMPLIANCE ANALYST | Casablanca (Maroc)",
+    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an De 1 à 3 ans",
+    "function": "Assurance (métiers de l\u0027) Banque (métiers de la) Achats / Supply Chain Logistique / Transport (métiers de) Banque (métiers de la) Informatique / Electronique Assurance (métiers de l\u0027) Achats / Supply Chain Gestion / Comptabilité / Finance Assistanat de Direction / Services Généraux Audit / Conseil Gestion projet / Etudes / R\u0026D",
+    "activity": "Assurance / Courtage Banque / Finance Autres Industries Banque / Finance Autres Industries Assurance / Courtage Distribution Banque / Finance Conseil / Etudes Energie",
+    "educationLevel": "Bac +3 Bac +2 Bac +3 Bac +5 et plus Bac +5 et plus Bac +2 Bac +2 Bac +2"
   },
   {
     "title": "Credit Analyst (Back Office) | Casablanca (Maroc)",
@@ -614,13 +628,6 @@
     "function": "Assurance (métiers de l\u0027) Banque (métiers de la)",
     "activity": "Assurance / Courtage Banque / Finance",
     "educationLevel": "Bac +3"
-  },
-  {
-    "title": "Approvisionneur Italophone | Rabat, Rabat-Salé-Kénitra, Maroc (Maroc) Agent Commercial H/F | Oujda (Maroc) Ingénieur AI | Casablanca (Maroc) Actuaire | Casablanca (Maroc) Assistant Analyse des Ventes | Bouskoura (Maroc) Stagiaire Archiviste | Rabat (Maroc) ENERGY COMPLIANCE ANALYST | Casablanca (Maroc) Acheteur Intrants Production | Agadir (Maroc)",
-    "experience": "Moins de 1 an Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans Moins de 1 an Moins de 1 an De 1 à 3 ans Moins de 1 an De 1 à 3 ans",
-    "function": "Achats / Supply Chain Logistique / Transport (métiers de) Banque (métiers de la) Informatique / Electronique Assurance (métiers de l\u0027) Achats / Supply Chain Gestion / Comptabilité / Finance Assistanat de Direction / Services Généraux Audit / Conseil Gestion projet / Etudes / R\u0026D Achats / Supply Chain",
-    "activity": "Autres Industries Banque / Finance Autres Industries Assurance / Courtage Distribution Banque / Finance Conseil / Etudes Energie Agriculture / Environnement Agroalimentaire",
-    "educationLevel": "Bac +2 Bac +3 Bac +5 et plus Bac +5 et plus Bac +2 Bac +2 Bac +2 Bac +5 et plus"
   },
   {
     "title": "Approvisionneur Italophone | Rabat, Rabat-Salé-Kénitra, Maroc (Maroc)",
@@ -670,12 +677,5 @@
     "function": "Audit / Conseil Gestion projet / Etudes / R\u0026D",
     "activity": "Conseil / Etudes Energie",
     "educationLevel": "Bac +2"
-  },
-  {
-    "title": "Acheteur Intrants Production | Agadir (Maroc)",
-    "experience": "Moins de 1 an De 1 à 3 ans",
-    "function": "Achats / Supply Chain",
-    "activity": "Agriculture / Environnement Agroalimentaire",
-    "educationLevel": "Bac +5 et plus"
   }
 ]

@@ -3,14 +3,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
+import weka.core.Attribute;
+import weka.core.DenseInstance;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ArffLoader.ArffReader;
 
-import static config.Config.TESTING_DATA_EXPERIENCE_LEVEL;
 import static config.Config.TRAINING_DATA;
 
 public class decisionTreePrediction {
@@ -21,41 +23,56 @@ public class decisionTreePrediction {
     public void predict() {
         try {
             // Load training data
-            BufferedReader reader = new BufferedReader(new FileReader(TRAINING_DATA));
+            System.out.println("Loading training data...");
+            BufferedReader reader = new BufferedReader(new FileReader(TRAINING_DATA)); // Replace with the actual path
             ArffReader arff = new ArffReader(reader);
             Instances dataTrain = arff.getData();
 
-            // Load testing data
-            BufferedReader reader1 = new BufferedReader(new FileReader(TESTING_DATA_EXPERIENCE_LEVEL));
-            ArffReader arff1 = new ArffReader(reader1);
-            Instances dataTest = arff1.getData();
-
-            // Set the target class (Experience Level) for both datasets
+            // Set the class index (Experience level as the target class)
             dataTrain.setClassIndex(dataTrain.numAttributes() - 2);
-            dataTest.setClassIndex(dataTrain.numAttributes() - 2);
 
-            // Create and train the REPTree model
+            // Train the REPTree model
+            System.out.println("Training the REPTree model...");
             weka.classifiers.trees.REPTree regressionTree = new weka.classifiers.trees.REPTree();
             regressionTree.buildClassifier(dataTrain);
 
-            // Evaluate the model
-            System.out.println("Evaluation with Train Data:");
+            // Evaluate the model using cross-validation
+            System.out.println("Evaluating the model...");
             Evaluation eval = new Evaluation(dataTrain);
             eval.crossValidateModel(regressionTree, dataTrain, 10, new Random(1));
             System.out.println(eval.toSummaryString());
 
-            // Make predictions on the test dataset
-            System.out.println("Predictions:");
-            for (int i = 0; i < dataTest.numInstances(); i++) {
-                Instance instance = dataTest.instance(i);
-                double predictionV = regressionTree.classifyInstance(instance);
-                System.out.println("Function: " + instance.stringValue(0) +
-                        ", Study Level: " + instance.stringValue(1) +
-                        ", Experience Level (prediction): " + (int) predictionV +
-                        ", Skills: " + instance.stringValue(3));
-            }
-        } catch (Exception ex) {
-            System.out.println("Error during prediction: " + ex.getMessage());
+            // Get user input for testing
+            System.out.println("Testing the model with user input...");
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Enter function: ");
+            String function = scanner.nextLine();
+
+            System.out.print("Enter study level: ");
+            String studyLevel = scanner.nextLine();
+
+            System.out.print("Enter skills: ");
+            String skills = scanner.nextLine();
+
+            // Create a new instance with user input
+            Attribute functionAttribute = dataTrain.attribute(0); // Assuming 'function' is the first attribute
+            Attribute studyLevelAttribute = dataTrain.attribute(1); // Assuming 'studyLevel' is the second attribute
+            Attribute skillsAttribute = dataTrain.attribute(3); // Assuming 'skills' is the fourth attribute
+
+            Instance newInstance = new DenseInstance(dataTrain.numAttributes());
+            newInstance.setDataset(dataTrain);
+            newInstance.setValue(functionAttribute, function);
+            newInstance.setValue(studyLevelAttribute, studyLevel);
+            newInstance.setValue(skillsAttribute, skills);
+
+            // Predict the experience level
+            double prediction = regressionTree.classifyInstance(newInstance);
+            System.out.println("Predicted Experience Level: " + (int) prediction);
+
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

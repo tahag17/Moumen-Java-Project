@@ -1,18 +1,20 @@
 package machine_learning;
 import java.util.Random;
+import java.util.Scanner;
 
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
+import weka.core.DenseInstance;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.StringToNominal;
 
-import static config.Config.TESTING_DATA_EDUCATIONAL_LEVEL;
 import static config.Config.TRAINING_DATA;
 public class predictionNaiveBayesEducationLevel {
     public void prediction() throws Exception {
+        // Load training data
         ConverterUtils.DataSource source1 = new ConverterUtils.DataSource(TRAINING_DATA);
         Instances train = source1.getDataSet();
 
@@ -23,21 +25,9 @@ public class predictionNaiveBayesEducationLevel {
 
         // Convert string class attribute to nominal (if it's a string)
         StringToNominal stringToNominal = new StringToNominal();
-        stringToNominal.setOptions(new String[] {"-R", String.valueOf(train.classIndex() + 1)});
+        stringToNominal.setOptions(new String[]{"-R", String.valueOf(train.classIndex() + 1)});
         stringToNominal.setInputFormat(train);
         train = Filter.useFilter(train, stringToNominal);
-
-        // Load testing data
-        ConverterUtils.DataSource source2 = new ConverterUtils.DataSource(TESTING_DATA_EDUCATIONAL_LEVEL);
-        Instances test = source2.getDataSet();
-
-        // Set the class attribute for testing data
-        if (test.classIndex() == -1) {
-            test.setClassIndex(1);
-        }
-
-        // Apply the same filter to the test data
-        test = Filter.useFilter(test, stringToNominal);
 
         // Create and train the Naive Bayes classifier
         NaiveBayes naiveBayes = new NaiveBayes();
@@ -47,44 +37,39 @@ public class predictionNaiveBayesEducationLevel {
         Evaluation eval_rocTrain = new Evaluation(train);
         eval_rocTrain.crossValidateModel(naiveBayes, train, 10, new Random(1));
 
-        // Perform cross-validation on the testing data
-        Evaluation eval_rocTest = new Evaluation(test);
-        eval_rocTest.crossValidateModel(naiveBayes, test, 10, new Random(1));
+        System.out.println("Model trained successfully. You can now input data for prediction.");
 
-        // Print the predicted class for each instance in the training set
-        System.out.println("______________La prédiction pour l'ensemble d'entraînement est : ______________");
+        // Accept user input for testing
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < train.numInstances(); i++) {
-            Instance instance = train.instance(i);
-            double prediction = naiveBayes.classifyInstance(instance);
-            String predictedClass = train.classAttribute().value((int) prediction);
+        System.out.print("Enter function: ");
+        String function = scanner.nextLine();
 
-            // Print the instance index and its predicted class
-            System.out.printf("Instance %d: Predicted class = %s%n", i, predictedClass);
+        System.out.print("Enter niveauExperience (e.g., 1,...): ");
+        double niveauExperience = scanner.nextDouble();
+        scanner.nextLine(); // Consume the leftover newline
 
-            // Print the values of each attribute for the instance
-            // Print the values of each attribute for the instance
-            System.out.print("Attribute values: ");
-            for (int j = 0; j < instance.numAttributes(); j++) {
-                String attributeValue = "";
+        System.out.print("Enter activity: ");
+        String activity = scanner.nextLine();
 
-                // Check the type of the attribute
-                if (instance.attribute(j).isNumeric()) {
-                    // If the attribute is numeric, get the numeric value
-                    attributeValue = String.valueOf(instance.value(j));
-                } else if (instance.attribute(j).isNominal() || instance.attribute(j).isString() || instance.attribute(j).isDate()) {
-                    // If the attribute is nominal, string, or date, get the string value
-                    attributeValue = instance.stringValue(j);
-                } else {
-                    // For unsupported types, print a placeholder or handle accordingly
-                    attributeValue = "Unsupported attribute type";
-                }
+        // Create a new instance with user input
+        Instance userInstance = new DenseInstance(train.numAttributes());
+        userInstance.setDataset(train);
 
-                System.out.printf("%s = %s; ", instance.attribute(j).name(), attributeValue);
-            }
-            System.out.println();  // Move to the next line after printing all attributes
-            // Move to the next line after printing all attributes
+        // Set attribute values based on user input
+        userInstance.setValue(train.attribute(0), function);
+        userInstance.setValue(train.attribute(2), niveauExperience);
+        userInstance.setValue(train.attribute(3), activity);
+        userInstance.setMissing(train.classIndex()); // Class value to predict
+
+        // Classify the new instance
+        double prediction = naiveBayes.classifyInstance(userInstance);
+        String predictedClass = train.classAttribute().value((int) prediction);
+
+        System.out.println("Predicted Study level: " + predictedClass);
+
+        scanner.close();
         }
     }
 
-}
+
