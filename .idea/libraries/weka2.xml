@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="weka1">
+  <library name="weka2">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../weka.jar!/" />
     </CLASSES>

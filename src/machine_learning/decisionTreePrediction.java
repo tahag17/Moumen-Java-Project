@@ -56,9 +56,9 @@ public class decisionTreePrediction {
             String skills = scanner.nextLine();
 
             // Create a new instance with user input
-            Attribute functionAttribute = dataTrain.attribute(0); // Assuming 'function' is the first attribute
-            Attribute studyLevelAttribute = dataTrain.attribute(1); // Assuming 'studyLevel' is the second attribute
-            Attribute skillsAttribute = dataTrain.attribute(3); // Assuming 'skills' is the fourth attribute
+            Attribute functionAttribute = dataTrain.attribute(0);
+            Attribute studyLevelAttribute = dataTrain.attribute(1);
+            Attribute skillsAttribute = dataTrain.attribute(3);
 
             Instance newInstance = new DenseInstance(dataTrain.numAttributes());
             newInstance.setDataset(dataTrain);
