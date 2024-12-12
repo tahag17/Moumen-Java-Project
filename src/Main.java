@@ -23,6 +23,7 @@ public class Main {
         Rekrut rekrut = new Rekrut();
         TalentTectra talentTectra = new TalentTectra();
         wetech wetech = new wetech();
+        MJob mjob = new MJob();
 
         // Initialize CleaningService
         CleaningService cleaningService = new CleaningService();
@@ -30,8 +31,8 @@ public class Main {
         // Scraping et nettoyage (Statique)
         try {
             // Scraping and cleaning data
-            talentTectra.scrap();
-            cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
+            //mjob.scrap();
+            cleaningService.CleanData(mjob, "mjob.json", "mjob_data.json");
 
             // Add other scraping calls here if needed:
             // bayt.scrap();
@@ -41,13 +42,13 @@ public class Main {
         } catch (IOException e) {
             System.err.println("Erreur lors de l'exécution du scraping et du nettoyage : " + e.getMessage());
             e.printStackTrace();
-            return;  // If scraping/cleaning fails, skip further processing
+            return; // If scraping/cleaning fails, skip further processing
         }
 
         // Job details mapping and insertion
         try {
             // Path to your cleaned JSON file
-            File jsonFile = new File(Config.BASE_PATH + "talenttectracleaned_data.json");
+            File jsonFile = new File(Config.BASE_PATH + "mjob_data.json");
 
             // Instantiate the mapper
             JobDetailsMapper mapper = new JobDetailsMapper();
@@ -65,16 +66,16 @@ public class Main {
             e.printStackTrace();
         }
 
-        //Generer la Chart:
-        JobChartService jobChartService = new JobChartService();
-        jobChartService.generateJobCharts();
-
-        // Instantiate the MLService and call the runMLPredictions method
-        MLService mlService = new MLService();
-        try {
-            mlService.runMLPredictions();  // Run the machine learning predictions
-        } catch (Exception e) {
-            e.printStackTrace();  // Handle any exceptions that occur during ML predictions
-        }
+//        //Generer la Chart:
+//        JobChartService jobChartService = new JobChartService();
+//        jobChartService.generateJobCharts();
+//
+//        // Instantiate the MLService and call the runMLPredictions method
+//        MLService mlService = new MLService();
+//        try {
+//            mlService.runMLPredictions();  // Run the machine learning predictions
+//        } catch (Exception e) {
+//            e.printStackTrace();  // Handle any exceptions that occur during ML predictions
+//        }
     }
 }

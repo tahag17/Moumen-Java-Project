@@ -23,7 +23,7 @@ public class RekrutCleaner {
         while (elementsIterator.hasNext()) {
             JsonNode job = elementsIterator.next();
 
-                        String title = job.get("title").asText();
+            String title = job.get("title").asText();
             String jobTitle = null;
             String location = null;
             if (title != null && title.contains("|")) {
@@ -34,32 +34,42 @@ public class RekrutCleaner {
 
             String experience = job.get("experience").asText();
 
-                        if (experience != null && !experience.isEmpty()) {
-                                Pattern pattern = Pattern.compile("\\d+");                  Matcher matcher = pattern.matcher(experience);
+            if (experience != null && !experience.isEmpty()) {
+                Pattern pattern = Pattern.compile("\\d+");
+                Matcher matcher = pattern.matcher(experience);
 
                 if (matcher.find()) {
-                    experience = matcher.group();                  } else {
-                    experience = "0";                  }
-            } else {
-                experience = "0";              }
+                    experience = matcher.group();
+                }
+                else {
+                    experience = "0";
+                }
+            }
+            else {
+                experience = "0";
+            }
 
-                        String function = job.get("function").asText();
+            String function = job.get("function").asText();
             if (function != null && function.contains("(metier de)")) {
                 function = function.replace("(metier de)", "").trim();             }
             if (function == null) {
                 function = "Non spécifié";             }
 
-                        String activity = job.get("activity").asText();
+            String activity = job.get("activity").asText();
             if (activity == null || activity.isEmpty()) {
-                activity = "Non spécifié";             } else {
-                activity = activity.replace("/", "-");             }
+                activity = "Non spécifié";
+            } else {
+                activity = activity.replace("/", "-");
+            }
 
-                        String educationLevel = job.get("educationLevel").asText();
+            String educationLevel = job.get("educationLevel").asText();
             if (educationLevel == null || educationLevel.isEmpty()) {
-                educationLevel = "Non spécifié";             } else {
-                educationLevel = formatNiveauEtude(educationLevel);             }
+                educationLevel = "Non spécifié";
+            } else {
+                educationLevel = formatNiveauEtude(educationLevel);
+            }
 
-                        ObjectNode cleanedJob = objectMapper.createObjectNode();
+            ObjectNode cleanedJob = objectMapper.createObjectNode();
             cleanedJob.put("function", jobTitle);
             cleanedJob.put("niveauEtude", educationLevel);
             cleanedJob.put("niveauExperience", experience);
@@ -75,17 +85,20 @@ public class RekrutCleaner {
 
     private static String formatNiveauEtude(String niveauEtude) {
         if (niveauEtude != null && !niveauEtude.isEmpty()) {
-                        Pattern pattern = Pattern.compile("Bac\\s?\\+?\\d*");              Matcher matcher = pattern.matcher(niveauEtude);
+            Pattern pattern = Pattern.compile("Bac\\s?\\+?\\d*");
+            Matcher matcher = pattern.matcher(niveauEtude);
 
             if (matcher.find()) {
                                 String result = matcher.group();
-                result = result.replaceAll("\\s?\\+", "+");                  return result;              }
+                result = result.replaceAll("\\s?\\+", "+");
+                return result;              }
         }
         return "Non spécifié";      }
 
         private static boolean containsMultipleMoins(String experience) {
         if (experience != null) {
-            long moinsCount = experience.split("Moins").length - 1;             return moinsCount > 1;         }
+            long moinsCount = experience.split("Moins").length - 1;
+            return moinsCount > 1;         }
         return false;
     }
 }

@@ -23,20 +23,20 @@ public class TalentTecraCleaner {
         while (elementsIterator.hasNext()) {
             JsonNode job = elementsIterator.next();
 
-                        String experienceLevel = formatExperienceLevel(getSafeText(job, "experienceLevel"));
+            String experienceLevel = formatExperienceLevel(getSafeText(job, "experienceLevel"));
             String niveauEtude = formatNiveauEtude(getSafeText(job, "niveauEtude"));
             String function = formatFunction(getSafeText(job, "jobTitle"));
             JsonNode skillsNode = job.get("skills");  
-                        String activity = formatActivity(skillsNode);
+            String activity = formatActivity(skillsNode);
 
-                        ObjectNode cleanedJob = objectMapper.createObjectNode();
+            ObjectNode cleanedJob = objectMapper.createObjectNode();
 
-                        cleanedJob.put("function", function);
+            cleanedJob.put("function", function);
             cleanedJob.put("niveauEtude", niveauEtude);
             cleanedJob.put("niveauExperience", experienceLevel);
             cleanedJob.put("activity", activity);
 
-                        cleanedData.add(cleanedJob);
+            cleanedData.add(cleanedJob);
         }
 
                 objectMapper.writeValue(new File(outputFile), cleanedData);
@@ -89,11 +89,13 @@ public class TalentTecraCleaner {
                     cleanedSkills.append(skillsNode.get(i).asText().trim());                  }
                 return cleanedSkills.toString();              }
         }
-        return "Non spécifié";      }
+        return "Non spécifié";
+        }
 
         private static String extractFirstInteger(String input) {
         if (input != null && !input.isEmpty()) {
-            Pattern pattern = Pattern.compile("\\d+");              Matcher matcher = pattern.matcher(input);
+            Pattern pattern = Pattern.compile("\\d+");
+            Matcher matcher = pattern.matcher(input);
 
             if (matcher.find()) {
                 return matcher.group();              }

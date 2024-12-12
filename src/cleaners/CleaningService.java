@@ -2,11 +2,13 @@ package cleaners;
 
 import config.Config;
 import scrapers.EmploiMa;
+import scrapers.MJob;
 import scrapers.Rekrut;
 import scrapers.TalentTectra;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.ref.Cleaner;
 
 public class CleaningService {
     public void CleanData(Object scraper, String inputFileName, String outputFileName) throws IOException {
@@ -23,7 +25,10 @@ public class CleaningService {
             EmploiMaCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
         } else if (scraper instanceof TalentTectra) {
             TalentTecraCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
-        } else {
+        } else if (scraper instanceof MJob) {
+                    MjobCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
+                }
+                else {
             throw new IllegalArgumentException("Unsupported scraper type: " + scraper.getClass().getName());
         }
 
