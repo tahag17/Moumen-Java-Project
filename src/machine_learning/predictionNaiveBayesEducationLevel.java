@@ -37,6 +37,16 @@ public class predictionNaiveBayesEducationLevel {
         // Perform cross-validation on the training data
         Evaluation eval_rocTrain = new Evaluation(train);
         eval_rocTrain.crossValidateModel(naiveBayes, train, 10, new Random(1));
+        System.out.println("=== Model Evaluation Metrics ===");
+        System.out.println("Correctly Classified Instances: " + eval_rocTrain.correct() + " (" + String.format("%.2f", eval_rocTrain.pctCorrect()) + "%)");
+        System.out.println("Incorrectly Classified Instances: " + eval_rocTrain.incorrect() + " (" + String.format("%.2f", eval_rocTrain.pctIncorrect()) + "%)");
+        System.out.println("Kappa Statistic: " + String.format("%.4f", eval_rocTrain.kappa()));
+        System.out.println("Mean Absolute Error: " + String.format("%.4f", eval_rocTrain.meanAbsoluteError()));
+        System.out.println("Root Mean Squared Error: " + String.format("%.4f", eval_rocTrain.rootMeanSquaredError()));
+        System.out.println("\nConfusion Matrix:");
+        System.out.println(eval_rocTrain.toMatrixString());
+        System.out.println("Summary: ");
+        System.out.println(eval_rocTrain.toSummaryString());
 
         System.out.println("Model trained successfully. You can now input data for prediction.");
 

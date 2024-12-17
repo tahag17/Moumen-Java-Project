@@ -25,26 +25,32 @@ public class EmploiMa {
         String outputFilePath = outputDirPath + "emploima_jobs.json";
 
         try {
-                        while (hasNextPage) {
-                String url = baseUrl + "?page=" + currentPage;
+            while (hasNextPage) {
+                String url = baseUrl + "?page=" + currentPage;//add to data base
                 Document document = Jsoup.connect(url).get();
+                String siteName = "EmploiMa";
 
                 System.out.println("Scraping Page: " + currentPage);
 
-                                Elements jobs = document.select(".card-job-detail");
+                Elements jobs = document.select(".card-job-detail");
 
-                                for (Element job : jobs) {
-                                        String title = job.select("h3 > a").text();
+                for (Element job : jobs) {
+                    String title = job.select("h3 > a").text();
 
-                                        String niveauEtude = job.select("ul > li:contains(Niveau d\\´études requis) strong").text();
+                    String niveauEtude = job.select("ul > li:contains(Niveau d\\´études requis) strong").text();
                     String niveauExperience = job.select("ul > li:contains(Niveau d\\'expérience) strong").text();
-                    String competence = job.select("ul > li:contains(Compétences clés) strong").text();
-
-                                        Job jobObj = new Job(title, niveauEtude, niveauExperience, competence);
+                    String competence = job.select("ul > li:contains(Compétences clés) strong").text();//ou activité
+                    String datPub=job.select("ul > time").text();
+                    String siteEntreprise = job.select("a[title][href]").attr("href");
+                    String nomEntreprise =job.select("a[title]").text();
+                    String description=job.select(".card-job-description > p").text();
+                    String region=job.select("ul > li:contains(Région de) strong").text();
+                    String typeContrat =job.select("ul > li:contains(Contrat proposé) strong").text();
+                    Job jobObj = new Job(title, niveauEtude, niveauExperience, competence,datPub, siteEntreprise, nomEntreprise,description, region, typeContrat,url,"EmploiMa");
                     jobList.add(jobObj);
                 }
 
-                                Element nextPageLink = document.selectFirst(".pager-next a");
+                Element nextPageLink = document.selectFirst(".pager-next a");
                 if (nextPageLink != null) {
                     currentPage++;
                 } else {
@@ -52,14 +58,14 @@ public class EmploiMa {
                 }
             }
 
-                        Gson gson = new Gson();
+            Gson gson = new Gson();
             String json = gson.toJson(jobList);
 
-                        File outputDir = new File(outputDirPath);
+            File outputDir = new File(outputDirPath);
             if (!outputDir.exists()) {
                 outputDir.mkdirs();             }
 
-                        try (FileWriter fileWriter = new FileWriter(outputFilePath)) {
+            try (FileWriter fileWriter = new FileWriter(outputFilePath)) {
                 fileWriter.write(json);
                 System.out.println("Job data saved to " + outputFilePath);
             }
@@ -71,20 +77,40 @@ public class EmploiMa {
 
 
 
-        public static class Job {
+    public class Job {
+        private String url;
+        private String webSite;
         private String title;
         private String niveauEtude;
         private String niveauExperience;
         private String competence;
+        private String datPub;
+        private String siteEntreprise;
+        private String nomEntreprise;
+        private String description;
+        private String region;
+        private String typeContrat;
 
-        public Job(String title, String niveauEtude, String niveauExperience, String competence) {
+        // Constructor
+        public Job(String title, String niveauEtude, String niveauExperience, String competence,
+                   String datPub, String siteEntreprise, String nomEntreprise,
+                   String description, String region, String typeContrat, String url, String webSite) {
             this.title = title;
             this.niveauEtude = niveauEtude;
             this.niveauExperience = niveauExperience;
             this.competence = competence;
+            this.datPub = datPub;
+            this.siteEntreprise = siteEntreprise;
+            this.nomEntreprise = nomEntreprise;
+            this.description = description;
+            this.region = region;
+            this.typeContrat = typeContrat;
+            this.url = url;
+            this.webSite = webSite;
         }
 
-                public String getTitle() {
+        // Getters and Setters
+        public String getTitle() {
             return title;
         }
 
@@ -115,5 +141,73 @@ public class EmploiMa {
         public void setCompetence(String competence) {
             this.competence = competence;
         }
+
+        public String getDatPub() {
+            return datPub;
+        }
+
+        public void setDatPub(String datPub) {
+            this.datPub = datPub;
+        }
+
+        public String getSiteEntreprise() {
+            return siteEntreprise;
+        }
+
+        public void setSiteEntreprise(String siteEntreprise) {
+            this.siteEntreprise = siteEntreprise;
+        }
+
+        public String getNomEntreprise() {
+            return nomEntreprise;
+        }
+
+        public void setNomEntreprise(String nomEntreprise) {
+            this.nomEntreprise = nomEntreprise;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public String getRegion() {
+            return region;
+        }
+
+        public void setRegion(String region) {
+            this.region = region;
+        }
+
+        public String getTypeContrat() {
+            return typeContrat;
+        }
+
+        public void setTypeContrat(String typeContrat) {
+            this.typeContrat = typeContrat;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public String getWebSite() {
+            return webSite;
+        }
+
+        public void setWebSite(String webSite) {
+            this.webSite = webSite;
+        }
+    }
+    public static void main(String[] args) {
+        EmploiMa m = new EmploiMa();
+        m.scrap();
     }
 }

@@ -1,13 +1,12 @@
 package scrapers;
+
 import com.google.gson.Gson;
 import config.Config;
-import job.JobDetails;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -15,20 +14,23 @@ import java.util.List;
 import java.util.Map;
 import java.time.Duration;
 import java.io.File;
-import java.io.IOException;
+
 public class MJob {
     List<Map<String, String>> jobDataList = new ArrayList<>();
+
     public void scrap() {
-        List<JobDetails> jobList = new ArrayList<>();
+        String url = "https://m-job.ma/recherche/informatique";
+        List<Job> jobList = new ArrayList<>();
         System.setProperty("webdriver.chrome.driver", Config.CHROME_DRIVER_PATH);
         // Initialize WebDriver
         WebDriver driver = new ChromeDriver();
         String outputDirPath = Config.BASE_PATH;
         String outputFilePath = outputDirPath + "mjob.json";
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
         try {
             // Open the site
-            driver.get("https://m-job.ma/recherche/informatique");
+            driver.get(url);
             wait.until((WebDriver d) -> {
                 JavascriptExecutor js = (JavascriptExecutor) d;
                 String readyState = js.executeScript("return document.readyState").toString();
@@ -50,24 +52,39 @@ public class MJob {
                     wait.until(ExpectedConditions.elementToBeClickable(offer));
                     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", offer);
 
-                    // Scrape job details
-                    WebElement titleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/section[2]/div/div/div[1]/div[2]/h1")));
+                    // Scrape job details using CSS selectors
+                    WebElement entrepriseNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div h3")));
+                    String entrepriseName = entrepriseNameElement.getText();
+
+                    WebElement contratElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div ul li:nth-child(2) h3")));
+                    String contrat = contratElement.getText();
+
+                    WebElement salaireElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div ul li:nth-child(3) h3")));
+                    String salaire = salaireElement.getText();
+
+                    WebElement titleElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div h1")));
                     String title = titleElement.getText();
 
-                    WebElement niveauEtudeElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/section[2]/div/div/div[2]/div[7]")));
+                    WebElement niveauEtudeElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div:nth-child(7)")));
                     String niveauEtude = niveauEtudeElement.getText();
 
-                    WebElement activityElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/section[2]/div/div/div[2]/div[4]")));
+                    WebElement activityElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div:nth-child(4)")));
                     String activity = activityElement.getText();
 
-                    WebElement niveauExperienceElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/section[2]/div/div/div[2]/div[6]")));
+                    WebElement niveauExperienceElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div:nth-child(6)")));
                     String niveauExperience = niveauExperienceElement.getText();
 
-                    System.out.println(title + " | " + niveauEtude + " | " + activity + " | " + niveauExperience);
+                    WebElement metierElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div:nth-child(5)")));
+                    String metier = metierElement.getText();
 
-                    // Save job details (if needed)
-                     JobDetails jobObj = new JobDetails(niveauExperience, title, activity, niveauEtude);
-                     jobList.add(jobObj);
+                    WebElement langElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div:nth-child(8)")));
+                    String lang = langElement.getText();
+
+                    WebElement regionElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section div div div div span")));
+                    String region = regionElement.getText();
+
+                    Job jobObj = new Job(url, "MJob", entrepriseName, contrat, salaire, title, niveauEtude, activity, niveauExperience, metier, lang, region);
+                    jobList.add(jobObj);
 
                     // Navigate back to the job list
                     driver.navigate().back();
@@ -123,11 +140,137 @@ public class MJob {
         }
     }
 
+    public class Job {
+        private String url;
+        private String site;
+        private String title;
+        private String desc;
+        private String date;
+        private String region;
+        private String experience;
+        private String function;
+        private String activity;
+        private String educationLevel;
+        private String typeC;
+        private String teletravail;  // Add missing 'teletravail' field
+
+        // Constructor
+        public Job(String url, String site, String title, String desc, String date, String region,
+                   String typeC, String activity, String experience, String educationLevel, String function, String teletravail) {
+            this.url = url;
+            this.site = site;
+            this.title = title;
+            this.desc = desc;
+            this.date = date;
+            this.region = region;
+            this.experience = experience;
+            this.function = function;
+            this.activity = activity;
+            this.educationLevel = educationLevel;
+            this.typeC = typeC;
+            this.teletravail = teletravail;
+        }
+
+        // Getters and Setters
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public String getSite() {
+            return site;
+        }
+
+        public void setSite(String site) {
+            this.site = site;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public void setDesc(String desc) {
+            this.desc = desc;
+        }
+
+        public String getDate() {
+            return date;
+        }
+
+        public void setDate(String date) {
+            this.date = date;
+        }
+
+        public String getRegion() {
+            return region;
+        }
+
+        public void setRegion(String region) {
+            this.region = region;
+        }
+
+        public String getExperience() {
+            return experience;
+        }
+
+        public void setExperience(String experience) {
+            this.experience = experience;
+        }
+
+        public String getFunction() {
+            return function;
+        }
+
+        public void setFunction(String function) {
+            this.function = function;
+        }
+
+        public String getActivity() {
+            return activity;
+        }
+
+        public void setActivity(String activity) {
+            this.activity = activity;
+        }
+
+        public String getEducationLevel() {
+            return educationLevel;
+        }
+
+        public void setEducationLevel(String educationLevel) {
+            this.educationLevel = educationLevel;
+        }
+
+        public String getTypeC() {
+            return typeC;
+        }
+
+        public void setTypeC(String typeC) {
+            this.typeC = typeC;
+        }
+
+        public String getTeletravail() {
+            return teletravail;
+        }
+
+        public void setTeletravail(String teletravail) {
+            this.teletravail = teletravail;
+        }
+    }
+
     public static void main(String[] args) {
         MJob job = new MJob();
         job.scrap();
     }
-
 }
-
-

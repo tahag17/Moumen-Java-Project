@@ -22,23 +22,93 @@ public class JobDetails {
     private Integer id;
 
     @JsonProperty("niveauExperience")
-    private String experienceLevel;
+    private String experienceLevel;//done
 
     @JsonProperty("niveauEtude")
-    private String niveauEtude;
+    private String niveauEtude;//done
 
     @JsonProperty("function")
-    private String jobTitle;
+    private String jobTitle;//done
 
-    @JsonProperty("activity")
+    @JsonProperty("region")
+    private String region;
+
+    @JsonProperty("url")
+    private String url;
+
+    @JsonProperty("siteName")
+    private String siteName;
+
+    @JsonProperty("date")
+    private String date;
+
+    @JsonProperty("siteEntreprise")
+    private String siteEntreprise;
+
+    @JsonProperty("nomEntreprise")
+    private String nomEntreprise;
+
+    @JsonProperty("description")
+    private String Description;
+
+    @JsonProperty("activitySector")
+    private String activitySector;//done
+
+    @JsonProperty("metier")
+    private String metier;
+
+    @JsonProperty("ContractType")
+    private String ContractType;
+
+    @JsonProperty("Diplomat")
+    private String Diplomat;
+
+    @JsonProperty("Profil")
+    private String Profil;
+
+    @JsonProperty("PersonnalityTraits")
+    private String PersonnalityTraits;
+
+    @JsonProperty("Language")
+    private String Language;
+
+    @JsonProperty("LanguageLevel")
+    private String LanguageLevel;
+
+    @JsonProperty("socialAdvantages")
+    private String socialAdvantages;
+
+    @JsonProperty("Teletravail")
+    private String Teletravail;
+
+    @JsonProperty("skills")
     @JsonDeserialize(using = ActivityDeserializer.class)
-    private List<String> skills;
+    private List<String> skills;//done
 
-        public JobDetails(String experienceLevel, String jobTitle, String activity, String niveauEtude) {
+    public JobDetails(String experienceLevel, String jobTitle, String activitySector, String niveauEtude,
+                      String region, String url, String siteName, String date, String siteEntreprise, String nomEntreprise,
+                      String description, String contractType, String diplomat, String profil, String personalityTraits,
+                      String language, String languageLevel, String socialAdvantages, String teletravail) {
         this.experienceLevel = experienceLevel;
         this.jobTitle = jobTitle;
-        this.skills = formatSkills(activity);
+        this.activitySector = activitySector;
         this.niveauEtude = niveauEtude;
+        this.region = region;
+        this.url = url;
+        this.siteName = siteName;
+        this.date = date;
+        this.siteEntreprise = siteEntreprise;
+        this.nomEntreprise = nomEntreprise;
+        this.Description = description;
+        this.ContractType = contractType;
+        this.Diplomat = diplomat;
+        this.Profil = profil;
+        this.PersonnalityTraits = personalityTraits;
+        this.Language = language;
+        this.LanguageLevel = languageLevel;
+        this.socialAdvantages = socialAdvantages;
+        this.Teletravail = teletravail;
+        this.skills = skills; // Assumes 'skills' is already formatted as needed
     }
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     public List<String> getSkills() {return skills;}

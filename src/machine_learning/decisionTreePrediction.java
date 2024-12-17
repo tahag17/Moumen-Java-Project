@@ -75,5 +75,9 @@ public class decisionTreePrediction {
             e.printStackTrace();
         }
     }
+    public static void main(String[] args){
+        decisionTreePrediction p = new decisionTreePrediction();
+        p.predict();
+    }
 
 }

@@ -2,6 +2,7 @@ package cleaners;
 
 import config.Config;
 import scrapers.EmploiMa;
+//import scrapers.MJob;
 import scrapers.MJob;
 import scrapers.Rekrut;
 import scrapers.TalentTectra;
@@ -25,9 +26,9 @@ public class CleaningService {
             EmploiMaCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
         } else if (scraper instanceof TalentTectra) {
             TalentTecraCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
-        } else if (scraper instanceof MJob) {
+       } else if (scraper instanceof MJob) {
                     MjobCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
-                }
+              }
                 else {
             throw new IllegalArgumentException("Unsupported scraper type: " + scraper.getClass().getName());
         }
