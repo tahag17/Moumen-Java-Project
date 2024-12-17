@@ -1,1 +1,62 @@
-[{"function":"Juriste droit des affaires","niveauEtude":"Bac+3","niveauExperience":"1","activity":"Banque - assurance"},{"function":"RAF","niveauEtude":"Bac+5","niveauExperience":"10","activity":"BTP - construction"},{"function":"Hospitality Officer","niveauEtude":"Bac+3","niveauExperience":"3","activity":"Évènementiel - hôte(sse) - accueil"},{"function":"Ingénieur génie civil senior sidi rahal","niveauEtude":"Bac+5","niveauExperience":"5","activity":"BTP - construction"},{"function":"controle qualite","niveauEtude":"Bac+2","niveauExperience":"1","activity":"Industrie - production - fabrication - autres"},{"function":"Technicien IT","niveauEtude":"Bac+2","niveauExperience":"3","activity":"BTP - construction"},{"function":"Responsable de la Technologie et de l’infrastructure IT des Sites","niveauEtude":"Bac+5","niveauExperience":"5","activity":"Equip. - électriques - électroniques - optiques - précision"},{"function":"Chargé(e) de Marketing Digital - CDI","niveauEtude":"Bac+5","niveauExperience":"1","activity":"Import - export"},{"function":"Un(e) Commercial(e) Prescripteur Senior - CDI","niveauEtude":"Bac+5","niveauExperience":"5","activity":"Import - export"},{"function":"CAVISTE","niveauEtude":"Bac+2","niveauExperience":"1","activity":"Hôtellerie - restauration"}]
+[
+  {
+    "function": "Assistant controle de gestion",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "1",
+    "activity": "Agroalimentaire"
+  },
+  {
+    "function": "infirmier polyvalent",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "3",
+    "activity": "Santé - pharmacie - hôpitaux - équipements - médicaux"
+  },
+  {
+    "function": "Serveur",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "1",
+    "activity": "Hôtellerie - restauration"
+  },
+  {
+    "function": "Assistant Achat et Gestionnaire de Stock",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "3",
+    "activity": "Industrie - production - fabrication - autres"
+  },
+  {
+    "function": "CHEF DE RANG",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "1",
+    "activity": "Hôtellerie - restauration"
+  },
+  {
+    "function": "Commercial terrain",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "1",
+    "activity": "BTP - construction"
+  },
+  {
+    "function": "resposable pédagogique",
+    "niveauEtude": "Bac+5",
+    "niveauExperience": "3",
+    "activity": "Services - autres"
+  },
+  {
+    "function": "Commis de rang",
+    "niveauEtude": "Non spécifié",
+    "niveauExperience": "1",
+    "activity": "Évènementiel - hôte(sse) - accueil"
+  },
+  {
+    "function": "Conducteur des travaux",
+    "niveauEtude": "Bac+2",
+    "niveauExperience": "5",
+    "activity": "Electricité - eau - gaz - nucléaire - énergie"
+  },
+  {
+    "function": "Juriste droit des affaires",
+    "niveauEtude": "Bac+3",
+    "niveauExperience": "1",
+    "activity": "Banque - assurance"
+  }
+]
