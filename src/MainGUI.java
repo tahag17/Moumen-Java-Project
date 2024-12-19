@@ -28,10 +28,10 @@ public class MainGUI {
         // Create instances for services
         ForceEmploi forceEmploi = new ForceEmploi();
         Bayt bayt = new Bayt();
-        EmploiMa emploiMa = new EmploiMa();
-        Rekrut rekrut = new Rekrut();
+         EmploiMa emploiMa = new EmploiMa();
+       Rekrut rekrut = new Rekrut();
         TalentTectra talentTectra = new TalentTectra();
-        wetech wetech = new wetech();
+       wetech wetech = new wetech();
         MJob mjob = new MJob();
 
         CleaningService cleaningService = new CleaningService();
@@ -49,17 +49,21 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 try {
                     // Example: Scrape and clean data for MJob
-                    mjob.scrap();
-                    bayt.scrap();
-                    forceEmploi.scrap();
-                    wetech.scrap();
-                    emploiMa.scrap();
-                    rekrut.scrap();
-                    talentTectra.scrap();
-                    cleaningService.CleanData(mjob, "mjob.json", "mjob_data.json");
+//                    mjob.scrap();
+//                    bayt.scrap();
+//                      forceEmploi.scrap();
+//                    wetech.scrap();
+//                    emploiMa.scrap();
+//                    rekrut.scrap();
+                   // talentTectra.scrap();
+                   cleaningService.CleanData(mjob, "mjob.json", "mjob_data.json");
                     cleaningService.CleanData(rekrut, "rekrut.json", "rekrut_data.json");
-                    cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploima_data.json");
-                    cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
+                   cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploima_data.json");
+                   cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
+                    cleaningService.CleanData(wetech, "WeTech.json", "WeTechdata.json");
+                    cleaningService.CleanData(bayt, "bayt_jobs.json", "bayt_data.json");
+                    cleaningService.CleanData(forceEmploi, "ForceEmploi.json", "ForceEmploi_Data.json");
+
 
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(frame, "Error during scraping/cleaning: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);

@@ -8,103 +8,70 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MjobCleaner {
+
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
     public static void cleanData(String inputFile, String outputFile) throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = objectMapper.readTree(new File(inputFile));
         ArrayNode cleanedData = objectMapper.createArrayNode();
-        Iterator<JsonNode> elementsIterator = rootNode.iterator();
 
+        Iterator<JsonNode> elementsIterator = rootNode.iterator();
         while (elementsIterator.hasNext()) {
             JsonNode job = elementsIterator.next();
 
-            // Extract and clean data
-
-            String experience = cleanExperience(job.get("experienceLevel"));
-            String educationLevel = cleanEducationLevel(job.get("niveauEtude"));
-            String activity = formatActivity(job.get("skills"));
-            String function = formatFunction(getSafeText(job, "jobTitle"));
-
-            // Build cleaned job object
             ObjectNode cleanedJob = objectMapper.createObjectNode();
-            cleanedJob.put("function", function);
-            cleanedJob.put("niveauEtude", educationLevel);
-            cleanedJob.put("niveauExperience", experience);
-            cleanedJob.put("activity", activity);
 
+            cleanedJob.put("Titre", getSafeText(job, "region"));
+            cleanedJob.put("URL", getSafeText(job,"url")); // Pas de champ URL dans l'exemple d'entrée
+            cleanedJob.put("Site Name", "Mjob"); // Nom du site spécifique
+            cleanedJob.put("Date de publication", ""); // Pas de champ date dans l'exemple d'entrée
+            cleanedJob.put("Date pour postuler", ""); // Pas de champ date de postulation dans l'exemple d'entrée
+            cleanedJob.put("Adresse d'entreprise", ""); // Pas de champ d'adresse
+            cleanedJob.put("Site web d'entreprise", ""); // Pas de champ site web entreprise
+            cleanedJob.put("Nom d'entreprise", getSafeText(job, "title")); // Pas de champ nom entreprise
+            cleanedJob.put("Description d'entreprise", ""); // Pas de champ description entreprise
+            cleanedJob.put("Description du poste", getSafeText(job, "experience"));
+            cleanedJob.put("Région", ""); // Pas de champ région
+            cleanedJob.put("Ville", ""); // Pas de champ ville
+            cleanedJob.put("Secteur d'activité", ""); // Pas de champ secteur d'activité spécifique
+            cleanedJob.put("Métier", ""); // Pas de champ métier
+            cleanedJob.put("Type du contrat", getSafeText(job,"desc")); // Pas de champ type de contrat
+            cleanedJob.put("Niveau d'études", "");
+            cleanedJob.put("Spécialité/Diplôme", ""); // Pas de champ spécialité
+            cleanedJob.put("Expérience", "");
+            cleanedJob.put("Profil recherché", "");
+            cleanedJob.put("Traits de personnalité", ""); // Pas de champ traits de personnalité
+            cleanedJob.put("Compétences requises (hard skills)",getSafeText(job, "function"));
+            cleanedJob.put("Soft-Skills","");
+            cleanedJob.put("Compétences recommandées", ""); // Pas de champ compétences recommandées
+            cleanedJob.put("Langue", "");
+            cleanedJob.put("Niveau de la langue", ""); // Pas de champ niveau de la langue
+            cleanedJob.put("Salaire", getSafeText(job,"date")); // Pas de champ salaire
+            cleanedJob.put("Avantages sociaux", ""); // Pas de champ avantages sociaux
+            cleanedJob.put("Télétravail", getSafeText(job,"teletravail")); // Pas de champ télétravail
 
             cleanedData.add(cleanedJob);
         }
 
-        // Write cleaned data to output file
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFile), cleanedData);
-        System.out.println("Cleaned data saved to " + outputFile);
-    }
-
-    private static String cleanExperience(JsonNode experienceNode) {
-        if (experienceNode != null && !experienceNode.isNull()) {
-            String experience = experienceNode.asText().trim();
-            Pattern pattern = Pattern.compile("\\d+");
-            Matcher matcher = pattern.matcher(experience);
-
-            if (matcher.find()) {
-                return matcher.group();
-            }
-        }
-        return "0"; // Default experience level
-    }
-
-    private static String cleanEducationLevel(JsonNode educationNode) {
-        if (educationNode != null && !educationNode.isNull()) {
-            String niveauEtude = educationNode.asText().trim();
-            return formatNiveauEtude(niveauEtude);
-        }
-        return "Non spécifié";
-    }
-
-    private static String formatNiveauEtude(String niveauEtude) {
-        if (niveauEtude != null && !niveauEtude.isEmpty()) {
-            // Case-insensitive pattern to match "BAC", "Bac", or "bac" with optional "+<number>"
-            Pattern pattern = Pattern.compile("(?i)BAC\\s*\\+?\\d*");
-            Matcher matcher = pattern.matcher(niveauEtude);
-
-            if (matcher.find()) {
-                // Extract the matched string
-                String result = matcher.group();
-                // Normalize the case to "Bac" and format with "+"
-                result = result.replaceAll("(?i)BAC", "Bac").replaceAll("\\s*\\+", "+");
-                return result;
-            }
-        }
-        return "Non spécifié";
-    }
-
-    private static String formatActivity(JsonNode skillsNode) {
-        if (skillsNode != null && skillsNode.isArray()) {
-            StringBuilder cleanedSkills = new StringBuilder();
-            for (int i = 0; i < skillsNode.size(); i++) {
-                if (i > 0) {
-                    cleanedSkills.append(" - ");
-                }
-                cleanedSkills.append(skillsNode.get(i).asText().trim());
-            }
-            return cleanedSkills.toString();
-        }
-        return "Non spécifié";
+        System.out.println("Nettoyage effectué avec succès. Fichier sauvegardé à : " + outputFile);
     }
 
     private static String getSafeText(JsonNode node, String fieldName) {
         JsonNode fieldNode = node.get(fieldName);
-        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText().trim() : "Non spécifié";
+        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText().trim() : "";
     }
 
-    private static String formatFunction(String jobTitle) {
-        if (jobTitle != null && !jobTitle.isEmpty() && jobTitle.contains("Fonction :")) {
-            return jobTitle.replace("Fonction :", "").trim();
+
+    public static void main(String[] args) {
+        try {
+            String inputFilePath = "input_wetech.json";
+            String outputFilePath = "output_cleaned_wetech.json";
+            cleanData(inputFilePath, outputFilePath);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return jobTitle.isEmpty() ? "Non spécifié" : jobTitle;
     }
 }

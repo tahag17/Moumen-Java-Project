@@ -13,92 +13,113 @@ import java.util.regex.Pattern;
 
 public class TalentTecraCleaner {
 
-        public static void cleanData(String inputFile, String outputFile) throws IOException {
-                ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    public static void cleanData(String inputFile, String outputFile) throws IOException {
         JsonNode rootNode = objectMapper.readTree(new File(inputFile));
+        ArrayNode cleanedData = objectMapper.createArrayNode();
 
-                ArrayNode cleanedData = objectMapper.createArrayNode();
-
-                Iterator<JsonNode> elementsIterator = rootNode.iterator();
+        Iterator<JsonNode> elementsIterator = rootNode.iterator();
         while (elementsIterator.hasNext()) {
             JsonNode job = elementsIterator.next();
 
-            String experienceLevel = formatExperienceLevel(getSafeText(job, "experienceLevel"));
-            String niveauEtude = formatNiveauEtude(getSafeText(job, "niveauEtude"));
-            String function = formatFunction(getSafeText(job, "jobTitle"));
-            JsonNode skillsNode = job.get("skills");  
-            String activity = formatActivity(skillsNode);
-
             ObjectNode cleanedJob = objectMapper.createObjectNode();
 
-            cleanedJob.put("function", function);
-            cleanedJob.put("niveauEtude", niveauEtude);
-            cleanedJob.put("niveauExperience", experienceLevel);
-            cleanedJob.put("activity", activity);
+            cleanedJob.put("Titre", getSafeText(job, "title"));
+            cleanedJob.put("URL", getSafeText(job, "url"));
+            cleanedJob.put("Site Name", getSafeText(job, "site"));
+            cleanedJob.put("Date de publication", getSafeText(job, "date"));
+            cleanedJob.put("Date pour postuler", "");  // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Adresse d'entreprise", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Site web d'entreprise", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Nom d'entreprise", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Description d'entreprise", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Description du poste", getSafeText(job, "desc"));
+            cleanedJob.put("Région", getSafeText(job, "region"));
+            cleanedJob.put("Ville", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Secteur d'activité", getSafeText(job, "activity"));
+            cleanedJob.put("Métier", getSafeText(job, "function"));
+            cleanedJob.put("Type du contrat", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Niveau d'études", cleanEducationLevel(getSafeText(job, "educationLevel")));
+            cleanedJob.put("Spécialité/Diplôme", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Expérience", cleanExperience(getSafeText(job, "experience")));
+            cleanedJob.put("Profil recherché", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Traits de personnalité", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Compétences requises (hard skills)", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Soft-Skills", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Compétences recommandées", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Langue", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Niveau de la langue", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Salaire", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Avantages sociaux", ""); // Champ non présent dans l'exemple d'entrée
+            cleanedJob.put("Télétravail", ""); // Champ non présent dans l'exemple d'entrée
 
             cleanedData.add(cleanedJob);
         }
 
-                objectMapper.writeValue(new File(outputFile), cleanedData);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(outputFile), cleanedData);
+        System.out.println("Nettoyage effectué avec succès. Fichier sauvegardé à : " + outputFile);
     }
 
-        private static String getSafeText(JsonNode node, String fieldName) {
+    private static String getSafeText(JsonNode node, String fieldName) {
         JsonNode fieldNode = node.get(fieldName);
-        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText().trim() : "";      }
-
-        private static String formatExperienceLevel(String experienceLevel) {
-        if (experienceLevel != null && !experienceLevel.isEmpty() && experienceLevel.contains("Expérience requise")) {
-            experienceLevel = experienceLevel.replace("Expérience requise :", "").trim();
-        }
-        return extractFirstInteger(experienceLevel);
+        return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText().trim() : "";
     }
 
-        private static String formatNiveauEtude(String niveauEtude) {
-        if (niveauEtude != null && !niveauEtude.isEmpty()) {
-                        niveauEtude = niveauEtude.replaceAll("\\s?et plus", "").trim();
-
-                        if (niveauEtude.toLowerCase().contains("bac")) {
-                                if (niveauEtude.equalsIgnoreCase("bac")) {
-                    return "Bac";                  } else {
-                                        Pattern pattern = Pattern.compile("Bac\\+\\d+");
-                    Matcher matcher = pattern.matcher(niveauEtude);
-
-                    if (matcher.find()) {
-                        return matcher.group();                      }
-                }
-            }
+    // Méthode pour nettoyer le champ 'Niveau d'études' et ne retenir que le premier Bac+x ou Bac
+    private static String cleanEducationLevel(String educationLevel) {
+        if (educationLevel == null || educationLevel.isEmpty()) {
+            return "";
         }
-        return "Non spécifié";      }
 
-        private static String formatFunction(String jobTitle) {
-        if (jobTitle != null && !jobTitle.isEmpty() && jobTitle.contains("Fonction :")) {
-            jobTitle = jobTitle.replace("Fonction :", "").trim();          }
-        return jobTitle.isEmpty() ? "Non spécifié" : jobTitle;
+        // Convertir la chaîne en minuscules et supprimer les espaces inutiles
+        educationLevel = educationLevel.replaceAll("\\s+", " ").trim().toLowerCase();
+
+        // Chercher la première occurrence de "bac"
+        int bacIndex = educationLevel.indexOf("bac");
+
+        if (bacIndex == -1) {
+            return ""; // Si "bac" n'est pas trouvé, on retourne une chaîne vide
+        }
+
+        // Vérifier si après "bac", il y a un "+" suivi d'un chiffre
+        int plusIndex = educationLevel.indexOf("+", bacIndex);
+        if (plusIndex != -1 && plusIndex + 1 < educationLevel.length() && Character.isDigit(educationLevel.charAt(plusIndex + 1))) {
+            // Extraire le chiffre après "bac+" et retourner la chaîne "bac+x"
+            return "Bac+" + educationLevel.charAt(plusIndex + 1);
+        } else {
+            // Si il n'y a pas de "+", retourner seulement "bac"
+            return "Bac";
+        }
     }
 
-        private static String formatActivity(JsonNode skillsNode) {
-        if (skillsNode != null && skillsNode.isArray()) {
-            int size = skillsNode.size();
-
-                        if (size > 3) {
-                StringBuilder cleanedSkills = new StringBuilder();
-
-                                for (int i = 3; i < size; i++) {
-                    if (i > 3) {
-                        cleanedSkills.append(" - ");                      }
-                    cleanedSkills.append(skillsNode.get(i).asText().trim());                  }
-                return cleanedSkills.toString();              }
-        }
-        return "Non spécifié";
+    // Méthode pour nettoyer le champ 'Expérience'
+    private static String cleanExperience(String experience) {
+        if (experience == null || experience.isEmpty()) {
+            return "";
         }
 
-        private static String extractFirstInteger(String input) {
-        if (input != null && !input.isEmpty()) {
-            Pattern pattern = Pattern.compile("\\d+");
-            Matcher matcher = pattern.matcher(input);
+        // Utilisation d'une expression régulière pour extraire le premier nombre
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(experience);
 
-            if (matcher.find()) {
-                return matcher.group();              }
+        if (matcher.find()) {
+            return matcher.group();
         }
-        return "Non spécifié";      }
+
+        return "";
+    }
+
+
+
+
+    public static void main(String[] args) {
+        try {
+            String inputFilePath = "input.json";
+            String outputFilePath = "output_cleaned.json";
+            cleanData(inputFilePath, outputFilePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

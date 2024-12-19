@@ -1,15 +1,13 @@
 package cleaners;
 
 import config.Config;
-import scrapers.EmploiMa;
-//import scrapers.MJob;
-import scrapers.MJob;
-import scrapers.Rekrut;
-import scrapers.TalentTectra;
+import scrapers.*;
+
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.ref.Cleaner;
+
+
 
 public class CleaningService {
     public void CleanData(Object scraper, String inputFileName, String outputFileName) throws IOException {
@@ -28,10 +26,17 @@ public class CleaningService {
             TalentTecraCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
        } else if (scraper instanceof MJob) {
                     MjobCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
-              }
-                else {
-            throw new IllegalArgumentException("Unsupported scraper type: " + scraper.getClass().getName());
-        }
+                } else if (scraper instanceof wetech) {
+                    WetechCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
+
+                }else if (scraper instanceof Bayt) {
+                    BaytCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
+                }else if (scraper instanceof ForceEmploi) {
+                    ForceEmploiCleaner.cleanData(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
+                }else {
+                    throw new IllegalArgumentException("Unsupported scraper type: " + scraper.getClass().getName());
+                }
+
 
         System.out.println("Data cleaned and filtered successfully for: " + inputFileName);
     }

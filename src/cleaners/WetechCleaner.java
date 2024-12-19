@@ -8,10 +8,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class EmploiMaCleaner {
+public class WetechCleaner {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -26,28 +24,28 @@ public class EmploiMaCleaner {
             ObjectNode cleanedJob = objectMapper.createObjectNode();
 
             cleanedJob.put("Titre", getSafeText(job, "title"));
-            cleanedJob.put("URL", getSafeText(job, "url")); // Pas de champ URL dans l'exemple d'entrée
-            cleanedJob.put("Site Name", "EmploiMa"); // Nom du site spécifique
-            cleanedJob.put("Date de publication", getSafeText(job, "datPub")); // Pas de champ date dans l'exemple d'entrée
+            cleanedJob.put("URL", ""); // Pas de champ URL dans l'exemple d'entrée
+            cleanedJob.put("Site Name", "Wetech"); // Nom du site spécifique
+            cleanedJob.put("Date de publication", ""); // Pas de champ date dans l'exemple d'entrée
             cleanedJob.put("Date pour postuler", ""); // Pas de champ date de postulation dans l'exemple d'entrée
             cleanedJob.put("Adresse d'entreprise", ""); // Pas de champ d'adresse
-            cleanedJob.put("Site web d'entreprise", getSafeText(job, "siteEntreprise")); // Pas de champ site web entreprise
+            cleanedJob.put("Site web d'entreprise", ""); // Pas de champ site web entreprise
             cleanedJob.put("Nom d'entreprise", ""); // Pas de champ nom entreprise
-            cleanedJob.put("Description d'entreprise", getSafeText(job, "description")); // Pas de champ description entreprise
+            cleanedJob.put("Description d'entreprise", ""); // Pas de champ description entreprise
             cleanedJob.put("Description du poste", getSafeText(job, "description"));
-            cleanedJob.put("Région", getSafeText(job, "region")); // Pas de champ région
+            cleanedJob.put("Région", ""); // Pas de champ région
             cleanedJob.put("Ville", ""); // Pas de champ ville
             cleanedJob.put("Secteur d'activité", ""); // Pas de champ secteur d'activité spécifique
             cleanedJob.put("Métier", ""); // Pas de champ métier
-            cleanedJob.put("Type du contrat", getSafeText(job, "typeContrat")); // Pas de champ type de contrat
-            cleanedJob.put("Niveau d'études",cleanEducationLevel(getSafeText(job, "niveauEtude")));
+            cleanedJob.put("Type du contrat", ""); // Pas de champ type de contrat
+            cleanedJob.put("Niveau d'études", cleanEducationLevel(getSafeText(job, "requirements")));
             cleanedJob.put("Spécialité/Diplôme", ""); // Pas de champ spécialité
-            cleanedJob.put("Expérience", cleanExperience(getSafeText(job, "niveauExperience")));
+            cleanedJob.put("Expérience", "");
             cleanedJob.put("Profil recherché", "");
             cleanedJob.put("Traits de personnalité", ""); // Pas de champ traits de personnalité
             cleanedJob.put("Compétences requises (hard skills)","");
             cleanedJob.put("Soft-Skills","");
-            cleanedJob.put("Compétences recommandées", getSafeText(job, "competence")); // Pas de champ compétences recommandées
+            cleanedJob.put("Compétences recommandées", ""); // Pas de champ compétences recommandées
             cleanedJob.put("Langue", "");
             cleanedJob.put("Niveau de la langue", ""); // Pas de champ niveau de la langue
             cleanedJob.put("Salaire", ""); // Pas de champ salaire
@@ -66,6 +64,7 @@ public class EmploiMaCleaner {
         return (fieldNode != null && !fieldNode.isNull()) ? fieldNode.asText().trim() : "";
     }
 
+    // Méthode pour nettoyer le champ 'Niveau d'études' et ne retenir que le premier Bac+x ou Bac
     private static String cleanEducationLevel(String educationLevel) {
         if (educationLevel == null || educationLevel.isEmpty()) {
             return "";
@@ -91,24 +90,6 @@ public class EmploiMaCleaner {
             return "Bac";
         }
     }
-
-
-    private static String cleanExperience(String experience) {
-        if (experience == null || experience.isEmpty()) {
-            return "";
-        }
-
-        // Utilisation d'une expression régulière pour extraire le premier nombre
-        Pattern pattern = Pattern.compile("\\d+");
-        Matcher matcher = pattern.matcher(experience);
-
-        if (matcher.find()) {
-            return matcher.group();
-        }
-
-        return "";
-    }
-
 
 
     public static void main(String[] args) {
