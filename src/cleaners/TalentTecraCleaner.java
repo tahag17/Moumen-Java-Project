@@ -11,6 +11,8 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static config.Config.BASE_PATH;
+
 public class TalentTecraCleaner {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -115,8 +117,8 @@ public class TalentTecraCleaner {
 
     public static void main(String[] args) {
         try {
-            String inputFilePath = "input.json";
-            String outputFilePath = "output_cleaned.json";
+            String inputFilePath = BASE_PATH+"talenttectra_jobs.json";
+            String outputFilePath = BASE_PATH+"talenttectra_jobs_cleaned.json";
             cleanData(inputFilePath, outputFilePath);
         } catch (IOException e) {
             e.printStackTrace();

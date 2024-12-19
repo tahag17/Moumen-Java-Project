@@ -11,6 +11,8 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static config.Config.BASE_PATH;
+
 public class RekrutCleaner {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -138,8 +140,8 @@ public class RekrutCleaner {
 
     public static void main(String[] args) {
         try {
-            String inputFilePath = "input_wetech.json";
-            String outputFilePath = "output_cleaned_wetech.json";
+            String inputFilePath = BASE_PATH+"rekrut.json";
+            String outputFilePath = BASE_PATH+"output_cleaned_rekrut.json";
             cleanData(inputFilePath, outputFilePath);
         } catch (IOException e) {
             e.printStackTrace();

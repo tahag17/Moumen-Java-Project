@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 
+import static config.Config.BASE_PATH;
+
 public class MjobCleaner {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -67,8 +69,8 @@ public class MjobCleaner {
 
     public static void main(String[] args) {
         try {
-            String inputFilePath = "input_wetech.json";
-            String outputFilePath = "output_cleaned_wetech.json";
+            String inputFilePath = BASE_PATH+"mjob.json";
+            String outputFilePath = BASE_PATH+"output_cleaned_mjob.json";
             cleanData(inputFilePath, outputFilePath);
         } catch (IOException e) {
             e.printStackTrace();
