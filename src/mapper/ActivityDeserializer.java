@@ -17,7 +17,7 @@ public class ActivityDeserializer extends JsonDeserializer<List<String>> {
 
                 if (currentToken == JsonToken.VALUE_STRING) {
             String activityStr = p.getValueAsString();
-                        String[] splitActivities = activityStr.split(" - ");
+                        String[] splitActivities = activityStr.split(" / ");
             for (String activity : splitActivities) {
                 activities.add(activity.trim());             }
         } else if (currentToken == JsonToken.START_ARRAY) {

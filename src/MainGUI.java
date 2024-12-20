@@ -28,10 +28,10 @@ public class MainGUI {
         // Create instances for services
         ForceEmploi forceEmploi = new ForceEmploi();
         Bayt bayt = new Bayt();
-         EmploiMa emploiMa = new EmploiMa();
-       Rekrut rekrut = new Rekrut();
+        EmploiMa emploiMa = new EmploiMa();
+        Rekrut rekrut = new Rekrut();
         TalentTectra talentTectra = new TalentTectra();
-       wetech wetech = new wetech();
+        wetech wetech = new wetech();
         MJob mjob = new MJob();
 
         CleaningService cleaningService = new CleaningService();
@@ -49,17 +49,17 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 try {
                     // Example: Scrape and clean data for MJob
-//                    mjob.scrap();
-//                    bayt.scrap();
-//                      forceEmploi.scrap();
-//                    wetech.scrap();
-//                    emploiMa.scrap();
-//                    rekrut.scrap();
-                   // talentTectra.scrap();
-                   cleaningService.CleanData(mjob, "mjob.json", "mjob_data.json");
+                    mjob.scrap();
+                    bayt.scrap();
+                    forceEmploi.scrap();
+                    wetech.scrap();
+                    emploiMa.scrap();
+                    rekrut.scrap();
+                    talentTectra.scrap();
+                    cleaningService.CleanData(mjob, "mjob.json", "mjob_data.json");
                     cleaningService.CleanData(rekrut, "rekrut.json", "rekrut_data.json");
-                   cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploima_data.json");
-                   cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
+                    cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploima_data.json");
+                    cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
                     cleaningService.CleanData(wetech, "WeTech.json", "WeTechdata.json");
                     cleaningService.CleanData(bayt, "bayt_jobs.json", "bayt_data.json");
                     cleaningService.CleanData(forceEmploi, "ForceEmploi.json", "ForceEmploi_Data.json");
@@ -78,25 +78,33 @@ public class MainGUI {
                     // Path to your cleaned JSON file
                     File jsonFileMjob = new File(Config.BASE_PATH + "mjob_data.json");
                     File jsonFileRekrut = new File(Config.BASE_PATH + "rekrut_data.json");
-                    File jsonFileEmploi = new File(Config.BASE_PATH + "emploi_data.json");
+                    File jsonFileEmploi = new File(Config.BASE_PATH + "emploima_data.json");
                     File jsonFileTalent = new File(Config.BASE_PATH + "talenttectracleaned_data.json");
+                    File jsonFileBayt = new File(Config.BASE_PATH + "bayt_data.json");
+                    File jsonFileForceEmploi = new File(Config.BASE_PATH + "ForceEmploi_Data.json");
+                    File jsonFileWeTech = new File(Config.BASE_PATH + "WeTechdata.json");
 
                     // Instantiate the mapper
                     JobDetailsMapper mapper = new JobDetailsMapper();
 
                     // Map the cleaned JSON file to a list of JobDetails
-                    //todo: clean the mJob file as it should be in order for it to be mapped to jobdetails
-//                    List<JobDetails> jobDetailsListMjob = mapper.mapJsonFileToJobDetails(jsonFileMjob);
+                    List<JobDetails> jobDetailsListMjob = mapper.mapJsonFileToJobDetails(jsonFileMjob);
                     List<JobDetails> jobDetailsListRekrut = mapper.mapJsonFileToJobDetails(jsonFileRekrut);
                     List<JobDetails> jobDetailsListEmploi = mapper.mapJsonFileToJobDetails(jsonFileEmploi);
                     List<JobDetails> jobDetailsListTalent = mapper.mapJsonFileToJobDetails(jsonFileTalent);
+                    List<JobDetails> jobDetailsListBayt = mapper.mapJsonFileToJobDetails(jsonFileBayt);
+                    List<JobDetails> jobDetailsListForceEmploi = mapper.mapJsonFileToJobDetails(jsonFileForceEmploi);
+                    List<JobDetails> jobDetailsListWeTech = mapper.mapJsonFileToJobDetails(jsonFileWeTech);
 
                     // Instantiate JobRepository and insert data
                     JobRepository repository = new JobRepository();
-//                    repository.insertJobDetails(jobDetailsListMjob);
+                    repository.insertJobDetails(jobDetailsListMjob);
                     repository.insertJobDetails(jobDetailsListRekrut);
                     repository.insertJobDetails(jobDetailsListEmploi);
                     repository.insertJobDetails(jobDetailsListTalent);
+                    repository.insertJobDetails(jobDetailsListBayt);
+                    repository.insertJobDetails(jobDetailsListForceEmploi);
+                    repository.insertJobDetails(jobDetailsListWeTech);
 
                     System.out.println("Job details and skills inserted successfully!");
                     JOptionPane.showMessageDialog(frame, "Job details and skills inserted successfully!");

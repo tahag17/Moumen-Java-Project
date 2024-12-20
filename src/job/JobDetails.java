@@ -1,126 +1,115 @@
-package job;
+    package job;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import lombok.*;
-import mapper.ActivityDeserializer;
+    import com.fasterxml.jackson.annotation.JsonFormat;
+    import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+    import com.fasterxml.jackson.annotation.JsonProperty;
+    import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+    import lombok.*;
+    import mapper.ActivityDeserializer;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
+    import java.util.List;
+    import java.util.Objects;
+    import java.util.stream.Collectors;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@EqualsAndHashCode
-@ToString
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class JobDetails {
-    private Integer id;
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @EqualsAndHashCode
+    @ToString
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public class JobDetails {
+        //1
+        private Integer id;
+        //missed
+        @JsonProperty("Titre")
+        private String titre;
+        //2
+        @JsonProperty("URL")
+        private String url;
+        //3
+        @JsonProperty("site Name")
+        private String siteName;
+        //4
+        @JsonProperty("Date de publication")
+        private String datePublication;
+        //5
+        @JsonProperty("Date pour postuler")
+        private String datePourPostuler;
+        //6
+        @JsonProperty("Adresse d'entreprise")
+        private String adresseEntreprise;
+        //7
+        @JsonProperty("Site web d'entreprise")
+        private String siteEntreprise;
+        //8
+        @JsonProperty("Nom d'entreprise")
+        private String nomEntreprise;
+        //9
+        @JsonProperty("Description d'entreprise")
+        private String descriptionEntreprise;
+        //10
+        @JsonProperty("Description du poste")
+        private String descriptionPoste;
+        //11
+        @JsonProperty("Région")
+        private String region;
+        //12
+        @JsonProperty("Ville")
+        private String ville;
+        //13
+        @JsonProperty("Secteur d'activité")
+        @JsonDeserialize(using = ActivityDeserializer.class)
+        private List<String> secteurActivites;
+        //14
+        @JsonProperty("Métier")
+        private String metier;
+        //15
+        @JsonProperty("Type du contrat")
+        private String typeContrat;
+        //16
+        @JsonProperty("Niveau d'études")
+        private String niveauEtude;
+        //17
+        @JsonProperty("Spécialité/Diplôme")
+        private String Diplomat;
+        //18
+        @JsonProperty("Expérience")
+        private String experience;
+        //19
+        @JsonProperty("Profil recherché")
+        private String Profil;
+        //20
+        @JsonProperty("Traits de personnalité")
+        private String traitsDePersonnalite;
+        //21
+        @JsonProperty("Compétences requises (hard skills)")
+        @JsonDeserialize(using = ActivityDeserializer.class)
+        private List<String> hardSkills;
+        //22
+        @JsonProperty("Soft-Skills")
+        @JsonDeserialize(using = ActivityDeserializer.class)
+        private List<String> softSkills;
+        //23
+        @JsonProperty("Compétences recommandées")
+        private String competencesRecommandes;
+        //24
+        @JsonProperty("Langue")
+        private String langue;
+        //25
+        @JsonProperty("Niveau de la langue")
+        private String niveauLangue;
+        //26
+        @JsonProperty("Salaire")
+        private String salaire;
+        //27
+        @JsonProperty("Avantages sociaux")
+        private String avantagesSociaux;
+        //28
+        @JsonProperty("Teletravail")
+        private String Teletravail;
 
-    @JsonProperty("niveauExperience")
-    private String experienceLevel;//done
 
-    @JsonProperty("niveauEtude")
-    private String niveauEtude;//done
 
-    @JsonProperty("function")
-    private String jobTitle;//done
 
-    @JsonProperty("region")
-    private String region;
-
-    @JsonProperty("url")
-    private String url;
-
-    @JsonProperty("siteName")
-    private String siteName;
-
-    @JsonProperty("date")
-    private String date;
-
-    @JsonProperty("siteEntreprise")
-    private String siteEntreprise;
-
-    @JsonProperty("nomEntreprise")
-    private String nomEntreprise;
-
-    @JsonProperty("description")
-    private String Description;
-
-    @JsonProperty("activitySector")
-    private String activitySector;//done
-
-    @JsonProperty("metier")
-    private String metier;
-
-    @JsonProperty("ContractType")
-    private String ContractType;
-
-    @JsonProperty("Diplomat")
-    private String Diplomat;
-
-    @JsonProperty("Profil")
-    private String Profil;
-
-    @JsonProperty("PersonnalityTraits")
-    private String PersonnalityTraits;
-
-    @JsonProperty("Language")
-    private String Language;
-
-    @JsonProperty("LanguageLevel")
-    private String LanguageLevel;
-
-    @JsonProperty("socialAdvantages")
-    private String socialAdvantages;
-
-    @JsonProperty("Teletravail")
-    private String Teletravail;
-
-    @JsonProperty("skills")
-    @JsonDeserialize(using = ActivityDeserializer.class)
-    private List<String> skills;//done
-
-    public JobDetails(String experienceLevel, String jobTitle, String activitySector, String niveauEtude,
-                      String region, String url, String siteName, String date, String siteEntreprise, String nomEntreprise,
-                      String description, String contractType, String diplomat, String profil, String personalityTraits,
-                      String language, String languageLevel, String socialAdvantages, String teletravail) {
-        this.experienceLevel = experienceLevel;
-        this.jobTitle = jobTitle;
-        this.activitySector = activitySector;
-        this.niveauEtude = niveauEtude;
-        this.region = region;
-        this.url = url;
-        this.siteName = siteName;
-        this.date = date;
-        this.siteEntreprise = siteEntreprise;
-        this.nomEntreprise = nomEntreprise;
-        this.Description = description;
-        this.ContractType = contractType;
-        this.Diplomat = diplomat;
-        this.Profil = profil;
-        this.PersonnalityTraits = personalityTraits;
-        this.Language = language;
-        this.LanguageLevel = languageLevel;
-        this.socialAdvantages = socialAdvantages;
-        this.Teletravail = teletravail;
-        this.skills = skills; // Assumes 'skills' is already formatted as needed
     }
-    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-    public List<String> getSkills() {return skills;}
-
-    private List<String> formatSkills(String activity) {
-        if (activity != null && !activity.isEmpty()) {
-            return List.of(activity.split("[,\\s-]+"))
-                    .stream()
-                    .map(String::trim)
-                    .collect(Collectors.toList());
-        }
-        return List.of();
-    }
-
-}

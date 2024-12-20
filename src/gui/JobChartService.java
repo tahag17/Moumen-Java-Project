@@ -5,6 +5,7 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,105 +14,65 @@ import java.util.Map;
 public class JobChartService {
 
     public void generateJobCharts() {
-        // Fetch data from the database
         DataFetcher dataFetcher = new DataFetcher();
+
+        Map<String, Integer> regionData = dataFetcher.fetchRegionData();
+        Map<String, Integer> contractTypeData = dataFetcher.fetchContractTypeData();
+        Map<String, Integer> experienceData = dataFetcher.fetchExperienceData();
         Map<String, Integer> educationLevelData = dataFetcher.fetchEducationLevelData();
-        Map<String, Integer> experienceLevelData = dataFetcher.fetchExperienceLevelData();
+        Map<String, Integer> secteursData = dataFetcher.fetchTopSecteursDActivite();
+        Map<String, Integer> hardSkillsData = dataFetcher.fetchTopHardSkills();
 
-        // Create and display the first chart for education level (still a donut chart)
-        createAndShowDonutChartWindow("Job Education Level Distribution", educationLevelData);
-
-        // Create and display the second chart for experience level (bar chart)
-        createAndShowBarChartWindow("Job Experience Level Distribution", experienceLevelData);
+        createAndShowPieChart("Job Distribution by Region", regionData);
+        createAndShowBarChart("Job Distribution by Contract Type", contractTypeData);
+        createAndShowBarChart("Job Distribution by Experience", experienceData); // Bar chart for Experience
+        createAndShowPieChart("Job Distribution by Education Level", educationLevelData); // Pie chart for Education Level
+        createAndShowBarChart("Top 20 Sectors of Activity", secteursData);
+        createAndShowBarChart("Top 20 Hard Skills", hardSkillsData);
     }
 
-    // Method to create and display a donut chart window
-    private void createAndShowDonutChartWindow(String title, Map<String, Integer> data) {
+    private void createAndShowPieChart(String title, Map<String, Integer> data) {
         JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(800, 600);
 
-        // Create a donut chart with the provided data
-        JFreeChart chart = createDonutChart(createPieDataset(data));
+        DefaultPieDataset dataset = new DefaultPieDataset();
+        data.forEach(dataset::setValue);
 
-        // Add the chart to a panel and display it
-        ChartPanel chartPanel = new ChartPanel(chart);
-        chartPanel.setPreferredSize(new Dimension(800, 600));
-        frame.getContentPane().add(chartPanel, BorderLayout.CENTER);
-
-        frame.setVisible(true);
-    }
-
-    // Method to create and display a bar chart window
-    private void createAndShowBarChartWindow(String title, Map<String, Integer> data) {
-        JFrame frame = new JFrame(title);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(800, 600);
-
-        // Create a bar chart with the provided data
-        JFreeChart chart = createBarChart(createCategoryDataset(data), title);
-
-        // Add the chart to a panel and display it
-        ChartPanel chartPanel = new ChartPanel(chart);
-        chartPanel.setPreferredSize(new Dimension(800, 600));
-        frame.getContentPane().add(chartPanel, BorderLayout.CENTER);
-
-        frame.setVisible(true);
-    }
-
-    // Create a dataset for the pie chart
-    private org.jfree.data.general.DefaultPieDataset createPieDataset(Map<String, Integer> data) {
-        org.jfree.data.general.DefaultPieDataset dataset = new org.jfree.data.general.DefaultPieDataset();
-
-        for (Map.Entry<String, Integer> entry : data.entrySet()) {
-            String label = entry.getKey() == null ? "Unknown" : entry.getKey();
-            dataset.setValue(label, entry.getValue());
-        }
-
-        return dataset;
-    }
-
-    // Create a dataset for the bar chart
-    private DefaultCategoryDataset createCategoryDataset(Map<String, Integer> data) {
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-
-        for (Map.Entry<String, Integer> entry : data.entrySet()) {
-            String category = entry.getKey() == null ? "Unknown" : entry.getKey();
-            dataset.addValue(entry.getValue(), "Jobs", category);
-        }
-
-        return dataset;
-    }
-
-    // Create a pie chart with a donut appearance
-    private JFreeChart createDonutChart(org.jfree.data.general.DefaultPieDataset dataset) {
         JFreeChart chart = ChartFactory.createPieChart(
-                null,   // No chart title here; the window title suffices
+                title,
                 dataset,
-                true,   // Show legend
-                true,   // Tooltips
-                false   // URLs
+                true,
+                true,
+                false
         );
 
-        org.jfree.chart.plot.PiePlot plot = (org.jfree.chart.plot.PiePlot) chart.getPlot();
-        plot.setLabelFont(new Font("SansSerif", Font.PLAIN, 12));
-        plot.setCircular(true);
-        plot.setLabelGap(0.02);
+        ChartPanel chartPanel = new ChartPanel(chart);
+        chartPanel.setPreferredSize(new Dimension(800, 600));
+        frame.add(chartPanel);
 
-        return chart;
+        frame.setVisible(true);
     }
 
-    // Create a bar chart
-    private JFreeChart createBarChart(DefaultCategoryDataset dataset, String title) {
-        return ChartFactory.createBarChart(
-                title,       // Chart title
-                "Experience Level", // Domain axis label
-                "Job Count",         // Range axis label
-                dataset,              // Data
-                org.jfree.chart.plot.PlotOrientation.VERTICAL,
-                true,                 // Include legend
-                true,                 // Tooltips
-                false                 // URLs
+    private void createAndShowBarChart(String title, Map<String, Integer> data) {
+        JFrame frame = new JFrame(title);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(800, 600);
+
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        data.forEach((key, value) -> dataset.addValue(value, "Jobs", key));
+
+        JFreeChart chart = ChartFactory.createBarChart(
+                title,
+                "Category",
+                "Count",
+                dataset
         );
+
+        ChartPanel chartPanel = new ChartPanel(chart);
+        chartPanel.setPreferredSize(new Dimension(800, 600));
+        frame.add(chartPanel);
+
+        frame.setVisible(true);
     }
 }
