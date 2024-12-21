@@ -4,6 +4,7 @@ import database.PostgreSQLConnection;
 import gui.JobChartService;
 import job.JobDetails;
 import job.JobRepository;
+import machine_learning.decisionTreePrediction;
 import mapper.JobDetailsMapper;
 import scrapers.*;
 
@@ -42,6 +43,8 @@ public class MainGUI {
         JButton scrapeButton = new JButton("Scrape and Clean Data");
         JButton mapAndInsertButton = new JButton("Map and Insert Job Details");
         JButton generateChartButton = new JButton("Generate Job Chart");
+        JButton ExpLButton = new JButton("Predict Experience Level");
+        JButton StudButton = new JButton("Predict Study Level");
         JButton exitButton = new JButton("Exit");
 
         // Add actions for buttons
@@ -51,9 +54,9 @@ public class MainGUI {
                 try {
                     // Example: Scrape and clean data for MJob
                     mjob.scrap();
-                    bayt.scrap();
-                    forceEmploi.scrap();
-                    wetech.scrap();
+                    //bayt.scrap();
+                    //forceEmploi.scrap();
+                    //wetech.scrap();
                     emploiMa.scrap();
                     rekrut.scrap();
                     talentTectra.scrap();
@@ -61,9 +64,9 @@ public class MainGUI {
                     cleaningService.CleanData(rekrut, "rekrut.json", "rekrut_data.json");
                     cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploima_data.json");
                     cleaningService.CleanData(talentTectra, "talenttectra_jobs.json", "talenttectracleaned_data.json");
-                    cleaningService.CleanData(wetech, "WeTech.json", "WeTechdata.json");
-                    cleaningService.CleanData(bayt, "bayt_jobs.json", "bayt_data.json");
-                    cleaningService.CleanData(forceEmploi, "ForceEmploi.json", "ForceEmploi_Data.json");
+                    //cleaningService.CleanData(wetech, "WeTech.json", "WeTechdata.json");
+                    //cleaningService.CleanData(bayt, "bayt_jobs.json", "bayt_data.json");
+                    //cleaningService.CleanData(forceEmploi, "ForceEmploi.json", "ForceEmploi_Data.json");
 
 
                 } catch (IOException ex) {
@@ -81,9 +84,9 @@ public class MainGUI {
                     File jsonFileRekrut = new File(Config.BASE_PATH + "rekrut_data.json");
                     File jsonFileEmploi = new File(Config.BASE_PATH + "emploima_data.json");
                     File jsonFileTalent = new File(Config.BASE_PATH + "talenttectracleaned_data.json");
-                    File jsonFileBayt = new File(Config.BASE_PATH + "bayt_data.json");
-                    File jsonFileForceEmploi = new File(Config.BASE_PATH + "ForceEmploi_Data.json");
-                    File jsonFileWeTech = new File(Config.BASE_PATH + "WeTechdata.json");
+                    //File jsonFileBayt = new File(Config.BASE_PATH + "bayt_data.json");
+                    //File jsonFileForceEmploi = new File(Config.BASE_PATH + "ForceEmploi_Data.json");
+                    //File jsonFileWeTech = new File(Config.BASE_PATH + "WeTechdata.json");
 
                     // Instantiate the mapper
                     JobDetailsMapper mapper = new JobDetailsMapper();
@@ -93,9 +96,9 @@ public class MainGUI {
                     List<JobDetails> jobDetailsListRekrut = mapper.mapJsonFileToJobDetails(jsonFileRekrut);
                     List<JobDetails> jobDetailsListEmploi = mapper.mapJsonFileToJobDetails(jsonFileEmploi);
                     List<JobDetails> jobDetailsListTalent = mapper.mapJsonFileToJobDetails(jsonFileTalent);
-                    List<JobDetails> jobDetailsListBayt = mapper.mapJsonFileToJobDetails(jsonFileBayt);
-                    List<JobDetails> jobDetailsListForceEmploi = mapper.mapJsonFileToJobDetails(jsonFileForceEmploi);
-                    List<JobDetails> jobDetailsListWeTech = mapper.mapJsonFileToJobDetails(jsonFileWeTech);
+                    //List<JobDetails> jobDetailsListBayt = mapper.mapJsonFileToJobDetails(jsonFileBayt);
+                    //List<JobDetails> jobDetailsListForceEmploi = mapper.mapJsonFileToJobDetails(jsonFileForceEmploi);
+                    //List<JobDetails> jobDetailsListWeTech = mapper.mapJsonFileToJobDetails(jsonFileWeTech);
 
                     // Instantiate JobRepository and insert data
                     JobRepository repository = new JobRepository(new PostgreSQLConnection());
@@ -103,9 +106,9 @@ public class MainGUI {
                     repository.insertJobDetails(jobDetailsListRekrut);
                     repository.insertJobDetails(jobDetailsListEmploi);
                     repository.insertJobDetails(jobDetailsListTalent);
-                    repository.insertJobDetails(jobDetailsListBayt);
-                    repository.insertJobDetails(jobDetailsListForceEmploi);
-                    repository.insertJobDetails(jobDetailsListWeTech);
+                    //repository.insertJobDetails(jobDetailsListBayt);
+                    //repository.insertJobDetails(jobDetailsListForceEmploi);
+                    //repository.insertJobDetails(jobDetailsListWeTech);
 
                     System.out.println("Job details and skills inserted successfully!");
                     JOptionPane.showMessageDialog(frame, "Job details and skills inserted successfully!");
@@ -127,6 +130,20 @@ public class MainGUI {
             }
         });
 
+        ExpLButton.addActionListener(new ActionListener() {
+            @Override
+                    public void actionPerformed(ActionEvent e) {
+                decisionTreePrediction.ModelGui();
+            }
+
+        });
+        StudButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                decisionTreePrediction.ModelGui();
+            }
+        });
+
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -138,6 +155,8 @@ public class MainGUI {
         panel.add(scrapeButton);
         panel.add(mapAndInsertButton);
         panel.add(generateChartButton);
+        panel.add(ExpLButton);
+        panel.add(StudButton);
         panel.add(exitButton);
 
         // Add panel to frame
