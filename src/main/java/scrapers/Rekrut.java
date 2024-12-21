@@ -23,7 +23,7 @@ public class Rekrut {
     private final String baseUrl = "https://www.rekrute.com/offres.html";
     private final String urlParams = "?workExperienceId%5B0%5D=1&workExperienceId%5B1%5D=2";
     private final String outputDirPath = Config.BASE_PATH; // Define output directory path
-    private final String outputFilePath = outputDirPath + "rekrut.json"; // Output file path
+    final String outputFilePath = outputDirPath + "rekrut.json"; // Output file path
 
     public Rekrut() {}
 

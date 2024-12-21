@@ -8,9 +8,18 @@ import java.util.List;
 public class JobRepository {
     private final PostgreSQLConnection dbConnection;
 
-    public JobRepository() {
+    public JobRepository(PostgreSQLConnection postgreSQLConnection) {
         dbConnection = new PostgreSQLConnection();
     }
+    public void insertJobDetailsWithException(List<JobDetails> jobDetailsList) throws SQLException {
+        try (Connection connection = dbConnection.connect()) {
+            connection.setAutoCommit(false); // Start transaction
+
+            // Simulate an exception by throwing one intentionally
+            throw new SQLException("Simulated database exception");
+        }
+    }
+
 
     public void insertJobDetails(List<JobDetails> jobDetailsList) {
         try (Connection connection = dbConnection.connect()) {

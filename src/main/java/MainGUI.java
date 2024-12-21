@@ -1,5 +1,6 @@
 import cleaners.CleaningService;
 import config.Config;
+import database.PostgreSQLConnection;
 import gui.JobChartService;
 import job.JobDetails;
 import job.JobRepository;
@@ -97,7 +98,7 @@ public class MainGUI {
                     List<JobDetails> jobDetailsListWeTech = mapper.mapJsonFileToJobDetails(jsonFileWeTech);
 
                     // Instantiate JobRepository and insert data
-                    JobRepository repository = new JobRepository();
+                    JobRepository repository = new JobRepository(new PostgreSQLConnection());
                     repository.insertJobDetails(jobDetailsListMjob);
                     repository.insertJobDetails(jobDetailsListRekrut);
                     repository.insertJobDetails(jobDetailsListEmploi);

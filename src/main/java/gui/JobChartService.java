@@ -31,7 +31,7 @@ public class JobChartService {
         createAndShowBarChart("Top 20 Hard Skills", hardSkillsData);
     }
 
-    private void createAndShowPieChart(String title, Map<String, Integer> data) {
+    void createAndShowPieChart(String title, Map<String, Integer> data) {
         JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(800, 600);
@@ -54,7 +54,7 @@ public class JobChartService {
         frame.setVisible(true);
     }
 
-    private void createAndShowBarChart(String title, Map<String, Integer> data) {
+    void createAndShowBarChart(String title, Map<String, Integer> data) {
         JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(800, 600);

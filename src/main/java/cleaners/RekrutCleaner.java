@@ -69,7 +69,7 @@ public class RekrutCleaner {
     }
 
   // Méthode pour nettoyer le champ 'Niveau d'études' et ne retenir que le premier Bac+x ou Bac
-    private static String cleanEducationLevel(String educationLevel) {
+    static String cleanEducationLevel(String educationLevel) {
         if (educationLevel == null || educationLevel.isEmpty()) {
             return "";
         }
@@ -100,7 +100,7 @@ public class RekrutCleaner {
 
 
     // Méthode pour nettoyer le champ 'Type de contrat'
-    private static String cleanContractType(String contractType) {
+    static String cleanContractType(String contractType) {
         if (contractType == null || contractType.isEmpty()) {
             return "";
         }
@@ -111,7 +111,7 @@ public class RekrutCleaner {
     }
 
     // Méthode pour nettoyer le champ 'Télétravail'
-    private static String cleanTelework(String telework) {
+    static String cleanTelework(String telework) {
         if (telework == null || telework.isEmpty()) {
             return "";
         }
@@ -122,7 +122,7 @@ public class RekrutCleaner {
     }
 
     // Méthode pour nettoyer le champ 'Expérience'
-    private static String cleanExperience(String experience) {
+    static String cleanExperience(String experience) {
         if (experience == null || experience.isEmpty()) {
             return "";
         }
