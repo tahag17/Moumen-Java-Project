@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Random;
 
-import weka.classifiers.Classifier;
+import weka.classifiers .Classifier;
 import weka.classifiers.Evaluation;
 import weka.core.Attribute;
 import weka.core.DenseInstance;
