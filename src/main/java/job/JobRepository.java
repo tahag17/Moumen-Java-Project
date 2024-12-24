@@ -3,14 +3,16 @@ package job;
 import database.PostgreSQLConnection;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JobRepository {
     private final PostgreSQLConnection dbConnection;
 
     public JobRepository(PostgreSQLConnection postgreSQLConnection) {
-        dbConnection = new PostgreSQLConnection();
+        dbConnection = postgreSQLConnection;
     }
+
     public void insertJobDetailsWithException(List<JobDetails> jobDetailsList) throws SQLException {
         try (Connection connection = dbConnection.connect()) {
             connection.setAutoCommit(false); // Start transaction
@@ -19,7 +21,6 @@ public class JobRepository {
             throw new SQLException("Simulated database exception");
         }
     }
-
 
     public void insertJobDetails(List<JobDetails> jobDetailsList) {
         try (Connection connection = dbConnection.connect()) {
@@ -112,4 +113,84 @@ public class JobRepository {
             statement.executeBatch();
         }
     }
+
+    // New method to get all job details from the database
+    public List<JobDetails> getAllJobDetails() throws SQLException {
+        List<JobDetails> jobDetailsList = new ArrayList<>();
+        String query = "SELECT j.id, j.titre, j.url, j.site_name, j.date_de_publication, j.date_pour_postuler, " +
+                "j.adresse_d_entreprise, j.site_web_d_entreprise, j.nom_d_entreprise, j.description_d_entreprise, " +
+                "j.description_du_poste, j.region, j.ville, j.metier, j.type_du_contrat, j.niveau_d_etudes, " +
+                "j.specialite_diplome, j.experience, j.profil_recherche, j.traits_de_personnalite, " +
+                "j.competences_recommandees, j.langue, j.niveau_de_la_langue, j.salaire, j.avantages_sociaux, j.teletravail, " +
+                "s.secteur_d_activite, h.hard_skills, so.soft_skills " +
+                "FROM jobs j " +
+                "LEFT JOIN secteurs_d_activite s ON j.id = s.job_id " +
+                "LEFT JOIN hard_skills h ON j.id = h.job_id " +
+                "LEFT JOIN soft_skills so ON j.id = so.job_id";
+
+        try (Connection connection = dbConnection.connect();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                JobDetails jobDetails = new JobDetails();
+                jobDetails.setId(resultSet.getInt("id"));
+                jobDetails.setTitre(resultSet.getString("titre"));
+                jobDetails.setUrl(resultSet.getString("url"));
+                jobDetails.setSiteName(resultSet.getString("site_name"));
+                jobDetails.setDatePublication(resultSet.getString("date_de_publication"));
+                jobDetails.setDatePourPostuler(resultSet.getString("date_pour_postuler"));
+                jobDetails.setAdresseEntreprise(resultSet.getString("adresse_d_entreprise"));
+                jobDetails.setSiteEntreprise(resultSet.getString("site_web_d_entreprise"));
+                jobDetails.setNomEntreprise(resultSet.getString("nom_d_entreprise"));
+                jobDetails.setDescriptionEntreprise(resultSet.getString("description_d_entreprise"));
+                jobDetails.setDescriptionPoste(resultSet.getString("description_du_poste"));
+                jobDetails.setRegion(resultSet.getString("region"));
+                jobDetails.setVille(resultSet.getString("ville"));
+                jobDetails.setMetier(resultSet.getString("metier"));
+                jobDetails.setTypeContrat(resultSet.getString("type_du_contrat"));
+                jobDetails.setNiveauEtude(resultSet.getString("niveau_d_etudes"));
+                jobDetails.setDiplomat(resultSet.getString("specialite_diplome"));
+                jobDetails.setExperience(resultSet.getString("experience"));
+                jobDetails.setProfil(resultSet.getString("profil_recherche"));
+                jobDetails.setTraitsDePersonnalite(resultSet.getString("traits_de_personnalite"));
+                jobDetails.setCompetencesRecommandes(resultSet.getString("competences_recommandees"));
+                jobDetails.setLangue(resultSet.getString("langue"));
+                jobDetails.setNiveauLangue(resultSet.getString("niveau_de_la_langue"));
+                jobDetails.setSalaire(resultSet.getString("salaire"));
+                jobDetails.setAvantagesSociaux(resultSet.getString("avantages_sociaux"));
+                jobDetails.setTeletravail(resultSet.getString("teletravail"));
+
+                // Fetch associated sectors, hard skills, and soft skills
+                List<String> secteurs = new ArrayList<>();
+                String secteur = resultSet.getString("secteur_d_activite");
+                if (secteur != null) {
+                    secteurs.add(secteur);
+                }
+                jobDetails.setSecteurActivites(secteurs);
+
+                List<String> hardSkills = new ArrayList<>();
+                String hardSkill = resultSet.getString("hard_skills");
+                if (hardSkill != null) {
+                    hardSkills.add(hardSkill);
+                }
+                jobDetails.setHardSkills(hardSkills);
+
+                List<String> softSkills = new ArrayList<>();
+                String softSkill = resultSet.getString("soft_skills");
+                if (softSkill != null) {
+                    softSkills.add(softSkill);
+                }
+                jobDetails.setSoftSkills(softSkills);
+
+                jobDetailsList.add(jobDetails);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error retrieving job details from the database", e);
+        }
+
+        return jobDetailsList;
+    }
+
 }
