@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmploiMa {
+public class EmploiMa implements scrappersInterface{
 
     public void scrap() {
         String baseUrl = "https://www.emploi.ma/recherche-jobs-maroc";
@@ -206,8 +206,5 @@ public class EmploiMa {
             this.webSite = webSite;
         }
     }
-    public static void main(String[] args) {
-        EmploiMa m = new EmploiMa();
-        m.scrap();
-    }
+
 }

@@ -15,7 +15,7 @@ import java.util.Map;
 import java.time.Duration;
 import java.io.File;
 
-public class MJob {
+public class MJob implements scrappersInterface {
     List<Map<String, String>> jobDataList = new ArrayList<>();
 
     public void scrap() {

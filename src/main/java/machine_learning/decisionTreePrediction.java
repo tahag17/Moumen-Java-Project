@@ -21,7 +21,7 @@ import static config.Config.TRAINING_DATA;
 public class decisionTreePrediction {
     private Classifier tree;
 
-    public Classifier trainTree() {
+    public Classifier predict() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(TRAINING_DATA));
             ArffReader arff = new ArffReader(reader);
@@ -46,7 +46,7 @@ public class decisionTreePrediction {
         return null;
     }
 
-    public void testTree(Classifier trainedTree, String function, String studyLevel, String skills) {
+    public void testModel(Classifier trainedTree, String function, String studyLevel, String skills) {
         try {
             if (trainedTree == null) {
                 JOptionPane.showMessageDialog(null, "Model is not trained.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -112,7 +112,7 @@ public class decisionTreePrediction {
         trainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                prediction.tree = prediction.trainTree();
+                prediction.tree = prediction.predict();
             }
         });
 
@@ -123,7 +123,7 @@ public class decisionTreePrediction {
                 String studyLevel = studyLevelField.getText();
                 String skills = skillsField.getText();
 
-                prediction.testTree(prediction.tree, function, studyLevel, skills);
+                prediction.testModel(prediction.tree, function, studyLevel, skills);
             }
         });
 

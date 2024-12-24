@@ -17,7 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class Rekrut {
+public class Rekrut implements scrappersInterface{
     private static final Logger LOGGER = Logger.getLogger(Rekrut.class.getName());
     private static final int MAX_RETRIES = 3; // Retry up to 3 times on timeout
     private final String baseUrl = "https://www.rekrute.com/offres.html";

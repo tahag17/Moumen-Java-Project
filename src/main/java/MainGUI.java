@@ -6,6 +6,7 @@ import job.JobDetails;
 import job.JobRepository;
 import job.JobService;
 import machine_learning.decisionTreePrediction;
+import machine_learning.predictionNaiveBayesEducationLevel;
 import mapper.JobDetailsMapper;
 import scrapers.*;
 
@@ -55,13 +56,13 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 try {
                     // Example: Scrape and clean data for MJob
-                    mjob.scrap();
+                    //mjob.scrap();
                     //bayt.scrap();
                     //forceEmploi.scrap();
                     //wetech.scrap();
-                    emploiMa.scrap();
+                    //emploiMa.scrap();
                     rekrut.scrap();
-                    talentTectra.scrap();
+                    //talentTectra.scrap();
                     cleaningService.CleanData(mjob, "mjob.json", "mjob_data.json");
                     cleaningService.CleanData(rekrut, "rekrut.json", "rekrut_data.json");
                     cleaningService.CleanData(emploiMa, "emploima_jobs.json", "emploima_data.json");
@@ -142,7 +143,7 @@ public class MainGUI {
         StudButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                decisionTreePrediction.ModelGui();
+                predictionNaiveBayesEducationLevel.ModelGui();
             }
         });
 
