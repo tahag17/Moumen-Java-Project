@@ -47,3 +47,8 @@ CREATE TABLE soft_skills (
                              job_id INTEGER,
                              FOREIGN KEY (job_id) REFERENCES jobs(id) ON DELETE CASCADE
 );
+CREATE TABLE users (
+                       id SERIAL PRIMARY KEY,
+                       username VARCHAR(50) NOT NULL UNIQUE,
+                       password VARCHAR(255) NOT NULL
+);

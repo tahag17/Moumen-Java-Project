@@ -27,6 +27,8 @@ public class decisionTreePrediction {
             ArffReader arff = new ArffReader(reader);
             Instances dataTrain = arff.getData();
 
+
+
             dataTrain.setClassIndex(dataTrain.numAttributes() - 2);
 
             weka.classifiers.trees.REPTree regressionTree = new weka.classifiers.trees.REPTree();
@@ -46,6 +48,17 @@ public class decisionTreePrediction {
         return null;
     }
 
+    private boolean isValidCategory(String value, Attribute attribute) {
+        if (attribute.isNominal()) { // Check if the attribute is nominal (i.e., categorical)
+            for (int i = 0; i < attribute.numValues(); i++) {
+                if (value.equals(attribute.value(i))) {
+                    return true; // Value exists in the attribute's possible values
+                }
+            }
+        }
+        return false; // Return false if value doesn't exist or attribute is not nominal
+    }
+
     public void testModel(Classifier trainedTree, String function, String studyLevel, String skills) {
         try {
             if (trainedTree == null) {
@@ -58,6 +71,11 @@ public class decisionTreePrediction {
             ArffReader arff = new ArffReader(reader);
             Instances dataTrain = arff.getData();
             dataTrain.setClassIndex(dataTrain.numAttributes() - 2);
+            function = (function == null || function.isEmpty() || !isValidCategory(function, dataTrain.attribute(0))) ? "Unknown" : function;
+            studyLevel = (studyLevel == null || studyLevel.isEmpty() || !isValidCategory(studyLevel, dataTrain.attribute(1))) ? "Unknown" : studyLevel;
+            skills = (skills == null || skills.isEmpty() || !isValidCategory(skills, dataTrain.attribute(3))) ? "Unknown" : skills;
+
+
 
             Attribute functionAttribute = dataTrain.attribute(0);
             Attribute studyLevelAttribute = dataTrain.attribute(1);

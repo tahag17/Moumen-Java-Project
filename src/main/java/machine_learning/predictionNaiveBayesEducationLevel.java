@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.Evaluation;
+import weka.core.Attribute;
 import weka.core.DenseInstance;
 import weka.core.Instance;
 import weka.core.Instances;
@@ -56,6 +57,17 @@ public class predictionNaiveBayesEducationLevel {
         return null;
     }
 
+    private boolean isValidCategory(String value, Attribute attribute) {
+        if (attribute.isNominal()) { // Check if the attribute is nominal (i.e., categorical)
+            for (int i = 0; i < attribute.numValues(); i++) {
+                if (value.equals(attribute.value(i))) {
+                    return true; // Value exists in the attribute's possible values
+                }
+            }
+        }
+        return false; // Return false if value doesn't exist or attribute is not nominal
+    }
+
     // Method to test the trained model
     public void testModel(NaiveBayes trainedModel, String function, int expLevel, String activity) throws Exception {
         if (trainedModel == null) {
@@ -69,6 +81,10 @@ public class predictionNaiveBayesEducationLevel {
         if (train.classIndex() == -1) {
             train.setClassIndex(1); // Ensure this is kept as it is in your code
         }
+
+        function = (function == null || function.isEmpty() || !isValidCategory(function, train.attribute(0))) ? "Unknown" : function;
+        activity = (activity == null || activity.isEmpty() || !isValidCategory(activity, train.attribute(3))) ? "Unknown" : activity;
+
 
         // Create an instance with user input
         Instance userInstance = new DenseInstance(train.numAttributes());

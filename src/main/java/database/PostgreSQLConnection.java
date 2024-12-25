@@ -12,7 +12,4 @@ public class PostgreSQLConnection {
     public Connection connect() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
-
-
-
 }
