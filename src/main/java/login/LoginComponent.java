@@ -35,14 +35,17 @@ public class LoginComponent {
     }
 
     // Method for account creation
-    public static boolean createAccount(String username, String password) {
-        String insertQuery = "INSERT INTO users (username, password) VALUES (?, ?)";
+    public static boolean createAccount(String username, String password,String firstname, String lastname, String birthDate) {
+        String insertQuery = "INSERT INTO users (username, password,firstname,lastname,birthdate) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection connection = new PostgreSQLConnection().connect();
              PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
 
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
+            preparedStatement.setString(3, firstname);
+            preparedStatement.setString(4, lastname);
+            preparedStatement.setString(5, birthDate);
 
             preparedStatement.executeUpdate();
             return true; // Account created successfully
@@ -54,8 +57,8 @@ public class LoginComponent {
     }
 
     // Login dialog with both login and account creation
-    public static void showLoginDialog(Frame frame) {
-        JDialog loginDialog = new JDialog(frame, "Login", true);
+    public static void showLoginDialog() {
+        JDialog loginDialog = new JDialog();
         loginDialog.setSize(300, 200);
         loginDialog.setLayout(new BorderLayout());
 
@@ -86,8 +89,10 @@ public class LoginComponent {
             String password = new String(passwordField.getPassword());
 
             if (authenticate(username, password)) {
+                FrameM frame = new FrameM();
                 JOptionPane.showMessageDialog(loginDialog, "Login successful!");
                 loginDialog.dispose();
+                frame.setMainFrame();
             } else {
                 JOptionPane.showMessageDialog(loginDialog, "Invalid username or password.", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -96,7 +101,7 @@ public class LoginComponent {
         // Create Account button action
         createAccountButton.addActionListener(e -> {
 
-            showCreateAccountDialog(frame); // Show the account creation dialog
+            showCreateAccountDialog(); // Show the account creation dialog
             loginDialog.dispose();
         });
 
@@ -105,17 +110,36 @@ public class LoginComponent {
     }
 
     // Dialog for account creation
-    public static void showCreateAccountDialog(Frame frame) {
-        JDialog createAccountDialog = new JDialog(frame, "Create Account", true);
-        createAccountDialog.setSize(300, 200);
+    public static void showCreateAccountDialog() {
+        JDialog createAccountDialog = new JDialog();
+        createAccountDialog.setSize(400, 300);
         createAccountDialog.setLayout(new BorderLayout());
 
-        JPanel panel = new JPanel(new GridLayout(3, 2));
+        JPanel panel = new JPanel(new GridLayout(5, 2, 10, 10));
+        JLabel firstnameLabel = new JLabel("First name:");
+        JTextField firstnameField = new JTextField();
+        JLabel lastnameLabel = new JLabel("Last name:");
+        JTextField lastnameField = new JTextField();
+        SpinnerDateModel dateModel = new SpinnerDateModel();
+        JSpinner dateSpinner = new JSpinner(dateModel);
+
+        // Set the editor to display date in a user-friendly format
+        JSpinner.DateEditor dateEditor = new JSpinner.DateEditor(dateSpinner, "yyyy-MM-dd");
+        dateSpinner.setEditor(dateEditor);
+
+        // Add the spinner to the frame
+
         JLabel usernameLabel = new JLabel("Username:");
         JTextField usernameField = new JTextField();
         JLabel passwordLabel = new JLabel("Password:");
         JPasswordField passwordField = new JPasswordField();
 
+        panel.add(firstnameLabel);
+        panel.add(firstnameField);
+        panel.add(lastnameLabel);
+        panel.add(lastnameField);
+        panel.add(new JLabel("Select your birth date:"));
+        panel.add(dateSpinner);
         panel.add(usernameLabel);
         panel.add(usernameField);
         panel.add(passwordLabel);
@@ -133,12 +157,15 @@ public class LoginComponent {
 
         // Create button action
         createButton.addActionListener(e -> {
+            String firstname = firstnameField.getText();
+            String lastname = lastnameField.getText();
+            String date = String.valueOf(dateSpinner.getValue());
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
 
-            if (createAccount(username, password)) {
+            if (createAccount(username, password,firstname,lastname,date)) {
                 JOptionPane.showMessageDialog(createAccountDialog, "Account created successfully!");
-                showLoginDialog(frame);
+                showLoginDialog();
                 createAccountDialog.dispose();
             } else {
                 JOptionPane.showMessageDialog(createAccountDialog, "Error creating account.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -146,7 +173,7 @@ public class LoginComponent {
         });
 
         // Cancel button action
-        cancel.addActionListener(e -> showLoginDialog(frame));
+        cancel.addActionListener(e -> showLoginDialog());
 
         createAccountDialog.setLocationRelativeTo(null);
         createAccountDialog.setVisible(true);
